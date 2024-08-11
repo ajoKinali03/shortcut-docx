@@ -1,62 +1,73 @@
 extends layout
 
-block content 
-  h1#tutorial-page Bagaimana Cara Menggunakan SHORTCUT-DOCX?
-  div.daftar-isi
-    ul
-      li
-        a(href="#judul1") Halaman Awal
-      li
-        a(href="#judul1a") Cara Memasukan Materi
-      li
-        a(href="#judul2") Cara Memasukan Referensi
-      li
-        a(href="#judul3") Cara Membuat Format Footnote dan Daftar Pustaka Otomatis 
-      li
-        a(href="#judul3a") Cara Memasukan Referensi Dengan Halaman Yang Berbeda
-      li
-        a(href="#judul4") Langkah Akhir
-  div.text
-    h1#judul1 Langkah Pertama "Input Materi"
-      p Silahkan pilih "Home" atau "Ayo Mulai=>" pada halman awal seperti pada gambar dibawah ini
-
-      p Pada halaman Home ini, kita sudah bisa memasukan teks atau materi makalah yang ingin kita buat. materi nya kita masukan pada kolom teks yang di blok 1, pada blok 2 tombol untuk me-download makalah, dan blok 3 untuk melihat referensi
-
-      p#judul1a Perlu diperhatikan dalam memasukan materi makalah, kita harus memisahkan semua paragraf/point sub bab/baris teks dengan 1x ENTER. contoh nya dapat dilihat pada gambar di bawah ini
-
-      p Jika telah selesai memasukan materi makalah nya, kita sudah bisa langsung me-download makalah nya jika kita tidak ingin menggunakan footnote.
-
-      p Tapi apabila ingin menggunakan footnote, kita harus mengikuti langkah selanjutnya =>
+block content
+  div.tutorial
+    div.container-ads-tutor
     
-    h1#judul2 Langkah Kedua "Input Referensi"
-      p Silahkan pilih "Referensi" seperti gambar dibawah ini
+    div.container-tutor
+      h1#tutorial-page Bagaimana Cara Menggunakan SHORTCUT-DOCX?
+      div.line
+      div.daftar-isi
+        p Daftar Isi
+        ul
+          li
+            a(href="#judul1") Halaman Awal
+          li
+            a(href="#judul1a") Cara Memasukan Materi
+          li
+            a(href="#judul2") Cara Memasukan Referensi
+          li
+            a(href="#judul3") Cara Membuat Format Footnote dan Daftar Pustaka Otomatis 
+          li
+            a(href="#judul3a") Cara Memasukan Referensi Dengan Halaman Yang Berbeda
+          li
+            a(href="#judul4") Langkah Akhir
+      div.text
+        h1#judul1 Langkah Pertama "Input Materi"
+          p Silahkan pilih "Home" atau "Ayo Mulai=>" pada halman awal seperti pada gambar dibawah ini
 
-      p Pada halaman "Referensi" ini, kita terlebih dahulu memilih jenis referensi yang ingin kita inputkan, seperti: Jurnal, Buku, Website, Tesis/Skripsi/Disertasi
+          p Pada halaman Home ini, kita sudah bisa memasukan teks atau materi makalah yang ingin kita buat. materi nya kita masukan pada kolom teks yang di blok 1, pada blok 2 tombol untuk me-download makalah, dan blok 3 untuk melihat referensi
 
-      p Setelah kita memilih jenis referensi, kita bisa langsung memasukan data referensi yang telah kita kumpulkan, seperti: penulis, judul, dll. 
-      
-      p Jika kita sudah memasukan data referensi-nya maka tekan tombol selesai untuk menyimpan data referensi kita.
+          p#judul1a Perlu diperhatikan dalam memasukan materi makalah, kita harus memisahkan semua paragraf/point sub bab/baris teks dengan 1x ENTER. contoh nya dapat dilihat pada gambar di bawah ini
 
-      p Apabila ingin atau ada referensi yang telah tersimpan tadi untuk dihapus, kita bisa tekan tombol hapus pada referensi card seperti gambar berikut.
+          p Jika telah selesai memasukan materi makalah nya, kita sudah bisa langsung me-download makalah nya jika kita tidak ingin menggunakan footnote.
 
-      p selanjutnya, kita pindah ke halaman "Home" untuk menyatukan referensi yang telah disimpan dengan materi yang kita masukan sebelumnya
+          p Tapi apabila ingin menggunakan footnote, kita harus mengikuti langkah selanjutnya
+        
+        div.line
+        h1#judul2 Langkah Kedua "Input Referensi"
+          p Silahkan pilih "Referensi" seperti gambar dibawah ini
 
-    h1#judul3 Langkah Ketiga "Menggabungkan Materi dan Referensi"
-      p Pada halaman "Home" ini, kita tekan tombol "referensi" untuk menampilkan list data referensi yang telah kita inputkan sebelumnya
+          p Pada halaman "Referensi" ini, kita terlebih dahulu memilih jenis referensi yang ingin kita inputkan, seperti: Jurnal, Buku, Website, Tesis/Skripsi/Disertasi
 
-      p Selanjutnya kita salin kode referensi dengan cara me-klik bagian yang telah dilingkari pada gambar di bawah ini
-      
-      p Apabila telah diklik maka kode referensi secara otomatis akan di salin ke papan klip, dan selanjutnya kita menempatkan kursor ke bagian yang ingin kita beri referensi sperti gambar dibawah ini.
+          p Setelah kita memilih jenis referensi, kita bisa langsung memasukan data referensi yang telah kita kumpulkan, seperti: penulis, judul, dll. 
+          
+          p Jika kita sudah memasukan data referensi-nya maka tekan tombol selesai untuk menyimpan data referensi kita.
 
-      p Jika sudah menempatkan kursor pada bagian yang di inginkan, maka kita paste kode tersebut seperti me-paste teks seperti biasanya.
+          p Apabila ingin atau ada referensi yang telah tersimpan tadi untuk dihapus, kita bisa tekan tombol hapus pada referensi card seperti gambar berikut.
 
-      p#judul3a Seandainya, kita ingin MENGGANTI NOMOR HALAM pada referensi yang telah kita gabungkan atau dalam kondisi seperti "Ibid.20, / Op.Cit,20 / Loc.Cit,20" maka kita hanya perlu menambahkan koma "," pada akhiran kode bagian dalam kurung seperti gambar di bawah ini
+          p selanjutnya, kita pindah ke halaman "Home" untuk menyatukan referensi yang telah disimpan dengan materi yang kita masukan sebelumnya
+        
+        div.line
+        h1#judul3 Langkah Ketiga "Menggabungkan Materi dan Referensi"
+          p Pada halaman "Home" ini, kita tekan tombol "referensi" untuk menampilkan list data referensi yang telah kita inputkan sebelumnya
 
-    h1#judul4 Tahap Akhir "Download Makalah dan Isi Dari Makalah Yang di Download"
-      p Selanjutnya tahap akhir, yaitu download file makalah nya. kita dapat tekan tombol download seperti gambar dibawah ini, apabila anda ingin melihat hasil semetara atau anda telah selesai membuat makalah-nya 
+          p Selanjutnya kita salin kode referensi dengan cara me-klik bagian yang telah dilingkari pada gambar di bawah ini
+          
+          p Apabila telah diklik maka kode referensi secara otomatis akan di salin ke papan klip, dan selanjutnya kita menempatkan kursor ke bagian yang ingin kita beri referensi sperti gambar dibawah ini.
 
-      p Dalam file yang anda download, dapat anda ganti namanya karena kami memberi nama bawaan file tersebut ialah "Makalah Ambo". hal tersebut kami lakukan sebagai ciri khas dari website kami
+          p Jika sudah menempatkan kursor pada bagian yang di inginkan, maka kita paste kode tersebut seperti me-paste teks seperti biasanya.
 
-      p Pada file makalah yang telah anda download, file nya berbentuk "docx" shingga teman-teman dapat mengedit tamplate yang kami buat dalam file "Makalah Ambo" tersebut. dengan harapan tamplate yang kami berikan dapat memudahkan teman-teman dalam membuat makalah.
+          p#judul3a Seandainya, kita ingin MENGGANTI NOMOR HALAM pada referensi yang telah kita gabungkan atau dalam kondisi seperti "Ibid.20, / Op.Cit,20 / Loc.Cit,20" maka kita hanya perlu menambahkan koma "," pada akhiran kode bagian dalam kurung seperti gambar di bawah ini
 
-      p jika ada hal yang ingin di tanyakan, atau ingin melaporkan bug yang teman-teman temukan. bisa langsung hubungi kami pada halaman "Tentang Kami" untuk melaporkannya melalui email ataupun media sosial kami
+        div.line
+        h1#judul4 Tahap Akhir "Download Makalah dan Isi Dari Makalah Yang di Download"
+          p Selanjutnya tahap akhir, yaitu download file makalah nya. kita dapat tekan tombol download seperti gambar dibawah ini, apabila anda ingin melihat hasil semetara atau anda telah selesai membuat makalah-nya 
+
+          p Dalam file yang anda download, dapat anda ganti namanya karena kami memberi nama bawaan file tersebut ialah "Makalah Ambo". hal tersebut kami lakukan sebagai ciri khas dari website kami
+
+          p Pada file makalah yang telah anda download, file nya berbentuk "docx" shingga teman-teman dapat mengedit tamplate yang kami buat dalam file "Makalah Ambo" tersebut. dengan harapan tamplate yang kami berikan dapat memudahkan teman-teman dalam membuat makalah.
+
+          p jika ada hal yang ingin di tanyakan, atau ingin melaporkan bug yang teman-teman temukan. bisa langsung hubungi kami pada halaman "Tentang Kami" untuk melaporkannya melalui email ataupun media sosial kami
+    
+    div.container-ads-tutor

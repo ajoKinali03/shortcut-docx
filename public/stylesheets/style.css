@@ -795,7 +795,7 @@ footer a{
   border: #797979 2px solid;
 }
 
-.ads-container{
+.container-ads-home{
   height: 85%;
   width: 100%;
 }
@@ -1014,3 +1014,79 @@ footer a{
 
 
 /* page tutorial */
+
+.tutorial{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.container-tutor{
+  width: 70%;
+  background-color: #141414;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px 10px;
+}
+
+.container-tutor #tutorial-page{
+  font-size: 3rem;
+}
+
+.container-tutor .line{
+  background-color: white;
+  width: 100%;
+}
+
+.container-tutor .daftar-isi{
+  background-color: black;
+  border-radius: 20px;
+}
+
+.container-tutor .daftar-isi p {
+  font-size: 2rem;
+  font-weight: 500;
+  padding-left: 1%;
+}
+
+.daftar-isi ul {
+  padding-left: 5%;
+  color: white;
+}
+
+.daftar-isi ul li {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.daftar-isi ul li a{
+  color: white;
+}
+
+.container-tutor .text .line{
+  width: 100%;
+  background-color: white;
+}
+
+.container-tutor .text h1{
+  color: #ffffff;
+  font-size: 2rem;
+  margin-left: 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.text h1 p{
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-left: 20px;
+  text-align: justify;
+}
+
+.container-ads-tutor{
+  width: 15%;
+}
