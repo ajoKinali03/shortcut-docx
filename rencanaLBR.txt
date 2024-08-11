@@ -1,0 +1,92 @@
+RENCANA UJI COBA PEMBUATAN WEBSITE MAKALAH OTOMATIS.
+
+A. Target User
+  1. pengguna android
+  2. membuat makalah karena terdesak
+  3. membuat makalah dengan cepat
+
+B. Design Sistem
+  1. Hanya berfokus pada isi makalah(bab pembahasan)
+  2. patokan style tergantung pada point isi(A. 1. a. dst) => design sistem awal
+  3. sistem tidak terlalu rumit
+    ^ maksudnya, dalam mendeteksi bahasa asing akan di beri tanda khusus. Untuk data data ditail akan di abaikan termasuk style font kusus terhadap kondisi tertentu seperti bahasa arab yang terselip diparagraf.
+  4. untuk mendeteksi ayat atau hadist akan diberi tanda (-ayat- -hadis- -terjmahan-)
+  5. ketika user memasukan teks copas, maka user bisa menghidupkan fitur chat-GPT untuk mengolah paragraf.
+  6. dan chat-GPT akan di atur untuk menghiraukan kutipan langsung
+  7. untuk menyusun style font untuk footnote dan daftar pustaka, mungkin akan di buat sistem terpisan atau khusus.
+  9. apa bila di temukan kata-kata yang diluar bahasa indonesia akan tetap diberikan style seperti untuk kasus typo
+  8. data dapat di simpan dan di edit
+
+C. Design UI
+  1. tampilan sederhana.
+  2. hanya menyediakan dua tombol yaitu: tombol mematikan Chat-GPT dan mengatur ayat
+  3. memberikan style khusus sperti warna merah kepada kata-kata yang typo termasuk bahasa asing.
+
+D. API yang akan digunakan
+  1. Chat-GPT link: https://rapidapi.com/neuralwriter-neuralwriter-default/api/paraphrasing-and-rewriter-api/pricing
+  2. Mandeley API link: https://github.com/Mendeley/mendeley-api-javascript-readership-map
+  3. Al-Qur'an kemenag API link: https://equran.id/apidev
+  4. KBBI API link: https://rapidapi.com/gizipp/api/indonesian-kata-baku-kbbi/pricing
+
+E. Algoritma
+  1. teks => pisahkan teks berdasarkan enter => kelompokkan bagian teks berdasarkan double enter => array tersebut dijadikan kedalam objek && diberi ID sesuai jenis data => deberi style sesuai dengan jenis data && dijadikan ke word => tahap satu selesai
+
+F. Hasil Project
+  1. KESIMPULAN
+      Setelah memlalui proses yang panjang dalam membuat website pemformat makalah otomatis, developer menyimpulkan bahwa sebsite ini dapat berjalan dengan lancar sesuai perencanaan yang telah di tentukan sebagai berikut:
+        a. code dapan mendeteksi dengan jelas penempatan identasi berdasarkan point-point materi
+        b. paragraf setelah point dapat mengikuti identasi dari point materi
+        c. style teks dan point telah sesuai dengan apa yang developer inginkan
+      Dari perencanaan tersebutlah untuk tahap awal ini website dapat berjalan lancar tanpa ada kendala yang serius sehingga untuk kedepannya website ini dapat dikembangan lagi dan dapat membantu mahasisiwa juga mempermudah dalam menulis karya ilmiah, tidak hanya makalah namun untuk kedepannya website ini juga dapat digunakan untuk pembutan skripsi, tesis, jurnal dll.
+
+  2. PENGEMBANGAN LANJUTAN
+      Website ini telah melalui tahap awal yang menjadi gerbang awal dalam pengembagan selanjutnya, oleh karena itu developer merincikan beberapa fitur yang terdiri dari fitur utama dan fitur pendukung:
+      a. Fitur Utama
+          ^ menerapkan API yang terdapat pada POINT D
+          ^ menjadikan website mudah digunakan untuk pengguna telepon seluler
+          ^ membuat layout untuk mengatur referansi
+          ^ menerapkan penyimpanan sementara
+          ^ membuat laman kusus untuk mengedit makalah
+          ^ halaman untuk tutorial singkan dan akses ke video tutorial
+
+      b. Fitur Pendukung
+          ^ membuat layout untuk pelaporan bug
+          ^ membuat layout komentar umum dan penilaian Website
+          ^ membuat sistem login dan user anonim
+          ^ membuat fitur penyimpanan dengan dataBase
+
+  3. BUG
+      Untuk tahap awal ini developer hanya menemukan satu bug tapi bug ini tidak lah terlalu vatal yaitu:
+        a. teks belum bisa menentukan dengan jelas "apa" point induknya, misal ini akan terjadi apa bila teks dari point "A" terdapat setelah point "1" maka teks akan mengikuti identasi dari point "1" bukan dari point "A". BUG ini terdapat pada file: uitls/pusat_pengolahan_data.js => line 109-17
+
+
+A. MEMBUAT MAKALAH OTMATIS FULL DENGAN PPLX-API
+
+
+NEW BUG:
+  BUG MUDAH
+    1. perbaiki penomoran, karena penomoran tidak restart setiap subab atau new parent number [selesai]
+    2. perubahan nomor pada prompt input tidak terdeteksi => -(footnote:7,'1')- [selesai]
+    3. perbeiki error frontend: referensi_set.js:89 Uncaught TypeError: Cannot read properties of null (reading 'addEventListener') at referensi_set.js:89:12 [tidak terdeteksi]
+
+  BUG SULIT
+    1. membuat sistem download file universal [selesai]
+    2. mencoba untuk memperbaiki susunan pragraf yang tidak sesuai dengan parentya [black list]
+    3. perbaiki error backend: title is not defined at eval (eval at exports.compile (E:\A-main folder\my-project\formating-docx\node_modules\jade\lib\jade.js:171:8), <anonymous>:39:58) [tidak terdeteksi]
+    
+  BUG BARU
+    1. muncul code aneh +?=ftnt!TR*_+ ketika memberikan footnote dan akan tampak pada file docx, dan hanya muncil pada teks tingkat 0 atau teks yang setingkat dengan point "A."
+  
+PERBAIKAN
+  1. membalikan nama daftar pustaka [seleseai]
+  2. melengkapi isi tamplate [selesai]
+  3. sistem penyimpanan pada frontend (indexDb) [selesai]
+    a. belajar dan pahami [20%]
+    b. perbaiki sistem penyimpanan home dan referensi [100%]
+    c. buat sistem input data melelui injeksi code [lupa ini apa]
+    d. buat riwayat/history pengguna [rencana]
+  4. tampilan website di perbagus[proses responsif]--------<
+  5. sistem validasi input
+  
+TAMBAHAN FITUR
+  1. notifikasi izin penggunaan indexDb

@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  div#container-load
+    div#loading(style="opacity:1;")
+      p SEDANG MENDOWNLOAD
+  div.container-home(style="padding:0.5%;")
+    textarea(spellcheck="false", name="text-input", cols="80", rows="20", placeholder="*Harap untuk memisahkan setiap teks dengan 1x enter.\n*Harap untuk mengisi teks lebih dari 10 kata atau 70 character\n*Untuk memasukan footnote silahkan pencet tombol copy di referensi button.\n ^Untuk mengulang referensi yang sama cukup tambahkan \"koma\" pada akhir nomor footnote dan tambahkan dengan nomor halaman. EX:\"-(footnote:1,21-25)-\".", style="padding: 20px; text-align: justify;", onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}")#form-input
+    
+    form#form-post(action="/home", method="post")
+      //- input#input-post(type="inline-block", name="postInput")
+      button.btn-home#btn-post(type="button", style="display:inline-block")
+        p Download
+      //- button.btn-home#btn-download(type="button")
+      //-   |Download
+      button.btn-home#btn-showref(type="button")
+        p Referensi
+
+    div.none(style="text-align: center; color: red; font-weight: bolder;")
+
+    //- form#form-post(action="/deleteDb", method="post")
+    //-   button(type="submit", style="width: 100px; height: 30px;")#btn-delete
+    //-     |Delete

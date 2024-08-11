@@ -1,0 +1,1445 @@
+@font-face {
+  font-family: 'sourcesanspro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(https://design.penpot.app/fonts/sourcesanspro-regular.woff) format('woff');
+}
+/* marchen */
+@font-face {
+font-family: 'Noto Sans Marchen';
+font-style: normal;
+font-weight: 400;
+font-display: block;
+src: url(https://design.penpot.app/internal/gfonts/font/notosansmarchen/v20/aFTO7OZ_Y282EP-WyG6QTOX_C8WZMEjXuIp7XLg.woff2) format('woff2');
+unicode-range: U+25CC, U+11C70-11CBF;
+}
+/* latin-ext */
+@font-face {
+font-family: 'Noto Sans Marchen';
+font-style: normal;
+font-weight: 400;
+font-display: block;
+src: url(https://design.penpot.app/internal/gfonts/font/notosansmarchen/v20/aFTO7OZ_Y282EP-WyG6QTOX_C8WZMEhGma9GZQ.woff2) format('woff2');
+unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+font-family: 'Noto Sans Marchen';
+font-style: normal;
+font-weight: 400;
+font-display: block;
+src: url(https://design.penpot.app/internal/gfonts/font/notosansmarchen/v20/aFTO7OZ_Y282EP-WyG6QTOX_C8WZMEhIma8.woff2) format('woff2');
+unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+font-family: 'Abel';
+font-style: normal;
+font-weight: 400;
+font-display: block;
+src: url(https://design.penpot.app/internal/gfonts/font/abel/v18/MwQ5bhbm2POE2V9BPQ.woff2) format('woff2');
+unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+html, body {
+margin: 0;
+min-height: 100%;
+min-width: 100%;
+padding: 0;
+}
+
+body {
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 100vw;
+min-height: 100vh;
+}
+
+* {
+box-sizing: border-box;
+}
+
+.text-node { background-clip: text !important; -webkit-background-clip: text !important; }
+
+/* Navbar */
+.navbar-c54feb3a046c {
+position: absolute;
+left: 1px;
+top: 0px;
+width: 1258px;
+height: 53px;
+}
+
+/* Text */
+.text-c550e7adc7bb {
+position: absolute;
+left: 17px;
+top: 12px;
+width: 527px;
+height: 26px;
+}
+
+/* REFERENSI */
+.referensi-c54feebfd2df {
+position: absolute;
+left: 382.07px;
+top: 0px;
+width: 144.93px;
+height: 26px;
+}
+.referensi-c54feebfd2df .root-0 {
+
+
+display: flex;
+white-space: break-spaces;
+align-items: flex-start;
+}
+.referensi-c54feebfd2df .root-0-paragraph-set-0 {
+display: inline-flex;
+flex-direction: column;
+justify-content: inherit;
+min-width: 100%;
+margin-right: 1px;
+vertical-align: top;
+}
+.referensi-c54feebfd2df .root-0-paragraph-set-0-paragraph-0 {
+font-size: 0;
+line-height: 1.2;
+margin: 0;
+text-align: left;
+}
+.referensi-c54feebfd2df .root-0-paragraph-set-0-paragraph-0-text-0 {
+color: rgba(91, 91, 91, 1);
+text-transform: none;
+
+line-break: auto;
+overflow-wrap: initial;
+white-space: break-spaces;
+text-rendering: geometricPrecision;
+caret-color: rgba(91, 91, 91, 1);
+text-decoration: none;
+letter-spacing: 0px;
+font-size: 24px;
+font-family: "Noto Sans Marchen";
+font-style: normal;
+font-weight: 400;
+}
+
+/* HOME */
+.home-c54fcab93398 {
+position: absolute;
+left: 261.3px;
+top: 0px;
+width: 82.34px;
+height: 26px;
+}
+.home-c54fcab93398 .root-0 {
+
+
+display: flex;
+white-space: break-spaces;
+align-items: flex-start;
+}
+.home-c54fcab93398 .root-0-paragraph-set-0 {
+display: inline-flex;
+flex-direction: column;
+justify-content: inherit;
+min-width: 100%;
+margin-right: 1px;
+vertical-align: top;
+}
+.home-c54fcab93398 .root-0-paragraph-set-0-paragraph-0 {
+font-size: 0;
+line-height: 1.2;
+margin: 0;
+text-align: left;
+}
+.home-c54fcab93398 .root-0-paragraph-set-0-paragraph-0-text-0 {
+color: rgba(91, 91, 91, 1);
+text-transform: none;
+
+line-break: auto;
+overflow-wrap: initial;
+white-space: break-spaces;
+text-rendering: geometricPrecision;
+caret-color: rgba(91, 91, 91, 1);
+text-decoration: none;
+letter-spacing: 0px;
+font-size: 24px;
+font-family: "Noto Sans Marchen";
+font-style: normal;
+font-weight: 400;
+}
+
+/* SHORTCUT-DOCX */
+.shortcutd-c54deaf34fef {
+position: absolute;
+left: 0px;
+top: 0px;
+width: 222.88px;
+height: 26px;
+}
+.shortcutd-c54deaf34fef .root-0 {
+
+
+display: flex;
+white-space: break-spaces;
+align-items: flex-start;
+}
+.shortcutd-c54deaf34fef .root-0-paragraph-set-0 {
+display: inline-flex;
+flex-direction: column;
+justify-content: inherit;
+min-width: 100%;
+margin-right: 1px;
+vertical-align: top;
+}
+.shortcutd-c54deaf34fef .root-0-paragraph-set-0-paragraph-0 {
+font-size: 0;
+line-height: 1.2;
+margin: 0;
+text-align: left;
+}
+.shortcutd-c54deaf34fef .root-0-paragraph-set-0-paragraph-0-text-0 {
+color: rgba(0, 0, 0, 1);
+text-transform: none;
+
+line-break: auto;
+overflow-wrap: initial;
+white-space: break-spaces;
+text-rendering: geometricPrecision;
+caret-color: rgba(0, 0, 0, 1);
+text-decoration: none;
+letter-spacing: 0px;
+font-style: normal;
+font-size: 24px;
+font-family: "Noto Sans Marchen";
+font-weight: 400;
+}
+
+/* navbar */
+.navbar-c54cb47c3185 {
+position: absolute;
+left: 0px;
+top: 0px;
+width: 1258px;
+height: 53px;
+background: #E7E8EC;
+border-radius: 0px;
+}
+
+/* Hero */
+.hero-c550f8b3a3f2 {
+position: absolute;
+left: 0px;
+top: 53px;
+width: 1258px;
+height: 368px;
+}
+
+/* text */
+.text-c55100b4cb3a {
+position: absolute;
+left: 12px;
+top: 92px;
+width: 690px;
+height: 126px;
+}
+
+/* Group */
+.group-c5d3a91bd6ed {
+position: absolute;
+left: 6px;
+top: 87px;
+width: 684px;
+height: 39px;
+}
+
+/* Social Media */
+.social-med-c5d3c194191a {
+position: absolute;
+left: 470.79px;
+top: 0px;
+width: 213.21px;
+height: 39px;
+}
+.social-med-c5d3c194191a .root-0 {
+
+
+display: flex;
+white-space: break-spaces;
+align-items: flex-start;
+}
+.social-med-c5d3c194191a .root-0-paragraph-set-0 {
+display: inline-flex;
+flex-direction: column;
+justify-content: inherit;
+min-width: 100%;
+margin-right: 1px;
+vertical-align: top;
+}
+.social-med-c5d3c194191a .root-0-paragraph-set-0-paragraph-0 {
+font-size: 0;
+line-height: 1.2;
+margin: 0;
+text-align: left;
+}
+.social-med-c5d3c194191a .root-0-paragraph-set-0-paragraph-0-text-0 {
+color: rgba(255, 255, 255, 1);
+text-transform: none;
+
+line-break: auto;
+overflow-wrap: initial;
+white-space: break-spaces;
+text-rendering: geometricPrecision;
+caret-color: rgba(255, 255, 255, 1);
+text-decoration: none;
+letter-spacing: 0px;
+font-size: 35px;
+font-family: "Abel";
+font-style: normal;
+font-weight: 400;
+}
+
+/* Cara Menggunakan */
+.cara-mengg-c5d357a60a7d {
+position: absolute;
+left: 134.95px;
+top: 0px;
+width: 313.04px;
+height: 39px;
+}
+.cara-mengg-c5d357a60a7d .root-0 {
+
+
+display: flex;
+white-space: break-spaces;
+align-items: flex-start;
+}
+.cara-mengg-c5d357a60a7d .root-0-paragraph-set-0 {
+display: inline-flex;
+flex-direction: column;
+justify-content: inherit;
+min-width: 100%;
+margin-right: 1px;
+vertical-align: top;
+}
+.cara-mengg-c5d357a60a7d .root-0-paragraph-set-0-paragraph-0 {
+font-size: 0;
+line-height: 1.2;
+margin: 0;
+text-align: left;
+}
+.cara-mengg-c5d357a60a7d .root-0-paragraph-set-0-paragraph-0-text-0 {
+color: rgba(255, 255, 255, 1);
+text-transform: none;
+
+line-break: auto;
+overflow-wrap: initial;
+white-space: break-spaces;
+text-rendering: geometricPrecision;
+caret-color: rgba(255, 255, 255, 1);
+text-decoration: none;
+letter-spacing: 0px;
+font-size: 35px;
+font-family: "Abel";
+font-style: normal;
+font-weight: 400;
+}
+
+/* Intro */
+.intro-c5d32b8f31b2 {
+position: absolute;
+left: 0px;
+top: 0px;
+width: 112.15px;
+height: 39px;
+}
+.intro-c5d32b8f31b2 .root-0 {
+
+
+display: flex;
+white-space: break-spaces;
+align-items: flex-start;
+}
+.intro-c5d32b8f31b2 .root-0-paragraph-set-0 {
+display: inline-flex;
+flex-direction: column;
+justify-content: inherit;
+min-width: 100%;
+margin-right: 1px;
+vertical-align: top;
+}
+.intro-c5d32b8f31b2 .root-0-paragraph-set-0-paragraph-0 {
+font-size: 0;
+line-height: 1.2;
+margin: 0;
+text-align: left;
+}
+.intro-c5d32b8f31b2 .root-0-paragraph-set-0-paragraph-0-text-0 {
+color: rgba(255, 255, 255, 1);
+text-transform: none;
+
+line-break: auto;
+overflow-wrap: initial;
+white-space: break-spaces;
+text-rendering: geometricPrecision;
+caret-color: rgba(255, 255, 255, 1);
+text-decoration: none;
+letter-spacing: 0px;
+font-size: 35px;
+font-family: "Abel";
+font-style: normal;
+font-weight: 400;
+}
+
+/* Rectangle */
+.rectangle-c5d51fed93f1 {
+position: absolute;
+left: 6px;
+top: 87px;
+width: 639px;
+height: 3px;
+background: #F7F7F7;
+border-radius: 10px;
+}
+
+/* SHORTCUT-DOCX */
+.shortcutd-c550b8a74370 {
+position: absolute;
+left: 0px;
+top: 0px;
+width: 461px;
+height: 87px;
+}
+.shortcutd-c550b8a74370 .root-0 {
+
+
+display: flex;
+white-space: break-spaces;
+align-items: flex-start;
+}
+.shortcutd-c550b8a74370 .root-0-paragraph-set-0 {
+display: inline-flex;
+flex-direction: column;
+justify-content: inherit;
+
+margin-right: 1px;
+vertical-align: top;
+}
+.shortcutd-c550b8a74370 .root-0-paragraph-set-0-paragraph-0 {
+font-size: 0;
+line-height: 1.2;
+margin: 0;
+text-align: center;
+}
+.shortcutd-c550b8a74370 .root-0-paragraph-set-0-paragraph-0-text-0 {
+color: rgba(202, 202, 202, 1);
+text-transform: none;
+
+line-break: auto;
+overflow-wrap: initial;
+white-space: pre;
+text-rendering: geometricPrecision;
+caret-color: rgba(202, 202, 202, 1);
+text-decoration: none;
+letter-spacing: 0px;
+font-size: 72px;
+font-family: "Abel";
+font-style: normal;
+font-weight: 400;
+}
+
+/* hero */
+.hero-c549ec4ada45 {
+position: absolute;
+left: 0px;
+top: 0px;
+width: 1258px;
+height: 368px;
+background: #000000;
+border: 1px solid #FFFFFF;
+border-radius: 0px;
+}
+
+/* footer */
+.footer-c5f306a01bff {
+position: absolute;
+left: 0px;
+top: 3228px;
+width: 1259px;
+height: 49px;
+}
+
+/* FOOTER */
+.footer-c5f2c4ea055a {
+position: absolute;
+left: 516px;
+top: 12px;
+width: 228px;
+height: 21px;
+}
+.footer-c5f2c4ea055a .root-0 {
+
+
+display: flex;
+white-space: break-spaces;
+align-items: flex-start;
+}
+.footer-c5f2c4ea055a .root-0-paragraph-set-0 {
+display: inline-flex;
+flex-direction: column;
+justify-content: inherit;
+min-width: 100%;
+margin-right: 1px;
+vertical-align: top;
+}
+.footer-c5f2c4ea055a .root-0-paragraph-set-0-paragraph-0 {
+font-size: 0;
+line-height: 1.2;
+margin: 0;
+text-align: center;
+}
+.footer-c5f2c4ea055a .root-0-paragraph-set-0-paragraph-0-text-0 {
+color: rgba(0, 0, 0, 1);
+text-transform: none;
+
+line-break: auto;
+overflow-wrap: initial;
+white-space: break-spaces;
+text-rendering: geometricPrecision;
+caret-color: rgba(0, 0, 0, 1);
+text-decoration: none;
+letter-spacing: 0px;
+font-size: 24px;
+font-family: "sourcesanspro";
+font-style: normal;
+font-weight: 400;
+}
+
+/* footer */
+.footer-c5f2a4d800a4 {
+position: absolute;
+left: 0px;
+top: 0px;
+width: 1259px;
+height: 49px;
+background: #B1B2B5;
+border-radius: 0px;
+}
+
+/* Content */
+.content-c5db22a0f6cc {
+position: absolute;
+left: 184px;
+top: 418px;
+width: 892px;
+height: 2859px;
+}
+
+/* text */
+.text-c5db2e3d0d09 {
+position: absolute;
+left: 19px;
+top: 9px;
+width: 839px;
+height: 1663px;
+}
+
+/* Group */
+.group-c5e442c6a499 {
+position: absolute;
+left: 1px;
+top: 1526px;
+width: 838px;
+height: 137px;
+}
+
+/* Mari bergabung dengan kami di shortcut-docx dan nikmati kemudahan dalam menyelesaikan tugas akademik Anda. Terima kasih telah mengunjungi, dan kami berharap dapat membantu Anda meraih kesuksesan dalam studi Anda! */
+.mari-berga-c5e442c6a49c {
+position: absolute;
+left: 0px;
+top: 0px;
+width: 838px;
+height: 137px;
+}
+.mari-berga-c5e442c6a49c .root-0 {
+
+
+display: flex;
+white-space: break-spaces;
+align-items: flex-start;
+}
+.mari-berga-c5e442c6a49c .root-0-paragraph-set-0 {
+display: inline-flex;
+flex-direction: column;
+justify-content: inherit;
+min-width: 100%;
+margin-right: 1px;
+vertical-align: top;
+}
+.mari-berga-c5e442c6a49c .root-0-paragraph-set-0-paragraph-0 {
+font-size: 0;
+line-height: 1.5;
+margin: 0;
+text-align: justify;
+}
+.mari-berga-c5e442c6a49c .root-0-paragraph-set-0-paragraph-0-text-0 {
+color: rgba(154, 154, 154, 1);
+text-transform: unset;
+
+line-break: auto;
+overflow-wrap: initial;
+white-space: break-spaces;
+text-rendering: geometricPrecision;
+caret-color: rgba(154, 154, 154, 1);
+text-decoration: none;
+letter-spacing: 0px;
+font-size: 27px;
+font-family: "Abel";
+font-style: normal;
+font-weight: 400;
+}
+
+/* Rectangle */
+.rectangle-c5e442c6a49b {
+position: absolute;
+left: 0px;
+top: 125px;
+width: 838px;
+height: 3px;
+background: #F7F7F7;
+border-radius: 10px;
+}
+
+/* Group */
+.group-c5e39f65f004 {
+position: absolute;
+left: 1px;
+top: 1167px;
+width: 838px;
+height: 310px;
+}
+
+/* Hemat Waktu: Dengan shortcut-docx, Anda bisa menghemat waktu dalam proses penulisan dan format makalah.
+Mudah Digunakan: Akses shortcut-docx dari laptop maupun handphone Anda dengan mudah.
+Efisiensi Maksimal: Alat ini dirancang untuk memberikan kemudahan dan efisiensi dalam setia */
+.hemat-wakt-c5e39f65f007 {
+position: absolute;
+left: 0px;
+top: 45px;
+width: 838px;
+height: 265px;
+}
+.hemat-wakt-c5e39f65f007 .root-0 {
+
+
+display: flex;
+white-space: break-spaces;
+align-items: flex-start;
+}
+.hemat-wakt-c5e39f65f007 .root-0-paragraph-set-0 {
+display: inline-flex;
+flex-direction: column;
+justify-content: inherit;
+min-width: 100%;
+margin-right: 1px;
+vertical-align: top;
+}
+.hemat-wakt-c5e39f65f007 .root-0-paragraph-set-0-paragraph-0 {
+font-size: 0;
+line-height: 1.5;
+margin: 0;
+text-align: justify;
+}
+.hemat-wakt-c5e39f65f007 .root-0-paragraph-set-0-paragraph-0-text-0 {
+color: rgba(154, 154, 154, 1);
+text-transform: unset;
+
+line-break: auto;
+overflow-wrap: initial;
+white-space: break-spaces;
+text-rendering: geometricPrecision;
+caret-color: rgba(154, 154, 154, 1);
+text-decoration: underline;
+letter-spacing: 0px;
+font-size: 27px;
+font-family: "Abel";
+font-style: normal;
+font-weight: 400;
+}
+.hemat-wakt-c5e39f65f007 .root-0-paragraph-set-0-paragraph-0-text-1 {
+color: rgba(154, 154, 154, 1);
+text-transform: unset;
+
+line-break: auto;
+overflow-wrap: initial;
+white-space: break-spaces;
+text-rendering: geometricPrecision;
+caret-color: rgba(154, 154, 154, 1);
+text-decoration: none;
+letter-spacing: 0px;
+font-size: 27px;
+font-family: "Abel";
+font-style: normal;
+font-weight: 400;
+}
+.hemat-wakt-c5e39f65f007 .root-0-paragraph-set-0-paragraph-1 {
+font-size: 0;
+line-height: 1.5;
+margin: 0;
+text-align: justify;
+}
+.hemat-wakt-c5e39f65f007 .root-0-paragraph-set-0-paragraph-1-text-0 {
+color: rgba(154, 154, 154, 1);
+text-transform: unset;
+
+line-break: auto;
+overflow-wrap: initial;
+white-space: break-spaces;
+text-rendering: geometricPrecision;
+caret-color: rgba(154, 154, 154, 1);
+text-decoration: underline;
+letter-spacing: 0px;
+font-size: 27px;
+font-family: "Abel";
+font-style: normal;
+font-weight: 400;
+}
+.hemat-wakt-c5e39f65f007 .root-0-paragraph-set-0-paragraph-1-text-1 {
+color: rgba(154, 154, 154, 1);
+text-transform: unset;
+
+line-break: auto;
+overflow-wrap: initial;
+white-space: break-spaces;
+text-rendering: geometricPrecision;
+caret-color: rgba(154, 154, 154, 1);
+text-decoration: none;
+letter-spacing: 0px;
+font-size: 27px;
+font-family: "Abel";
+font-style: normal;
+font-weight: 400;
+}
+.hemat-wakt-c5e39f65f007 .root-0-paragraph-set-0-paragraph-2 {
+font-size: 0;
+line-height: 1.5;
+margin: 0;
+text-align: justify;
+}
+.hemat-wakt-c5e39f65f007 .root-0-paragraph-set-0-paragraph-2-text-0 {
+color: rgba(154, 154, 154, 1);
+text-transform: unset;
+
+line-break: auto;
+overflow-wrap: initial;
+white-space: break-spaces;
+text-rendering: geometricPrecision;
+caret-color: rgba(154, 154, 154, 1);
+text-decoration: underline;
+letter-spacing: 0px;
+font-size: 27px;
+font-family: "Abel";
+font-style: normal;
+font-weight: 400;
+}
+.hemat-wakt-c5e39f65f007 .root-0-paragraph-set-0-paragraph-2-text-1 {
+color: rgba(154, 154, 154, 1);
+text-transform: unset;
+
+line-break: auto;
+overflow-wrap: initial;
+white-space: break-spaces;
+text-rendering: geometricPrecision;
+caret-color: rgba(154, 154, 154, 1);
+text-decoration: none;
+letter-spacing: 0px;
+font-size: 27px;
+font-family: "Abel";
+font-style: normal;
+font-weight: 400;
+}
+
+/* Rectangle */
+.rectangle-c5e39f65f006 {
+position: absolute;
+left: 0px;
+top: 39px;
+width: 838px;
+height: 3px;
+background: #F7F7F7;
+border-radius: 10px;
+}
+
+/* Manfaat yang akan Anda dapatkan: */
+.manfaat-ya-c5e39f65f005 {
+position: absolute;
+left: 0px;
+top: 0px;
+width: 511px;
+height: 35px;
+}
+.manfaat-ya-c5e39f65f005 .root-0 {
+
+
+display: flex;
+white-space: break-spaces;
+align-items: flex-start;
+}
+.manfaat-ya-c5e39f65f005 .root-0-paragraph-set-0 {
+display: inline-flex;
+flex-direction: column;
+justify-content: inherit;
+min-width: 100%;
+margin-right: 1px;
+vertical-align: top;
+}
+.manfaat-ya-c5e39f65f005 .root-0-paragraph-set-0-paragraph-0 {
+font-size: 0;
+line-height: 1.2;
+margin: 0;
+text-align: left;
+}
+.manfaat-ya-c5e39f65f005 .root-0-paragraph-set-0-paragraph-0-text-0 {
+color: rgba(255, 255, 255, 1);
+text-transform: none;
+
+line-break: auto;
+overflow-wrap: initial;
+white-space: break-spaces;
+text-rendering: geometricPrecision;
+caret-color: rgba(255, 255, 255, 1);
+text-decoration: none;
+letter-spacing: 0px;
+font-size: 30px;
+font-family: "Abel";
+font-style: normal;
+font-weight: 400;
+}
+
+/* Group */
+.group-c5e3406ea0b4 {
+position: absolute;
+left: 1px;
+top: 954px;
+width: 838px;
+height: 181px;
+}
+
+/* Kami berkomitmen untuk mempermudah pekerjaan mahasiswa dalam pembuatan makalah, sehingga Anda bisa lebih fokus pada konten dan analisis, bukan pada format. */
+.kami-berko-c5e3406ea0b7 {
+position: absolute;
+left: 0px;
+top: 45px;
+width: 838px;
+height: 136px;
+}
+.kami-berko-c5e3406ea0b7 .root-0 {
+
+
+display: flex;
+white-space: break-spaces;
+align-items: flex-start;
+}
+.kami-berko-c5e3406ea0b7 .root-0-paragraph-set-0 {
+display: inline-flex;
+flex-direction: column;
+justify-content: inherit;
+min-width: 100%;
+margin-right: 1px;
+vertical-align: top;
+}
+.kami-berko-c5e3406ea0b7 .root-0-paragraph-set-0-paragraph-0 {
+font-size: 0;
+line-height: 1.5;
+margin: 0;
+text-align: justify;
+}
+.kami-berko-c5e3406ea0b7 .root-0-paragraph-set-0-paragraph-0-text-0 {
+color: rgba(154, 154, 154, 1);
+text-transform: none;
+
+line-break: auto;
+overflow-wrap: initial;
+white-space: break-spaces;
+text-rendering: geometricPrecision;
+caret-color: rgba(154, 154, 154, 1);
+text-decoration: none;
+letter-spacing: 0px;
+font-size: 30px;
+font-family: "Abel";
+font-style: normal;
+font-weight: 400;
+}
+
+/* Rectangle */
+.rectangle-c5e3406ea0b6 {
+position: absolute;
+left: 0px;
+top: 39px;
+width: 838px;
+height: 3px;
+background: #F7F7F7;
+border-radius: 10px;
+}
+
+/* Tujuan kami: */
+.tujuan-kam-c5e3406ea0b5 {
+position: absolute;
+left: 0px;
+top: 0px;
+width: 511px;
+height: 35px;
+}
+.tujuan-kam-c5e3406ea0b5 .root-0 {
+
+
+display: flex;
+white-space: break-spaces;
+align-items: flex-start;
+}
+.tujuan-kam-c5e3406ea0b5 .root-0-paragraph-set-0 {
+display: inline-flex;
+flex-direction: column;
+justify-content: inherit;
+min-width: 100%;
+margin-right: 1px;
+vertical-align: top;
+}
+.tujuan-kam-c5e3406ea0b5 .root-0-paragraph-set-0-paragraph-0 {
+font-size: 0;
+line-height: 1.2;
+margin: 0;
+text-align: left;
+}
+.tujuan-kam-c5e3406ea0b5 .root-0-paragraph-set-0-paragraph-0-text-0 {
+color: rgba(255, 255, 255, 1);
+text-transform: none;
+
+line-break: auto;
+overflow-wrap: initial;
+white-space: break-spaces;
+text-rendering: geometricPrecision;
+caret-color: rgba(255, 255, 255, 1);
+text-decoration: none;
+letter-spacing: 0px;
+font-size: 30px;
+font-family: "Abel";
+font-style: normal;
+font-weight: 400;
+}
+
+/* Group */
+.group-c5e1eedcc589 {
+position: absolute;
+left: 1px;
+top: 616px;
+width: 838px;
+height: 323px;
+}
+
+/* Prosesnya sangat sederhana:
+  *  Masukkan materi yang ingin Anda sertakan dalam makalah.
+* Shortcut-docx akan mengolah materi tersebut menjadi template makalah yang sudah terformat dengan rapi.
+* Daftar pustaka dan catatan kaki akan disusun secara otomatis sesuai dengan sta */
+.prosesnya-c5e1eedcc58c {
+position: absolute;
+left: 0px;
+top: 45px;
+width: 838px;
+height: 278px;
+}
+.prosesnya-c5e1eedcc58c .root-0 {
+
+
+display: flex;
+white-space: break-spaces;
+align-items: flex-start;
+}
+.prosesnya-c5e1eedcc58c .root-0-paragraph-set-0 {
+display: inline-flex;
+flex-direction: column;
+justify-content: inherit;
+min-width: 100%;
+margin-right: 1px;
+vertical-align: top;
+}
+.prosesnya-c5e1eedcc58c .root-0-paragraph-set-0-paragraph-0 {
+font-size: 0;
+line-height: 1.5;
+margin: 0;
+text-align: justify;
+}
+.prosesnya-c5e1eedcc58c .root-0-paragraph-set-0-paragraph-0-text-0 {
+color: rgba(154, 154, 154, 1);
+text-transform: none;
+
+line-break: auto;
+overflow-wrap: initial;
+white-space: break-spaces;
+text-rendering: geometricPrecision;
+caret-color: rgba(154, 154, 154, 1);
+text-decoration: none;
+letter-spacing: 0px;
+font-size: 30px;
+font-family: "Abel";
+font-style: normal;
+font-weight: 400;
+}
+.prosesnya-c5e1eedcc58c .root-0-paragraph-set-0-paragraph-1 {
+font-size: 0;
+line-height: 1.5;
+margin: 0;
+text-align: justify;
+}
+.prosesnya-c5e1eedcc58c .root-0-paragraph-set-0-paragraph-1-text-0 {
+color: rgba(154, 154, 154, 1);
+text-transform: none;
+
+line-break: auto;
+overflow-wrap: initial;
+white-space: break-spaces;
+text-rendering: geometricPrecision;
+caret-color: rgba(154, 154, 154, 1);
+text-decoration: none;
+letter-spacing: 0px;
+font-size: 30px;
+font-family: "Abel";
+font-style: normal;
+font-weight: 400;
+}
+.prosesnya-c5e1eedcc58c .root-0-paragraph-set-0-paragraph-1-text-1 {
+color: rgba(154, 154, 154, 1);
+text-transform: none;
+
+line-break: auto;
+overflow-wrap: initial;
+white-space: break-spaces;
+text-rendering: geometricPrecision;
+caret-color: rgba(154, 154, 154, 1);
+text-decoration: none;
+letter-spacing: 0px;
+font-size: 25px;
+font-family: "Abel";
+font-style: normal;
+font-weight: 400;
+}
+.prosesnya-c5e1eedcc58c .root-0-paragraph-set-0-paragraph-2 {
+font-size: 0;
+line-height: 1.5;
+margin: 0;
+text-align: justify;
+}
+.prosesnya-c5e1eedcc58c .root-0-paragraph-set-0-paragraph-2-text-0 {
+color: rgba(154, 154, 154, 1);
+text-transform: none;
+
+line-break: auto;
+overflow-wrap: initial;
+white-space: break-spaces;
+text-rendering: geometricPrecision;
+caret-color: rgba(154, 154, 154, 1);
+text-decoration: none;
+letter-spacing: 0px;
+font-size: 30px;
+font-family: "Abel";
+font-style: normal;
+font-weight: 400;
+}
+.prosesnya-c5e1eedcc58c .root-0-paragraph-set-0-paragraph-2-text-1 {
+color: rgba(154, 154, 154, 1);
+text-transform: none;
+
+line-break: auto;
+overflow-wrap: initial;
+white-space: break-spaces;
+text-rendering: geometricPrecision;
+caret-color: rgba(154, 154, 154, 1);
+text-decoration: none;
+letter-spacing: 0px;
+font-size: 25px;
+font-family: "Abel";
+font-style: normal;
+font-weight: 400;
+}
+.prosesnya-c5e1eedcc58c .root-0-paragraph-set-0-paragraph-3 {
+font-size: 0;
+line-height: 1.5;
+margin: 0;
+text-align: justify;
+}
+.prosesnya-c5e1eedcc58c .root-0-paragraph-set-0-paragraph-3-text-0 {
+color: rgba(154, 154, 154, 1);
+text-transform: none;
+
+line-break: auto;
+overflow-wrap: initial;
+white-space: break-spaces;
+text-rendering: geometricPrecision;
+caret-color: rgba(154, 154, 154, 1);
+text-decoration: none;
+letter-spacing: 0px;
+font-size: 30px;
+font-family: "Abel";
+font-style: normal;
+font-weight: 400;
+}
+.prosesnya-c5e1eedcc58c .root-0-paragraph-set-0-paragraph-3-text-1 {
+color: rgba(154, 154, 154, 1);
+text-transform: none;
+
+line-break: auto;
+overflow-wrap: initial;
+white-space: break-spaces;
+text-rendering: geometricPrecision;
+caret-color: rgba(154, 154, 154, 1);
+text-decoration: none;
+letter-spacing: 0px;
+font-size: 25px;
+font-family: "Abel";
+font-style: normal;
+font-weight: 400;
+}
+
+/* Rectangle */
+.rectangle-c5e1eedcc58b {
+position: absolute;
+left: 0px;
+top: 39px;
+width: 838px;
+height: 3px;
+background: #F7F7F7;
+border-radius: 10px;
+}
+
+/* Bagaimana cara kerjanya? */
+.bagaimana-c5e1eedcc58a {
+position: absolute;
+left: 0px;
+top: 0px;
+width: 511px;
+height: 35px;
+}
+.bagaimana-c5e1eedcc58a .root-0 {
+
+
+display: flex;
+white-space: break-spaces;
+align-items: flex-start;
+}
+.bagaimana-c5e1eedcc58a .root-0-paragraph-set-0 {
+display: inline-flex;
+flex-direction: column;
+justify-content: inherit;
+min-width: 100%;
+margin-right: 1px;
+vertical-align: top;
+}
+.bagaimana-c5e1eedcc58a .root-0-paragraph-set-0-paragraph-0 {
+font-size: 0;
+line-height: 1.2;
+margin: 0;
+text-align: left;
+}
+.bagaimana-c5e1eedcc58a .root-0-paragraph-set-0-paragraph-0-text-0 {
+color: rgba(255, 255, 255, 1);
+text-transform: none;
+
+line-break: auto;
+overflow-wrap: initial;
+white-space: break-spaces;
+text-rendering: geometricPrecision;
+caret-color: rgba(255, 255, 255, 1);
+text-decoration: none;
+letter-spacing: 0px;
+font-size: 30px;
+font-family: "Abel";
+font-style: normal;
+font-weight: 400;
+}
+
+/* Group */
+.group-c5e0cde5d4c3 {
+position: absolute;
+left: 1px;
+top: 367px;
+width: 838px;
+height: 283px;
+}
+
+/* Shortcut-docx dibuat untuk membantu para mahasiswa agar dapat menyelesaikan makalah dengan lebih cepat dan lebih mudah. Tidak perlu lagi repot mengatur format dan detail makalah secara manual, karena kami yang akan melakukannya untuk Anda. */
+.shortcutd-c5e0cde5d4c6 {
+position: absolute;
+left: 0px;
+top: 45px;
+width: 838px;
+height: 238px;
+}
+.shortcutd-c5e0cde5d4c6 .root-0 {
+
+
+display: flex;
+white-space: break-spaces;
+align-items: flex-start;
+}
+.shortcutd-c5e0cde5d4c6 .root-0-paragraph-set-0 {
+display: inline-flex;
+flex-direction: column;
+justify-content: inherit;
+min-width: 100%;
+margin-right: 1px;
+vertical-align: top;
+}
+.shortcutd-c5e0cde5d4c6 .root-0-paragraph-set-0-paragraph-0 {
+font-size: 0;
+line-height: 1.5;
+margin: 0;
+text-align: justify;
+}
+.shortcutd-c5e0cde5d4c6 .root-0-paragraph-set-0-paragraph-0-text-0 {
+color: rgba(154, 154, 154, 1);
+text-transform: none;
+
+line-break: auto;
+overflow-wrap: initial;
+white-space: break-spaces;
+text-rendering: geometricPrecision;
+caret-color: rgba(154, 154, 154, 1);
+text-decoration: none;
+letter-spacing: 0px;
+font-size: 30px;
+font-family: "Abel";
+font-style: normal;
+font-weight: 400;
+}
+
+/* Rectangle */
+.rectangle-c5e0cde5d4c5 {
+position: absolute;
+left: 0px;
+top: 39px;
+width: 838px;
+height: 3px;
+background: #F7F7F7;
+border-radius: 10px;
+}
+
+/* Kenapa memilih shortcut-docx? */
+.kenapa-mem-c5e0cde5d4c4 {
+position: absolute;
+left: 0px;
+top: 0px;
+width: 511px;
+height: 35px;
+}
+.kenapa-mem-c5e0cde5d4c4 .root-0 {
+
+
+display: flex;
+white-space: break-spaces;
+align-items: flex-start;
+}
+.kenapa-mem-c5e0cde5d4c4 .root-0-paragraph-set-0 {
+display: inline-flex;
+flex-direction: column;
+justify-content: inherit;
+min-width: 100%;
+margin-right: 1px;
+vertical-align: top;
+}
+.kenapa-mem-c5e0cde5d4c4 .root-0-paragraph-set-0-paragraph-0 {
+font-size: 0;
+line-height: 1.2;
+margin: 0;
+text-align: left;
+}
+.kenapa-mem-c5e0cde5d4c4 .root-0-paragraph-set-0-paragraph-0-text-0 {
+color: rgba(255, 255, 255, 1);
+text-transform: none;
+
+line-break: auto;
+overflow-wrap: initial;
+white-space: break-spaces;
+text-rendering: geometricPrecision;
+caret-color: rgba(255, 255, 255, 1);
+text-decoration: none;
+letter-spacing: 0px;
+font-size: 30px;
+font-family: "Abel";
+font-style: normal;
+font-weight: 400;
+}
+
+/* Group */
+.group-c5e0c697b189 {
+position: absolute;
+left: 0px;
+top: 71px;
+width: 838px;
+height: 286px;
+}
+
+/* Kami dengan senang hati memperkenalkan shortcut-docx, sebuah alat inovatif yang dirancang khusus untuk mempermudah Anda dalam mengerjakan makalah. Shortcut-docx adalah solusi tepat bagi Anda yang menginginkan kemudahan dan efisiensi dalam menyiapkan tugas akademik. */
+.kami-denga-c5dfee11bfda {
+position: absolute;
+left: 0px;
+top: 48px;
+width: 838px;
+height: 238px;
+}
+.kami-denga-c5dfee11bfda .root-0 {
+
+
+display: flex;
+white-space: break-spaces;
+align-items: flex-start;
+}
+.kami-denga-c5dfee11bfda .root-0-paragraph-set-0 {
+display: inline-flex;
+flex-direction: column;
+justify-content: inherit;
+min-width: 100%;
+margin-right: 1px;
+vertical-align: top;
+}
+.kami-denga-c5dfee11bfda .root-0-paragraph-set-0-paragraph-0 {
+font-size: 0;
+line-height: 1.5;
+margin: 0;
+text-align: justify;
+}
+.kami-denga-c5dfee11bfda .root-0-paragraph-set-0-paragraph-0-text-0 {
+color: rgba(154, 154, 154, 1);
+text-transform: none;
+
+line-break: auto;
+overflow-wrap: initial;
+white-space: break-spaces;
+text-rendering: geometricPrecision;
+caret-color: rgba(154, 154, 154, 1);
+text-decoration: none;
+letter-spacing: 0px;
+font-size: 30px;
+font-family: "Abel";
+font-style: normal;
+font-weight: 400;
+}
+
+/* Rectangle */
+.rectangle-c5e07ed569c6 {
+position: absolute;
+left: 0px;
+top: 39px;
+width: 838px;
+height: 3px;
+background: #F7F7F7;
+border-radius: 10px;
+}
+
+/* Halo para mahasiswa dan pengunjung! */
+.halo-para-c5dfa8ee1de3 {
+position: absolute;
+left: 0px;
+top: 0px;
+width: 511px;
+height: 35px;
+}
+.halo-para-c5dfa8ee1de3 .root-0 {
+
+
+display: flex;
+white-space: break-spaces;
+align-items: flex-start;
+}
+.halo-para-c5dfa8ee1de3 .root-0-paragraph-set-0 {
+display: inline-flex;
+flex-direction: column;
+justify-content: inherit;
+min-width: 100%;
+margin-right: 1px;
+vertical-align: top;
+}
+.halo-para-c5dfa8ee1de3 .root-0-paragraph-set-0-paragraph-0 {
+font-size: 0;
+line-height: 1.2;
+margin: 0;
+text-align: left;
+}
+.halo-para-c5dfa8ee1de3 .root-0-paragraph-set-0-paragraph-0-text-0 {
+color: rgba(255, 255, 255, 1);
+text-transform: none;
+
+line-break: auto;
+overflow-wrap: initial;
+white-space: break-spaces;
+text-rendering: geometricPrecision;
+caret-color: rgba(255, 255, 255, 1);
+text-decoration: none;
+letter-spacing: 0px;
+font-size: 30px;
+font-family: "Abel";
+font-style: normal;
+font-weight: 400;
+}
+
+/* Selamat Datang di SHORTCUT-DOCX! */
+.selamat-da-c5dafc20d2b6 {
+position: absolute;
+left: 0px;
+top: 0px;
+width: 572px;
+height: 71px;
+}
+.selamat-da-c5dafc20d2b6 .root-0 {
+
+
+display: flex;
+white-space: break-spaces;
+align-items: flex-start;
+}
+.selamat-da-c5dafc20d2b6 .root-0-paragraph-set-0 {
+display: inline-flex;
+flex-direction: column;
+justify-content: inherit;
+min-width: 100%;
+margin-right: 1px;
+vertical-align: top;
+}
+.selamat-da-c5dafc20d2b6 .root-0-paragraph-set-0-paragraph-0 {
+font-size: 0;
+line-height: 1.2;
+margin: 0;
+text-align: left;
+}
+.selamat-da-c5dafc20d2b6 .root-0-paragraph-set-0-paragraph-0-text-0 {
+color: rgba(255, 255, 255, 1);
+text-transform: none;
+
+line-break: auto;
+overflow-wrap: initial;
+white-space: break-spaces;
+text-rendering: geometricPrecision;
+caret-color: rgba(255, 255, 255, 1);
+text-decoration: none;
+letter-spacing: 0px;
+font-size: 40px;
+font-family: "Abel";
+font-style: normal;
+font-weight: 400;
+}
+
+/* content */
+.content-c551c355eb0a {
+position: absolute;
+left: 0px;
+top: 0px;
+width: 892px;
+height: 2859px;
+background: #000000;
+border-radius: 0px;
+}
