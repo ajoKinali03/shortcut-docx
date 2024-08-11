@@ -178,9 +178,9 @@ function crtCntrShwRef(respon, bool) {
       shwRefHome.style.fontWeight = "";
       crtShowDtHome(respon, listItemChild);
     } else {
-      shwRefHome.style.textAlign = "center";
-      shwRefHome.style.color = "red";
-      shwRefHome.style.fontWeight = "bolder";
+      // shwRefHome.style.textAlign = "center";
+      // shwRefHome.style.color = "red";
+      // shwRefHome.style.fontWeight = "bolder";
       shwRefHome.innerText = respon;
     }
   } else {

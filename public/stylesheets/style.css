@@ -8,9 +8,21 @@
   /* outline: 1px red solid; */
 }
 
+/* page layout */
+/* page index */
+/* page home */
+/* page referensi */
+/* page tutorial */
+/* page tentang kami */
+/* page kebijakan privasi */
+
+
 /* responsif */
 /* desktop */
 @media (min-width: 901px) {
+
+  /* page layout */
+
   .navbar {
     height: 8vh;
   }
@@ -25,12 +37,14 @@
   .tgl-view {
     display: block;
   }
-  .drop-menu{
+  .drop-menu {
     width: 35%;
   }
-  .drop-menu-none{
+  .drop-menu-none {
     display: none;
   }
+
+  /* page index */
 
   @keyframes playDesk {
     0% {
@@ -79,7 +93,8 @@
     font-weight: 200;
   }
   .hero-parent .container-txt a {
-    font-size: 1.8vw;
+    font-size: 1.6vw;
+    padding-right: calc(100% / 10);
   }
 
   .content {
@@ -97,6 +112,95 @@
   .content h1 .text .judul {
     font-size: 1.4rem;
   }
+
+
+  /* page home */
+  
+  .container-home textarea {
+    background-color: rgb(41, 41, 41);
+    color: white;
+  }
+  
+  .btn-home {
+    font-weight: 500;
+    margin: 0px 2px;
+    width: 40%;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    border: #3f3f3f 2px solid;
+    color: rgb(0, 0, 0);
+    border-radius: 20px;
+    padding-bottom: 2px;
+  }
+  
+  .btn-home:active {
+    opacity: 0.5;
+  }
+  
+  .btn-home:hover {
+    cursor: pointer;
+    color: rgb(102, 102, 102);
+    border: #797979 2px solid;
+  }
+  
+  @keyframes play2 {
+    0% {
+      transform: translateY(-10vh);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .show-ref-home {
+    padding: 5px;
+    border-radius: 5px;
+    overflow: scroll;
+    overflow-x: hidden;
+    transition: 0.3s;
+    animation: play2 0.1s alternate;
+    border: 5px solid rgb(94, 94, 94);
+    background-color: rgb(94, 94, 94);
+  }
+  
+  .ref-home {
+    width: 100%;
+    height: max-content;
+    margin-bottom: 10px;
+    background-color: rgb(24, 24, 24);
+    padding: 5px;
+    border-radius: 10px;
+  }
+  
+  .ref-home p {
+    color: white;
+    margin: 0 0 3px 0;
+  }
+  
+  .ref-home p:nth-child(1) {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 3px 0px;
+    width: 100%;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    border-bottom: 1px white solid;
+    margin: 0 0 3px 0;
+    background-color: rgb(0, 0, 0);
+  }
+  
+  .ref-home p:nth-child(1):active {
+    color: rgb(73, 73, 73);
+  }
+  
+  .ref-home p:nth-child(1):hover {
+    border-bottom: 1px rgb(37, 37, 37) solid;
+    background-color: rgb(126, 126, 126);
+  }
+
 }
 
 /* tablet */
@@ -126,7 +230,7 @@
     display: block;
   }
 
-  .drop-menu{
+  .drop-menu {
     width: 40%;
   }
 
@@ -355,7 +459,7 @@ body {
   min-height: 100vh;
 }
 
-/* navbar */
+/* page layout */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -455,7 +559,8 @@ body {
   opacity: 50%;
 }
 
-/* index.pub */
+
+/* page index */
 
 .hero {
   background-color: rgb(0, 0, 0);
@@ -511,7 +616,6 @@ body {
 .hero .link-href a {
   text-decoration: none;
   color: white;
-  padding-right: calc(100% / 6 - 1.4rem);
   /* animation: opacityAnim 10s infinite cubic-bezier(0.23, 1, 0.320, 1); */
 }
 
@@ -641,7 +745,7 @@ footer {
   z-index: 1;
 }
 
-/* /home */
+/* page home */
 .container-home {
   display: flex;
   flex-wrap: wrap;
@@ -652,14 +756,16 @@ footer {
 }
 
 .container-home textarea {
+  font-size: 1.3rem;
   background-color: rgb(41, 41, 41);
   color: white;
 }
 
 .btn-home {
+  font-size: 1.2rem;
   font-weight: 500;
-  margin: 0px 2px;
-  width: 40%;
+  margin: 0px auto;
+  width: 100%;
   height: 40px;
   background-color: rgb(255, 255, 255);
   border: #3f3f3f 2px solid;
@@ -678,6 +784,12 @@ footer {
   border: #797979 2px solid;
 }
 
+.ads-container{
+  height: 90%;
+  width: 100%;
+  background-color: white;
+}
+
 @keyframes play2 {
   0% {
     transform: translateY(-10vh);
@@ -690,6 +802,7 @@ footer {
 }
 
 .show-ref-home {
+  font-size: 1.3rem;
   padding: 5px;
   border-radius: 5px;
   overflow: scroll;
@@ -736,7 +849,7 @@ footer {
   background-color: rgb(126, 126, 126);
 }
 
-/* /referensi */
+/* page referensi */
 .container-input {
   background-color: rgb(37, 37, 37);
   width: 100%;
