@@ -10,12 +10,6 @@ router.get("/", function (req, res, next) {
   res.render("index", { title: "SHORTCUT-DOCX", hello: "hello world" });
 });
 
-// api
-// router.get("/home/api", async function (req, res, next) {
-//   const hslData = await mentahanDataDb.find();
-//   res.send(hslData);
-// });
-
 router.get("/home", (req, res) => {
   res.render("home", {
     title: "SHORTCUT-DOCX",
@@ -54,13 +48,27 @@ router.post("/home", async function (req, res) {
   }
 });
 
-// router.get("/about", async function (req, res) {
-//   res.render("about", {
-//     title: "SHORTCUT-DOCX",
-//   });
 
 router.get("/referensi", async function (req, res) {
   res.render("referensi", {
+    title: "SHORTCUT-DOCX",
+  });
+});
+
+router.get("/tutorial", async function (req, res) {
+  res.render("tutorial", {
+    title: "SHORTCUT-DOCX",
+  });
+});
+
+router.get("/kebijakan-privasi", async function (req, res) {
+  res.render("kebijakan-privasi", {
+    title: "SHORTCUT-DOCX",
+  });
+});
+
+router.get("/tentang-kami", async function (req, res) {
+  res.render("tentang-kami", {
     title: "SHORTCUT-DOCX",
   });
 });

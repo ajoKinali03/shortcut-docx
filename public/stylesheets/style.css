@@ -28,10 +28,7 @@
   .drop-menu{
     width: 35%;
   }
-  .drop-menu1{
-    display: none;
-  }
-  .drop-menu2{
+  .drop-menu-none{
     display: none;
   }
 
@@ -216,6 +213,9 @@
     display: none;
   }
   .navbar .text-nav a:nth-child(3) {
+    display: none;
+  }
+  .navbar .text-nav a:nth-child(4) {
     display: none;
   }
 
