@@ -126,7 +126,7 @@ async function downloadDocx(data) {
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = "Makalah Ambo.docx";
+    a.download = "Makalah.docx";
     document.body.appendChild(a);
     a.click();
     a.remove();

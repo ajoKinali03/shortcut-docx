@@ -839,6 +839,7 @@ footer a{
 
 .ref-home p:nth-child(1) {
   display: flex;
+  cursor: pointer;
   justify-content: space-evenly;
   align-items: center;
   padding: 3px 0px;
@@ -1068,6 +1069,7 @@ footer a{
 .container-tutor .text .line{
   width: 100%;
   background-color: white;
+  margin: 5px 0;
 }
 
 .container-tutor .text h1{
@@ -1085,6 +1087,15 @@ footer a{
   font-weight: 300;
   margin-left: 20px;
   text-align: justify;
+}
+
+
+.img-tutor {
+  max-width: 100%; 
+  height: auto;   
+  display: block; 
+  margin: 0 auto;
+  margin-bottom: 25px; 
 }
 
 .container-ads-tutor{
