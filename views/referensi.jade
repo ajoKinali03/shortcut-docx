@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  .container-input(style="margin-top:0.5%;")
+    h1 Ilmu Tanpa Referensi Adalah Ilmu Sesat
+    .select-type
+      p Jenis Referensi
+      select#tipe-ref(name="tipe")
+        option(value="jurnal") Jurnal
+        option(value="buku") Buku
+        option(value="tesis") Tesis, Skripsi, Disertasi
+        option(value="website") Website
+      button#btn-confirm-text(type="button") Selesai 
+
+    form.form-input
+      input.inpt-txt(type="text", placeholder="Judul")
+      input.inpt-txt(type="text", placeholder="Penulis")
+      input.inpt-txt(type="text", placeholder="Nama Jurnal")
+      input.inpt-txt(type="text", placeholder="Tahun")
+      input.inpt-txt(type="text", placeholder="Volume")
+      input.inpt-txt(type="text", placeholder="Nomor")
+      input.inpt-txt(type="text", placeholder="Halaman")
+      //- input.inpt-txt(type="text", placeholder="ISBN (Opsional)")
+      //- button#btn-hapus-semua(type="button", style="margin-left: 5px; background-color: rgb(255, 49, 49)") Hapus Semua Referensi
+      
+  .container-ref
