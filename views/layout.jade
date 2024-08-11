@@ -8,16 +8,20 @@ html(lang="id")
     div.navbar
       div.text-nav
         a.nav-text1(href='/') #{title}
-        a.nav-text2(href='/home') HOME
-        a.nav-text1(href='/referensi') REFERENSI
+        a.nav-text2(href='/home') Home
+        a.nav-text1(href='/referensi') Referensi
+        a.nav-text1(href='/') Tutorial
 
       
       input.tgl-btn#nav-tgl-btn(type="checkbox")
       div.tgl-view
         p(style="display: none;") X
       div.drop-menu
-        a.nav-text2(href='/home') HOME
-        a.nav-text1(href='/referensi') REFERENSI
+        a.nav-text2.drop-menu1(href='/home') Home
+        a.nav-text1.drop-menu2(href='/referensi') Referansi
+        a.nav-text1(href='/') Tutorial
+        a.nav-text1(href='/about') Tentang Kami
+        a.nav-text1(href='') Kebijakan Privasi
       
       //- #navbarNav.collapse.navbar-collapse
         ul.navbar-nav
