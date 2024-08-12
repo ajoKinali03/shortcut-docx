@@ -16,11 +16,9 @@
 /* page tentang kami */
 /* page kebijakan privasi */
 
-
 /* responsif */
 /* desktop */
 @media (min-width: 901px) {
-
   /* page layout */
 
   .navbar {
@@ -40,7 +38,7 @@
   .drop-menu {
     width: 35%;
   }
-  .drop-menu a{
+  .drop-menu a {
     font-size: 1.2rem;
   }
   .drop-menu-none {
@@ -116,14 +114,13 @@
     font-size: 1.4rem;
   }
 
-
   /* page home */
-  
+
   .container-home textarea {
     background-color: rgb(41, 41, 41);
     color: white;
   }
-  
+
   .btn-home {
     font-weight: 500;
     margin: 0px 2px;
@@ -135,17 +132,17 @@
     border-radius: 20px;
     padding-bottom: 2px;
   }
-  
+
   .btn-home:active {
     opacity: 0.5;
   }
-  
+
   .btn-home:hover {
     cursor: pointer;
     color: rgb(102, 102, 102);
     border: #797979 2px solid;
   }
-  
+
   @keyframes play2 {
     0% {
       transform: translateY(-10vh);
@@ -156,7 +153,7 @@
       opacity: 1;
     }
   }
-  
+
   .show-ref-home {
     padding: 5px;
     border-radius: 5px;
@@ -167,7 +164,7 @@
     border: 5px solid rgb(94, 94, 94);
     background-color: rgb(94, 94, 94);
   }
-  
+
   .ref-home {
     width: 100%;
     height: max-content;
@@ -176,12 +173,12 @@
     padding: 5px;
     border-radius: 10px;
   }
-  
+
   .ref-home p {
     color: white;
     margin: 0 0 3px 0;
   }
-  
+
   .ref-home p:nth-child(1) {
     display: flex;
     justify-content: space-evenly;
@@ -194,16 +191,15 @@
     margin: 0 0 3px 0;
     background-color: rgb(0, 0, 0);
   }
-  
+
   .ref-home p:nth-child(1):active {
     color: rgb(73, 73, 73);
   }
-  
+
   .ref-home p:nth-child(1):hover {
     border-bottom: 1px rgb(37, 37, 37) solid;
     background-color: rgb(126, 126, 126);
   }
-
 }
 
 /* tablet */
@@ -562,7 +558,6 @@ body {
   opacity: 50%;
 }
 
-
 /* page index */
 
 .hero {
@@ -748,11 +743,11 @@ footer {
   z-index: 1;
 }
 
-footer p{
+footer p {
   margin: 0 10px;
 }
 
-footer a{
+footer a {
   color: black;
 }
 
@@ -795,7 +790,7 @@ footer a{
   border: #797979 2px solid;
 }
 
-.container-ads-home{
+.container-ads-home {
   height: 85%;
   width: 100%;
 }
@@ -1005,24 +1000,22 @@ footer a{
   border: #797979 2px solid;
 }
 
-
-.container-ads-ref{
+.container-ads-ref {
   display: none;
   width: 10%;
   height: 100px;
   background-color: white;
 }
 
-
 /* page tutorial */
 
-.tutorial{
+.tutorial {
   width: 100%;
   display: flex;
   flex-direction: row;
 }
 
-.container-tutor{
+.container-tutor {
   width: 70%;
   background-color: #141414;
   color: white;
@@ -1032,16 +1025,16 @@ footer a{
   padding: 10px 10px;
 }
 
-.container-tutor #tutorial-page{
+.container-tutor #tutorial-page {
   font-size: 3rem;
 }
 
-.container-tutor .line{
+.container-tutor .line {
   background-color: white;
   width: 100%;
 }
 
-.container-tutor .daftar-isi{
+.container-tutor .daftar-isi {
   background-color: black;
   border-radius: 20px;
 }
@@ -1062,17 +1055,17 @@ footer a{
   margin: 10px 0;
 }
 
-.daftar-isi ul li a{
+.daftar-isi ul li a {
   color: white;
 }
 
-.container-tutor .text .line{
+.container-tutor .text .line {
   width: 100%;
   background-color: white;
   margin: 5px 0;
 }
 
-.container-tutor .text h1{
+.container-tutor .text h1 {
   color: #ffffff;
   font-size: 2rem;
   margin-left: 20px;
@@ -1082,26 +1075,192 @@ footer a{
   gap: 20px;
 }
 
-.text h1 p{
+.text h1 p {
   font-size: 1.2rem;
   font-weight: 300;
   margin-left: 20px;
   text-align: justify;
 }
 
-.text h1 p a{
+.text h1 p a {
   color: white;
 }
 
-
 .img-tutor {
-  max-width: 100%; 
-  height: auto;   
-  display: block; 
+  max-width: 100%;
+  height: auto;
+  display: block;
   margin: 0 auto;
-  margin-bottom: 25px; 
+  margin-bottom: 25px;
 }
 
-.container-ads-tutor{
+.container-ads-tutor {
   width: 15%;
+}
+
+/* page tentang kami */
+.container-about {
+  width: 100%;
+  margin: 0px auto;
+  background-color: #1f1f1f;
+  color: white;
+  min-height: 100vh;
+  max-height: max-content;
+  padding: 10px 20px;
+  padding-bottom: 30vh;
+}
+
+.container-about h1 {
+  font-size: 5rem;
+  margin-bottom: 20px;
+  background-color: black;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+}
+
+.container-about .text-about {
+  padding-top: 20px;
+  width: inherit;
+}
+
+.text-about .link-about {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  border: solid 1px black;
+  text-decoration: none;
+  padding: 5px;
+  padding-bottom: 10px;
+  border-radius: 50px;
+  display: inline-block;
+}
+
+.text-about a {
+  color: white;
+  display: inline-block;
+  margin: 5px;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.text-about .line {
+  width: 90%;
+  background-color: white;
+  height: 5px;
+}
+
+.text-about .penjelasan-about {
+  width: 70%;
+  text-align: left;
+  background-color: black;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.penjelasan-about h2 {
+  margin: 10px 0;
+  font-size: 2rem;
+}
+
+.penjelasan-about p {
+  margin: 25px 0;
+  font-size: 1.3rem;
+  font-weight: 200;
+  margin-left: 3%;
+}
+
+.text-about .kontak-about {
+  margin-top: 5%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+}
+
+.kontak-about .kontak {
+  width: 100%;
+  padding: 20px;
+  background-color: black;
+}
+
+.kontak h2{
+  font-size: 2.3rem;
+  font-weight: 400;
+}
+
+.kontak .line{
+  width: inherit;
+  height: 3px;
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+
+.kontak .profil{
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+}
+
+
+.profil .profil-text{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.profil-text h3 {
+  font-size: 5rem;
+}
+
+
+.profil-text .h4-point{
+  border-left: white 3px solid;
+  margin-left: 30px;
+}
+
+.h4-point h4{
+  font-weight: 500;
+  background-color: rgb(46, 46, 46);
+  padding: 3px;
+  margin: 2px 10px;
+}
+
+.profil-text .social-media {
+  margin-left: 30px;
+  margin-top: 20px;
+  border: solid 2px white;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.social-media .line{
+  margin: 0;
+  height: 2px;
+}
+
+.social-media p{
+  font-size: 1.2rem;
+}
+
+.social-media a{
+  text-decoration: underline;
+  border-left: 2px solid white;
+  padding-left: 5px;
+  font-size: 1.1rem;
+  display: inline-block;
+  margin-left: 25px;
+}
+
+.profil .profil-img{
+  width: 250px;
+  height: 250px;
+  margin-left: 20px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 800%;
+  font-weight: 100;
 }
