@@ -1089,6 +1089,10 @@ footer a{
   text-align: justify;
 }
 
+.text h1 p a{
+  color: white;
+}
+
 
 .img-tutor {
   max-width: 100%; 
