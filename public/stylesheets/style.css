@@ -1269,4 +1269,45 @@ footer a {
 
 /* page kebijakan privasi */
 
+.container-privasi{
+  padding: 0 10%;
+  width: 100%;
+  color: white;
+  height: max-content;
+}
 
+.container-privasi h1 {
+  font-size: 5rem;
+  background-color: rgb(32, 32, 32);
+  padding: 10px;
+  border-bottom: 3px white solid;
+}
+
+.container-privasi div{
+  margin: 60px 0;
+  border-left: 3px solid white;
+  border-right: 3px solid white;
+  padding: 0 5px;
+}
+
+.container-privasi div h2 {
+  font-size: 2rem;
+  padding: 0px 5px;
+  background-color: rgb(49, 49, 49);
+}
+
+.container-privasi div p{
+  font-size: 1.2rem;
+  margin-left: 20px;
+}
+
+.container-privasi div ul{
+  font-size: 1.2rem;
+  margin-left: 50px;
+}
+
+.container-privasi div a{
+  font-size: 1.2rem;
+  margin-left: 20px;
+  color: white;
+}
