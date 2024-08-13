@@ -13,15 +13,14 @@ const dropMenu = document.getElementsByClassName("drop-menu")[0];
 const tglView = document.getElementsByClassName("tgl-view")[0];
 
 tglBtn.addEventListener("click", () => {
-  if(tglBtn.checked){
+  if (tglBtn.checked) {
     dropMenu.style.display = "flex";
-    tglView.childNodes.item(0).style.display = "block"
-  }else{
-    tglView.childNodes.item(0).style.display = "none"
+    tglView.childNodes.item(0).style.display = "block";
+  } else {
+    tglView.childNodes.item(0).style.display = "none";
     dropMenu.style.display = "none";
   }
-})
-
+});
 
 document.addEventListener("keyup", (event) => {
   let cekElementTarget = event.view.location.href.includes("home")
@@ -64,7 +63,6 @@ if (lebarCntrCntn >= 1000) {
   formPost.style.width = `${parseInt(0.22 * lebarCntrCntn)}px`;
 }
 if (lebarCntrCntn <= 1039) {
-
   inpt.style.width = `${parseInt(0.99 * lebarCntrCntn)}px`;
   formPost.style.width = `${parseInt(0.99 * lebarCntrCntn)}px`;
 }
@@ -90,7 +88,19 @@ btnPostText.addEventListener("click", () => {
           };
           // akan mengirim data apabila teks ada isi nya
           if (res1.txt.length > 70) {
-            downloadDocx(data);
+            displayData(3)
+              .then((res3) => {
+                let setuju = persetujuanPrivasi(res3);
+                console.log(setuju)
+                if (setuju) {
+                  downloadDocx(data);
+                } else if (!setuju) {
+                  alert(
+                    "| Maaf kami tidak bisa mengolah data anda!.\n\n| Jika anda tidak setuju dengan kebijakan privasi kami, anda bisa hubungi kami melalui instagram untuk menyampaikan keluhan-nya."
+                  );
+                }
+              })
+              .catch((err) => err);
           } else {
             alert(
               "Harap isi prompt terlebih dahulu sebelum me-download makalah anda dan tolong diperhatikan untuk mengisi promt lebeh dari 10 KATA atau lebih dari 70 chracter"
@@ -117,10 +127,7 @@ async function downloadDocx(data) {
       body: JSON.stringify({ data }),
     })
       .then()
-      .catch()
-      .finally((res) => {
-        console.log(res);
-      });
+      .catch();
 
     const blob = await response.blob();
     const url = window.URL.createObjectURL(blob);
@@ -246,3 +253,19 @@ document.addEventListener("click", (event) => {
       });
   }
 });
+
+
+const persetujuanPrivasi = (value) => {
+  value = value ? value.setuju : false;
+  if(value){
+    return true;
+  }else{
+    let setuju = confirm("Apakah sudah membaca Kebijakan Privasi kami?\n\n Jika sudah silahkan tekan \"OKE\" untuk setuju dengan kebijakan privasi kami").valueOf()
+    if(setuju){
+      saveData(true, 3, "setuju");
+      return true;
+    }else{
+      return false;
+    }
+  }
+};

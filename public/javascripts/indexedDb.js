@@ -14,6 +14,7 @@ function openDatabase() {
       // Menambahkan indeks untuk pencarian
       store.createIndex("txt", "txt", { unique: false });
       store.createIndex("ref", "ref", { unique: false });
+      store.createIndex("setuju", "setuju", { unique: false });
     };
 
     request.onsuccess = function (event) {

@@ -94,7 +94,7 @@
     font-weight: 200;
   }
   .hero-parent .container-txt a {
-    font-size: 1.6vw;
+    font-size: 1.4vw;
     padding-right: calc(100% / 10);
   }
 
@@ -613,7 +613,7 @@ body {
 }
 
 .hero .link-href a {
-  text-decoration: none;
+  text-decoration: underline;
   color: white;
   /* animation: opacityAnim 10s infinite cubic-bezier(0.23, 1, 0.320, 1); */
 }
