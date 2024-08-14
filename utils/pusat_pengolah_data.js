@@ -33,7 +33,6 @@ const mentahanData = async (data) => {
     try{
       // console.log(listRef.ftNt)
       let docxBuffer = await runDocx(teksStyled.join(","), listRef);
-      console.log(docxBuffer)
       return docxBuffer;
     }catch(error){
       throw error;

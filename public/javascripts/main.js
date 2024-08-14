@@ -67,15 +67,6 @@ if (lebarCntrCntn <= 1039) {
   formPost.style.width = `${parseInt(0.99 * lebarCntrCntn)}px`;
 }
 
-// show and hide button download
-// function shwHideBtnDwnld(text, bool) {
-//   if (bool && /[a-zA-Z\d]/.test(text) && text.length > 0) {
-//     btnPostText.style.display = "inline-block";
-//   } else {
-//     btnPostText.style.display = "inline-block";
-//   }
-// }
-
 // fungsi ketika tombol download ditekan
 btnPostText.addEventListener("click", () => {
   displayData(1)
@@ -205,13 +196,7 @@ function crtShowDtHome(data, cntrRefHome) {
     let refClass = document.createAttribute("class");
     refClass.value = "ref-home";
     showRefParent.setAttributeNode(refClass);
-    // let keyWordBtn = document.createElement("button");
-    // let idKeyWordBtn = document.createAttribute("id");
-    // idKeyWordBtn.value = "keyword-btn";
-    // keyWordBtn.setAttributeNode(idKeyWordBtn);
-    // keyWordBtn.style.padding = "0 3px";
-    // keyWordBtn.style.margin = "5px 0 5px 10px";
-    // keyWordBtn.innerText = "Copy";
+
 
     let showdFrag = document.createDocumentFragment();
     for (let key in e) {
@@ -220,13 +205,7 @@ function crtShowDtHome(data, cntrRefHome) {
       idKeyWordBtn.value = "keyword-btn";
       shwTextP.setAttributeNode(idKeyWordBtn);
       if (key == "ID") {
-        // shwTextP.style.color = "black";
-        // shwTextP.style.backgroundColor = "white";
-        // shwTextP.style.textAlign = "center";
-        // shwTextP.style.fontWeight = "bolder";
-        // shwTextP.style.borderRadius = "5px";
         shwTextP.innerText = `-(footnote:${e[key]})-`;
-        // shwTextP.appendChild(keyWordBtn);
       } else {
         shwTextP.innerText = `${key}: ${e[key]}`;
       }
@@ -261,11 +240,11 @@ const persetujuanPrivasi = (value) => {
     return true;
   }else{
     let setuju = confirm("Apakah sudah membaca Kebijakan Privasi kami?\n\n Jika sudah silahkan tekan \"OKE\" untuk setuju dengan kebijakan privasi kami").valueOf()
+    saveData(setuju, 3, "setuju");
     if(setuju){
-      saveData(true, 3, "setuju");
-      return true;
+      return setuju;
     }else{
-      return false;
+      return setuju;
     }
   }
 };
