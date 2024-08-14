@@ -82,7 +82,6 @@ btnPostText.addEventListener("click", () => {
             displayData(3)
               .then((res3) => {
                 let setuju = persetujuanPrivasi(res3);
-                console.log(setuju)
                 if (setuju) {
                   downloadDocx(data);
                 } else if (!setuju) {

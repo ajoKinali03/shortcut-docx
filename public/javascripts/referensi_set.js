@@ -114,10 +114,10 @@ btnConfirmTxt.addEventListener("click", () => {
       let cekDt = res.ref;
 
       if(cekDt[0] == null){
-        console.log(cekDt, "tst1")
+        // console.log(cekDt, "tst1")
         cekDt = [];
       }else{
-        console.log(cekDt, "tst2")
+        // console.log(cekDt, "tst2")
       }
       let idRef = 0 + cekDt.length;
       idRef++;
@@ -175,6 +175,8 @@ document.addEventListener("click", (event) => {
       let arrayChildren = event.target.parentElement.children;
       let triger = event.target;
 
+      // terduga bug urutan id yang salah ada di sini
+
       // hapus data yang ditarget
       if (triger.id == "ref-btn-del") {
         for (let value of arrayChildren) {
@@ -182,6 +184,10 @@ document.addEventListener("click", (event) => {
             let idElement = value.innerText.split(":")[1];
             let dataAfterDelete = res.ref.filter((e) => e.ID != idElement);
             // menyimpan kembali data yang baru
+            dataAfterDelete = dataAfterDelete.map((e, i) => {
+              e.ID = i+1;
+              return e;
+            })
             saveData(dataAfterDelete, 2, "ref");
             location.reload(true);
           }
