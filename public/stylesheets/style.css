@@ -210,6 +210,10 @@
 
 /* tablet */
 @media (min-width: 601px) and (max-width: 900px) {
+  /* html{
+    overflow: visible;
+  } */
+
   .navbar {
     height: 7vh;
     font-size: 1.3rem;
@@ -243,6 +247,8 @@
     margin-top: 5px;
     font-size: 1.3rem;
   }
+
+  /* page index */
 
   .hero {
     height: 50vh;
@@ -286,12 +292,11 @@
     font-size: 1.3rem;
   }
 
-  /* .hero-parent .container-txt */
-
   .container-txt h1 {
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 500;
   }
+
   .content {
     padding: 10px 2.5%;
   }
@@ -382,10 +387,27 @@
 
 /* gawai */
 @media (max-width: 600px) {
-  /* navbar */
-
+  
+  
+  html{
+    overflow: visible;
+  }
+  
+  /* page layout */
   .navbar {
-    height: 15vh;
+    height: 9vh;
+  }
+
+  .navbar .text-nav a {
+    font-size: 1.3rem;
+  }
+  
+  .navbar .drop-menu {
+    padding-right: 10px;
+  }
+
+  .navbar .drop-menu a{
+    font-size: 1.1rem !important;
   }
 
   .navbar .text-nav a:nth-child(2) {
@@ -404,6 +426,63 @@
   .tgl-view {
     display: block;
   }
+
+  /* page index */
+
+  .hero {
+    height: 50vh;
+  }
+
+  .hero .hero-parent {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-parent .container-prop {
+    position: absolute;
+    opacity: 0.2;
+    z-index: 0;
+    top: 0;
+    width: 80%;
+    height: 100%;
+  }
+
+  .container-prop .parent-prop {
+    height: inherit;
+  }
+
+  .container-prop .parent-prop .properti {
+    width: 30px;
+    height: 50%;
+  }
+
+  .hero-parent {
+    padding: 0 0 !important;
+    width: 100%;
+  }
+
+  .hero-parent .container-txt {
+    position: absolute;
+    z-index: 1 !important;
+    width: 90%;
+  }
+
+  .container-txt h1{
+    font-size: calc(1.5rem + 3.5vw) !important;
+  }
+
+  .container-txt .link-href {
+    justify-content: center;
+  }
+
+  .link-href a {
+    padding-right: 0 !important;
+    margin: 0 auto;
+    font-size: calc(0.5rem + 1.5vw) !important;
+  }
+
+  
 }
 
 /* style seleksi teks */

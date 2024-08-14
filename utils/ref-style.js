@@ -12,11 +12,6 @@ const refStyled = (listRef, ref) => {
       }
     }
   });
-  
-  
-  let dfPstk = sortingRef(ref).map((e, i) => {
-    return daftarPustakaStyle(e, i, e.type);
-  });
 
 
   let hsl = [];
@@ -29,17 +24,41 @@ const refStyled = (listRef, ref) => {
       hsl.push(footnoteStyle(e, count, e.type, aftrCkSmeRf[i + 1], i));
     }
   });
-  // console.log(`footnotes:{ ${hsl.join(",")}},`)
+  let dfPstk = sortingRef(ref).map((e, i) => {
+    return daftarPustakaStyle(e, i, e.type);
+  });
+  
   return { ftNt: `footnotes:{ ${hsl.join(",")}},`, dfPstk: dfPstk.join(",") };
-  // return { ftNt: `footnotes:{ },`, dfPstk: "" };
 };
 
+
+// fungsi untuk membalik nama pada daftar pustaka
 function pembalikNama(nama) {
   if (nama.includes(" ")) {
     nama = nama.split(" ");
-    let namaBelakang = nama.pop();
-    let namaDepan = nama.join(" ");
-    let hslNama = `${namaBelakang}, ${namaDepan}`;
+    let selectNama = [];
+    nama.forEach((e, i) => {
+      if(e.toLowerCase() == "dkk"){
+        if(nama[i-1] != "dan") {
+          selectNama.push(nama[i-1]);
+        }else if(nama[i-1] == "dan"){
+          selectNama.push(nama[i-2]);
+        }
+      };
+    });
+
+    selectNama = selectNama.join("");
+    let hslNama = "";
+    if(nama.includes("dan")){
+      console.log("ok ndan")
+      nama = nama.join(" ").replace(" " + selectNama, "")
+      hslNama = selectNama.replaceAll(",", "") + ", " + nama;
+    };
+    if(!nama.includes("dan")){
+      console.log("ndk ndan")
+      nama = nama.join(" ").replace(" " + selectNama, ",")
+      hslNama = selectNama.replaceAll(",", "") + ". " + nama;
+    };
     return hslNama;
   } else {
     return nama;
