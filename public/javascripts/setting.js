@@ -17,28 +17,3 @@ document.querySelectorAll(".scroll-link").forEach((anchor) => {
 });
 
 
-
-
-// animation random ball
-
-// document.addEventListener("DOMContentLoaded", function() {
-//     const ball = document.querySelector('.ball');
-//     const container = document.querySelector('.hero');
-
-//     const containerWidth = container.clientWidth;
-//     const containerHeight = container.clientHeight;
-//     const ballDiameter = ball.clientWidth;
-
-//     function getRandomPosition() {
-//         const x = Math.random() * (containerWidth - ballDiameter);
-//         const y = Math.random() * (containerHeight - ballDiameter);
-//         return { x, y };
-//     }
-
-//     function moveBall() {
-//         const { x, y } = getRandomPosition();
-//         ball.style.transform = `translate(${x}px, ${y}px)`;
-//     }
-
-//     setInterval(moveBall, 1000);
-// });

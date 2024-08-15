@@ -12,6 +12,7 @@ const tglBtn = document.getElementById("nav-tgl-btn");
 const dropMenu = document.getElementsByClassName("drop-menu")[0];
 const tglView = document.getElementsByClassName("tgl-view")[0];
 
+
 tglBtn.addEventListener("click", () => {
   if (tglBtn.checked) {
     dropMenu.style.display = "flex";
@@ -57,6 +58,7 @@ displayData(1)
 // auto set lebar atau responsif dari tampilan home
 let lebarCntrCntn = document.getElementsByTagName("body").item(0).offsetWidth;
 // .getBoundingClientRect().width;
+
 
 if (lebarCntrCntn >= 1000) {
   inpt.style.width = `${parseInt(0.5 * lebarCntrCntn)}px`;

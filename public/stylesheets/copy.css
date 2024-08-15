@@ -1,1446 +1,1040 @@
-@font-face {
-  font-family: 'sourcesanspro';
-  font-style: normal;
-  font-weight: 400;
-  font-display: block;
-  src: url(https://design.penpot.app/fonts/sourcesanspro-regular.woff) format('woff');
-}
-/* marchen */
-@font-face {
-font-family: 'Noto Sans Marchen';
-font-style: normal;
-font-weight: 400;
-font-display: block;
-src: url(https://design.penpot.app/internal/gfonts/font/notosansmarchen/v20/aFTO7OZ_Y282EP-WyG6QTOX_C8WZMEjXuIp7XLg.woff2) format('woff2');
-unicode-range: U+25CC, U+11C70-11CBF;
-}
-
-/* latin-ext */
-@font-face {
-font-family: 'Noto Sans Marchen';
-font-style: normal;
-font-weight: 400;
-font-display: block;
-src: url(https://design.penpot.app/internal/gfonts/font/notosansmarchen/v20/aFTO7OZ_Y282EP-WyG6QTOX_C8WZMEhGma9GZQ.woff2) format('woff2');
-unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-font-family: 'Noto Sans Marchen';
-font-style: normal;
-font-weight: 400;
-font-display: block;
-src: url(https://design.penpot.app/internal/gfonts/font/notosansmarchen/v20/aFTO7OZ_Y282EP-WyG6QTOX_C8WZMEhIma8.woff2) format('woff2');
-unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* latin */
-@font-face {
-font-family: 'Abel';
-font-style: normal;
-font-weight: 400;
-font-display: block;
-src: url(https://design.penpot.app/internal/gfonts/font/abel/v18/MwQ5bhbm2POE2V9BPQ.woff2) format('woff2');
-unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+/* root */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --bgClr-tgl: black;
+  /* outline: 1px red solid; */
 }
 
 
-html, body {
-margin: 0;
-min-height: 100%;
-min-width: 100%;
-padding: 0;
+/* style seleksi teks */
+::selection {
+  background-color: white;
+  color: black;
+}
+
+/* loading animasi */
+@keyframes load {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#container-load {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: rgb(0, 0, 0);
+  opacity: 30%;
+}
+
+#container-load.active-parent {
+  display: flex;
+}
+
+#loading {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  width: 15%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+
+#loading p {
+  color: black;
+  padding: 10px 5px;
+  text-align: center;
+  font-weight: 500;
+  animation: load 3s infinite;
+}
+
+#loading.active {
+  display: block;
+}
+
+/* animasi loop bagian index */
+@keyframes opacityAnim {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes play1 {
+  0% {
+    transform: translateY(-100%);
+    /* box-shadow:white  0px 0px 30px 0px; */
+  }
+  50% {
+    transform: translateY(50%);
+    /* box-shadow:white  0px 0px 30px 0px; */
+  }
+  100% {
+    transform: translateY(200%);
+    /* box-shadow:white  0px 0px 30px 0px; */
+  }
+}
+
+/* .parent-prop{
+  background-color: white;
+  position: absolute;
+  z-index: 1;
+} */
+
+/* .ball {
+  width: 10px;
+  height: 10px;
+  box-shadow: white 0px 0px 30px 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  position: absolute;
+  transition: 2s;
+} */
+
+/* style umum untuk garis di index */
+.line {
+  height: 4px;
+  width: 20%;
+  background-color: red;
+  border-radius: 5px;
+}
+
+/* pengaturan umum */
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  min-width: 100%;
+  padding: 0;
+  scroll-behavior: smooth;
 }
 
 body {
-display: flex;
-flex-direction: column;
-align-items: center;
-width: 100vw;
-min-height: 100vh;
-}
-
-* {
-box-sizing: border-box;
-}
-
-.text-node { background-clip: text !important; -webkit-background-clip: text !important; }
-
-/* Navbar */
-.navbar-c54feb3a046c {
-position: absolute;
-left: 1px;
-top: 0px;
-width: 1258px;
-height: 53px;
-}
-
-/* Text */
-.text-c550e7adc7bb {
-position: absolute;
-left: 17px;
-top: 12px;
-width: 527px;
-height: 26px;
-}
-
-/* REFERENSI */
-.referensi-c54feebfd2df {
-position: absolute;
-left: 382.07px;
-top: 0px;
-width: 144.93px;
-height: 26px;
-}
-.referensi-c54feebfd2df .root-0 {
-
-
-display: flex;
-white-space: break-spaces;
-align-items: flex-start;
-}
-.referensi-c54feebfd2df .root-0-paragraph-set-0 {
-display: inline-flex;
-flex-direction: column;
-justify-content: inherit;
-min-width: 100%;
-margin-right: 1px;
-vertical-align: top;
-}
-.referensi-c54feebfd2df .root-0-paragraph-set-0-paragraph-0 {
-font-size: 0;
-line-height: 1.2;
-margin: 0;
-text-align: left;
-}
-.referensi-c54feebfd2df .root-0-paragraph-set-0-paragraph-0-text-0 {
-color: rgba(91, 91, 91, 1);
-text-transform: none;
-
-line-break: auto;
-overflow-wrap: initial;
-white-space: break-spaces;
-text-rendering: geometricPrecision;
-caret-color: rgba(91, 91, 91, 1);
-text-decoration: none;
-letter-spacing: 0px;
-font-size: 24px;
-font-family: "Noto Sans Marchen";
-font-style: normal;
-font-weight: 400;
-}
-
-/* HOME */
-.home-c54fcab93398 {
-position: absolute;
-left: 261.3px;
-top: 0px;
-width: 82.34px;
-height: 26px;
-}
-.home-c54fcab93398 .root-0 {
-
-
-display: flex;
-white-space: break-spaces;
-align-items: flex-start;
-}
-.home-c54fcab93398 .root-0-paragraph-set-0 {
-display: inline-flex;
-flex-direction: column;
-justify-content: inherit;
-min-width: 100%;
-margin-right: 1px;
-vertical-align: top;
-}
-.home-c54fcab93398 .root-0-paragraph-set-0-paragraph-0 {
-font-size: 0;
-line-height: 1.2;
-margin: 0;
-text-align: left;
-}
-.home-c54fcab93398 .root-0-paragraph-set-0-paragraph-0-text-0 {
-color: rgba(91, 91, 91, 1);
-text-transform: none;
-
-line-break: auto;
-overflow-wrap: initial;
-white-space: break-spaces;
-text-rendering: geometricPrecision;
-caret-color: rgba(91, 91, 91, 1);
-text-decoration: none;
-letter-spacing: 0px;
-font-size: 24px;
-font-family: "Noto Sans Marchen";
-font-style: normal;
-font-weight: 400;
-}
-
-/* SHORTCUT-DOCX */
-.shortcutd-c54deaf34fef {
-position: absolute;
-left: 0px;
-top: 0px;
-width: 222.88px;
-height: 26px;
-}
-.shortcutd-c54deaf34fef .root-0 {
-
-
-display: flex;
-white-space: break-spaces;
-align-items: flex-start;
-}
-.shortcutd-c54deaf34fef .root-0-paragraph-set-0 {
-display: inline-flex;
-flex-direction: column;
-justify-content: inherit;
-min-width: 100%;
-margin-right: 1px;
-vertical-align: top;
-}
-.shortcutd-c54deaf34fef .root-0-paragraph-set-0-paragraph-0 {
-font-size: 0;
-line-height: 1.2;
-margin: 0;
-text-align: left;
-}
-.shortcutd-c54deaf34fef .root-0-paragraph-set-0-paragraph-0-text-0 {
-color: rgba(0, 0, 0, 1);
-text-transform: none;
-
-line-break: auto;
-overflow-wrap: initial;
-white-space: break-spaces;
-text-rendering: geometricPrecision;
-caret-color: rgba(0, 0, 0, 1);
-text-decoration: none;
-letter-spacing: 0px;
-font-style: normal;
-font-size: 24px;
-font-family: "Noto Sans Marchen";
-font-weight: 400;
-}
-
-/* navbar */
-.navbar-c54cb47c3185 {
-position: absolute;
-left: 0px;
-top: 0px;
-width: 1258px;
-height: 53px;
-background: #E7E8EC;
-border-radius: 0px;
-}
-
-/* Hero */
-.hero-c550f8b3a3f2 {
-position: absolute;
-left: 0px;
-top: 53px;
-width: 1258px;
-height: 368px;
-}
-
-/* text */
-.text-c55100b4cb3a {
-position: absolute;
-left: 12px;
-top: 92px;
-width: 690px;
-height: 126px;
-}
-
-/* Group */
-.group-c5d3a91bd6ed {
-position: absolute;
-left: 6px;
-top: 87px;
-width: 684px;
-height: 39px;
-}
-
-/* Social Media */
-.social-med-c5d3c194191a {
-position: absolute;
-left: 470.79px;
-top: 0px;
-width: 213.21px;
-height: 39px;
-}
-.social-med-c5d3c194191a .root-0 {
-
-
-display: flex;
-white-space: break-spaces;
-align-items: flex-start;
-}
-.social-med-c5d3c194191a .root-0-paragraph-set-0 {
-display: inline-flex;
-flex-direction: column;
-justify-content: inherit;
-min-width: 100%;
-margin-right: 1px;
-vertical-align: top;
-}
-.social-med-c5d3c194191a .root-0-paragraph-set-0-paragraph-0 {
-font-size: 0;
-line-height: 1.2;
-margin: 0;
-text-align: left;
-}
-.social-med-c5d3c194191a .root-0-paragraph-set-0-paragraph-0-text-0 {
-color: rgba(255, 255, 255, 1);
-text-transform: none;
-
-line-break: auto;
-overflow-wrap: initial;
-white-space: break-spaces;
-text-rendering: geometricPrecision;
-caret-color: rgba(255, 255, 255, 1);
-text-decoration: none;
-letter-spacing: 0px;
-font-size: 35px;
-font-family: "Abel";
-font-style: normal;
-font-weight: 400;
-}
-
-/* Cara Menggunakan */
-.cara-mengg-c5d357a60a7d {
-position: absolute;
-left: 134.95px;
-top: 0px;
-width: 313.04px;
-height: 39px;
-}
-.cara-mengg-c5d357a60a7d .root-0 {
-
-
-display: flex;
-white-space: break-spaces;
-align-items: flex-start;
-}
-.cara-mengg-c5d357a60a7d .root-0-paragraph-set-0 {
-display: inline-flex;
-flex-direction: column;
-justify-content: inherit;
-min-width: 100%;
-margin-right: 1px;
-vertical-align: top;
-}
-.cara-mengg-c5d357a60a7d .root-0-paragraph-set-0-paragraph-0 {
-font-size: 0;
-line-height: 1.2;
-margin: 0;
-text-align: left;
-}
-.cara-mengg-c5d357a60a7d .root-0-paragraph-set-0-paragraph-0-text-0 {
-color: rgba(255, 255, 255, 1);
-text-transform: none;
-
-line-break: auto;
-overflow-wrap: initial;
-white-space: break-spaces;
-text-rendering: geometricPrecision;
-caret-color: rgba(255, 255, 255, 1);
-text-decoration: none;
-letter-spacing: 0px;
-font-size: 35px;
-font-family: "Abel";
-font-style: normal;
-font-weight: 400;
-}
-
-/* Intro */
-.intro-c5d32b8f31b2 {
-position: absolute;
-left: 0px;
-top: 0px;
-width: 112.15px;
-height: 39px;
-}
-.intro-c5d32b8f31b2 .root-0 {
-
-
-display: flex;
-white-space: break-spaces;
-align-items: flex-start;
-}
-.intro-c5d32b8f31b2 .root-0-paragraph-set-0 {
-display: inline-flex;
-flex-direction: column;
-justify-content: inherit;
-min-width: 100%;
-margin-right: 1px;
-vertical-align: top;
-}
-.intro-c5d32b8f31b2 .root-0-paragraph-set-0-paragraph-0 {
-font-size: 0;
-line-height: 1.2;
-margin: 0;
-text-align: left;
-}
-.intro-c5d32b8f31b2 .root-0-paragraph-set-0-paragraph-0-text-0 {
-color: rgba(255, 255, 255, 1);
-text-transform: none;
-
-line-break: auto;
-overflow-wrap: initial;
-white-space: break-spaces;
-text-rendering: geometricPrecision;
-caret-color: rgba(255, 255, 255, 1);
-text-decoration: none;
-letter-spacing: 0px;
-font-size: 35px;
-font-family: "Abel";
-font-style: normal;
-font-weight: 400;
-}
-
-/* Rectangle */
-.rectangle-c5d51fed93f1 {
-position: absolute;
-left: 6px;
-top: 87px;
-width: 639px;
-height: 3px;
-background: #F7F7F7;
-border-radius: 10px;
-}
-
-/* SHORTCUT-DOCX */
-.shortcutd-c550b8a74370 {
-position: absolute;
-left: 0px;
-top: 0px;
-width: 461px;
-height: 87px;
-}
-.shortcutd-c550b8a74370 .root-0 {
-
-
-display: flex;
-white-space: break-spaces;
-align-items: flex-start;
-}
-.shortcutd-c550b8a74370 .root-0-paragraph-set-0 {
-display: inline-flex;
-flex-direction: column;
-justify-content: inherit;
-
-margin-right: 1px;
-vertical-align: top;
-}
-.shortcutd-c550b8a74370 .root-0-paragraph-set-0-paragraph-0 {
-font-size: 0;
-line-height: 1.2;
-margin: 0;
-text-align: center;
-}
-.shortcutd-c550b8a74370 .root-0-paragraph-set-0-paragraph-0-text-0 {
-color: rgba(202, 202, 202, 1);
-text-transform: none;
-
-line-break: auto;
-overflow-wrap: initial;
-white-space: pre;
-text-rendering: geometricPrecision;
-caret-color: rgba(202, 202, 202, 1);
-text-decoration: none;
-letter-spacing: 0px;
-font-size: 72px;
-font-family: "Abel";
-font-style: normal;
-font-weight: 400;
-}
-
-/* hero */
-.hero-c549ec4ada45 {
-position: absolute;
-left: 0px;
-top: 0px;
-width: 1258px;
-height: 368px;
-background: #000000;
-border: 1px solid #FFFFFF;
-border-radius: 0px;
-}
-
-/* footer */
-.footer-c5f306a01bff {
-position: absolute;
-left: 0px;
-top: 3228px;
-width: 1259px;
-height: 49px;
-}
-
-/* FOOTER */
-.footer-c5f2c4ea055a {
-position: absolute;
-left: 516px;
-top: 12px;
-width: 228px;
-height: 21px;
-}
-.footer-c5f2c4ea055a .root-0 {
-
-
-display: flex;
-white-space: break-spaces;
-align-items: flex-start;
-}
-.footer-c5f2c4ea055a .root-0-paragraph-set-0 {
-display: inline-flex;
-flex-direction: column;
-justify-content: inherit;
-min-width: 100%;
-margin-right: 1px;
-vertical-align: top;
-}
-.footer-c5f2c4ea055a .root-0-paragraph-set-0-paragraph-0 {
-font-size: 0;
-line-height: 1.2;
-margin: 0;
-text-align: center;
-}
-.footer-c5f2c4ea055a .root-0-paragraph-set-0-paragraph-0-text-0 {
-color: rgba(0, 0, 0, 1);
-text-transform: none;
-
-line-break: auto;
-overflow-wrap: initial;
-white-space: break-spaces;
-text-rendering: geometricPrecision;
-caret-color: rgba(0, 0, 0, 1);
-text-decoration: none;
-letter-spacing: 0px;
-font-size: 24px;
-font-family: "sourcesanspro";
-font-style: normal;
-font-weight: 400;
-}
-
-/* footer */
-.footer-c5f2a4d800a4 {
-position: absolute;
-left: 0px;
-top: 0px;
-width: 1259px;
-height: 49px;
-background: #B1B2B5;
-border-radius: 0px;
-}
-
-/* Content */
-.content-c5db22a0f6cc {
-position: absolute;
-left: 184px;
-top: 418px;
-width: 892px;
-height: 2859px;
-}
-
-/* text */
-.text-c5db2e3d0d09 {
-position: absolute;
-left: 19px;
-top: 9px;
-width: 839px;
-height: 1663px;
-}
-
-/* Group */
-.group-c5e442c6a499 {
-position: absolute;
-left: 1px;
-top: 1526px;
-width: 838px;
-height: 137px;
-}
-
-/* Mari bergabung dengan kami di shortcut-docx dan nikmati kemudahan dalam menyelesaikan tugas akademik Anda. Terima kasih telah mengunjungi, dan kami berharap dapat membantu Anda meraih kesuksesan dalam studi Anda! */
-.mari-berga-c5e442c6a49c {
-position: absolute;
-left: 0px;
-top: 0px;
-width: 838px;
-height: 137px;
-}
-.mari-berga-c5e442c6a49c .root-0 {
-
-
-display: flex;
-white-space: break-spaces;
-align-items: flex-start;
-}
-.mari-berga-c5e442c6a49c .root-0-paragraph-set-0 {
-display: inline-flex;
-flex-direction: column;
-justify-content: inherit;
-min-width: 100%;
-margin-right: 1px;
-vertical-align: top;
-}
-.mari-berga-c5e442c6a49c .root-0-paragraph-set-0-paragraph-0 {
-font-size: 0;
-line-height: 1.5;
-margin: 0;
-text-align: justify;
-}
-.mari-berga-c5e442c6a49c .root-0-paragraph-set-0-paragraph-0-text-0 {
-color: rgba(154, 154, 154, 1);
-text-transform: unset;
-
-line-break: auto;
-overflow-wrap: initial;
-white-space: break-spaces;
-text-rendering: geometricPrecision;
-caret-color: rgba(154, 154, 154, 1);
-text-decoration: none;
-letter-spacing: 0px;
-font-size: 27px;
-font-family: "Abel";
-font-style: normal;
-font-weight: 400;
-}
-
-/* Rectangle */
-.rectangle-c5e442c6a49b {
-position: absolute;
-left: 0px;
-top: 125px;
-width: 838px;
-height: 3px;
-background: #F7F7F7;
-border-radius: 10px;
-}
-
-/* Group */
-.group-c5e39f65f004 {
-position: absolute;
-left: 1px;
-top: 1167px;
-width: 838px;
-height: 310px;
-}
-
-/* Hemat Waktu: Dengan shortcut-docx, Anda bisa menghemat waktu dalam proses penulisan dan format makalah.
-Mudah Digunakan: Akses shortcut-docx dari laptop maupun handphone Anda dengan mudah.
-Efisiensi Maksimal: Alat ini dirancang untuk memberikan kemudahan dan efisiensi dalam setia */
-.hemat-wakt-c5e39f65f007 {
-position: absolute;
-left: 0px;
-top: 45px;
-width: 838px;
-height: 265px;
-}
-.hemat-wakt-c5e39f65f007 .root-0 {
-
-
-display: flex;
-white-space: break-spaces;
-align-items: flex-start;
-}
-.hemat-wakt-c5e39f65f007 .root-0-paragraph-set-0 {
-display: inline-flex;
-flex-direction: column;
-justify-content: inherit;
-min-width: 100%;
-margin-right: 1px;
-vertical-align: top;
-}
-.hemat-wakt-c5e39f65f007 .root-0-paragraph-set-0-paragraph-0 {
-font-size: 0;
-line-height: 1.5;
-margin: 0;
-text-align: justify;
-}
-.hemat-wakt-c5e39f65f007 .root-0-paragraph-set-0-paragraph-0-text-0 {
-color: rgba(154, 154, 154, 1);
-text-transform: unset;
-
-line-break: auto;
-overflow-wrap: initial;
-white-space: break-spaces;
-text-rendering: geometricPrecision;
-caret-color: rgba(154, 154, 154, 1);
-text-decoration: underline;
-letter-spacing: 0px;
-font-size: 27px;
-font-family: "Abel";
-font-style: normal;
-font-weight: 400;
-}
-.hemat-wakt-c5e39f65f007 .root-0-paragraph-set-0-paragraph-0-text-1 {
-color: rgba(154, 154, 154, 1);
-text-transform: unset;
-
-line-break: auto;
-overflow-wrap: initial;
-white-space: break-spaces;
-text-rendering: geometricPrecision;
-caret-color: rgba(154, 154, 154, 1);
-text-decoration: none;
-letter-spacing: 0px;
-font-size: 27px;
-font-family: "Abel";
-font-style: normal;
-font-weight: 400;
-}
-.hemat-wakt-c5e39f65f007 .root-0-paragraph-set-0-paragraph-1 {
-font-size: 0;
-line-height: 1.5;
-margin: 0;
-text-align: justify;
-}
-.hemat-wakt-c5e39f65f007 .root-0-paragraph-set-0-paragraph-1-text-0 {
-color: rgba(154, 154, 154, 1);
-text-transform: unset;
-
-line-break: auto;
-overflow-wrap: initial;
-white-space: break-spaces;
-text-rendering: geometricPrecision;
-caret-color: rgba(154, 154, 154, 1);
-text-decoration: underline;
-letter-spacing: 0px;
-font-size: 27px;
-font-family: "Abel";
-font-style: normal;
-font-weight: 400;
-}
-.hemat-wakt-c5e39f65f007 .root-0-paragraph-set-0-paragraph-1-text-1 {
-color: rgba(154, 154, 154, 1);
-text-transform: unset;
-
-line-break: auto;
-overflow-wrap: initial;
-white-space: break-spaces;
-text-rendering: geometricPrecision;
-caret-color: rgba(154, 154, 154, 1);
-text-decoration: none;
-letter-spacing: 0px;
-font-size: 27px;
-font-family: "Abel";
-font-style: normal;
-font-weight: 400;
-}
-.hemat-wakt-c5e39f65f007 .root-0-paragraph-set-0-paragraph-2 {
-font-size: 0;
-line-height: 1.5;
-margin: 0;
-text-align: justify;
-}
-.hemat-wakt-c5e39f65f007 .root-0-paragraph-set-0-paragraph-2-text-0 {
-color: rgba(154, 154, 154, 1);
-text-transform: unset;
-
-line-break: auto;
-overflow-wrap: initial;
-white-space: break-spaces;
-text-rendering: geometricPrecision;
-caret-color: rgba(154, 154, 154, 1);
-text-decoration: underline;
-letter-spacing: 0px;
-font-size: 27px;
-font-family: "Abel";
-font-style: normal;
-font-weight: 400;
-}
-.hemat-wakt-c5e39f65f007 .root-0-paragraph-set-0-paragraph-2-text-1 {
-color: rgba(154, 154, 154, 1);
-text-transform: unset;
-
-line-break: auto;
-overflow-wrap: initial;
-white-space: break-spaces;
-text-rendering: geometricPrecision;
-caret-color: rgba(154, 154, 154, 1);
-text-decoration: none;
-letter-spacing: 0px;
-font-size: 27px;
-font-family: "Abel";
-font-style: normal;
-font-weight: 400;
-}
-
-/* Rectangle */
-.rectangle-c5e39f65f006 {
-position: absolute;
-left: 0px;
-top: 39px;
-width: 838px;
-height: 3px;
-background: #F7F7F7;
-border-radius: 10px;
-}
-
-/* Manfaat yang akan Anda dapatkan: */
-.manfaat-ya-c5e39f65f005 {
-position: absolute;
-left: 0px;
-top: 0px;
-width: 511px;
-height: 35px;
-}
-.manfaat-ya-c5e39f65f005 .root-0 {
-
-
-display: flex;
-white-space: break-spaces;
-align-items: flex-start;
-}
-.manfaat-ya-c5e39f65f005 .root-0-paragraph-set-0 {
-display: inline-flex;
-flex-direction: column;
-justify-content: inherit;
-min-width: 100%;
-margin-right: 1px;
-vertical-align: top;
-}
-.manfaat-ya-c5e39f65f005 .root-0-paragraph-set-0-paragraph-0 {
-font-size: 0;
-line-height: 1.2;
-margin: 0;
-text-align: left;
-}
-.manfaat-ya-c5e39f65f005 .root-0-paragraph-set-0-paragraph-0-text-0 {
-color: rgba(255, 255, 255, 1);
-text-transform: none;
-
-line-break: auto;
-overflow-wrap: initial;
-white-space: break-spaces;
-text-rendering: geometricPrecision;
-caret-color: rgba(255, 255, 255, 1);
-text-decoration: none;
-letter-spacing: 0px;
-font-size: 30px;
-font-family: "Abel";
-font-style: normal;
-font-weight: 400;
-}
-
-/* Group */
-.group-c5e3406ea0b4 {
-position: absolute;
-left: 1px;
-top: 954px;
-width: 838px;
-height: 181px;
-}
-
-/* Kami berkomitmen untuk mempermudah pekerjaan mahasiswa dalam pembuatan makalah, sehingga Anda bisa lebih fokus pada konten dan analisis, bukan pada format. */
-.kami-berko-c5e3406ea0b7 {
-position: absolute;
-left: 0px;
-top: 45px;
-width: 838px;
-height: 136px;
-}
-.kami-berko-c5e3406ea0b7 .root-0 {
-
-
-display: flex;
-white-space: break-spaces;
-align-items: flex-start;
-}
-.kami-berko-c5e3406ea0b7 .root-0-paragraph-set-0 {
-display: inline-flex;
-flex-direction: column;
-justify-content: inherit;
-min-width: 100%;
-margin-right: 1px;
-vertical-align: top;
-}
-.kami-berko-c5e3406ea0b7 .root-0-paragraph-set-0-paragraph-0 {
-font-size: 0;
-line-height: 1.5;
-margin: 0;
-text-align: justify;
-}
-.kami-berko-c5e3406ea0b7 .root-0-paragraph-set-0-paragraph-0-text-0 {
-color: rgba(154, 154, 154, 1);
-text-transform: none;
-
-line-break: auto;
-overflow-wrap: initial;
-white-space: break-spaces;
-text-rendering: geometricPrecision;
-caret-color: rgba(154, 154, 154, 1);
-text-decoration: none;
-letter-spacing: 0px;
-font-size: 30px;
-font-family: "Abel";
-font-style: normal;
-font-weight: 400;
-}
-
-/* Rectangle */
-.rectangle-c5e3406ea0b6 {
-position: absolute;
-left: 0px;
-top: 39px;
-width: 838px;
-height: 3px;
-background: #F7F7F7;
-border-radius: 10px;
-}
-
-/* Tujuan kami: */
-.tujuan-kam-c5e3406ea0b5 {
-position: absolute;
-left: 0px;
-top: 0px;
-width: 511px;
-height: 35px;
-}
-.tujuan-kam-c5e3406ea0b5 .root-0 {
-
-
-display: flex;
-white-space: break-spaces;
-align-items: flex-start;
-}
-.tujuan-kam-c5e3406ea0b5 .root-0-paragraph-set-0 {
-display: inline-flex;
-flex-direction: column;
-justify-content: inherit;
-min-width: 100%;
-margin-right: 1px;
-vertical-align: top;
-}
-.tujuan-kam-c5e3406ea0b5 .root-0-paragraph-set-0-paragraph-0 {
-font-size: 0;
-line-height: 1.2;
-margin: 0;
-text-align: left;
-}
-.tujuan-kam-c5e3406ea0b5 .root-0-paragraph-set-0-paragraph-0-text-0 {
-color: rgba(255, 255, 255, 1);
-text-transform: none;
-
-line-break: auto;
-overflow-wrap: initial;
-white-space: break-spaces;
-text-rendering: geometricPrecision;
-caret-color: rgba(255, 255, 255, 1);
-text-decoration: none;
-letter-spacing: 0px;
-font-size: 30px;
-font-family: "Abel";
-font-style: normal;
-font-weight: 400;
-}
-
-/* Group */
-.group-c5e1eedcc589 {
-position: absolute;
-left: 1px;
-top: 616px;
-width: 838px;
-height: 323px;
-}
-
-/* Prosesnya sangat sederhana:
-  *  Masukkan materi yang ingin Anda sertakan dalam makalah.
-* Shortcut-docx akan mengolah materi tersebut menjadi template makalah yang sudah terformat dengan rapi.
-* Daftar pustaka dan catatan kaki akan disusun secara otomatis sesuai dengan sta */
-.prosesnya-c5e1eedcc58c {
-position: absolute;
-left: 0px;
-top: 45px;
-width: 838px;
-height: 278px;
-}
-.prosesnya-c5e1eedcc58c .root-0 {
-
-
-display: flex;
-white-space: break-spaces;
-align-items: flex-start;
-}
-.prosesnya-c5e1eedcc58c .root-0-paragraph-set-0 {
-display: inline-flex;
-flex-direction: column;
-justify-content: inherit;
-min-width: 100%;
-margin-right: 1px;
-vertical-align: top;
-}
-.prosesnya-c5e1eedcc58c .root-0-paragraph-set-0-paragraph-0 {
-font-size: 0;
-line-height: 1.5;
-margin: 0;
-text-align: justify;
-}
-.prosesnya-c5e1eedcc58c .root-0-paragraph-set-0-paragraph-0-text-0 {
-color: rgba(154, 154, 154, 1);
-text-transform: none;
-
-line-break: auto;
-overflow-wrap: initial;
-white-space: break-spaces;
-text-rendering: geometricPrecision;
-caret-color: rgba(154, 154, 154, 1);
-text-decoration: none;
-letter-spacing: 0px;
-font-size: 30px;
-font-family: "Abel";
-font-style: normal;
-font-weight: 400;
-}
-.prosesnya-c5e1eedcc58c .root-0-paragraph-set-0-paragraph-1 {
-font-size: 0;
-line-height: 1.5;
-margin: 0;
-text-align: justify;
-}
-.prosesnya-c5e1eedcc58c .root-0-paragraph-set-0-paragraph-1-text-0 {
-color: rgba(154, 154, 154, 1);
-text-transform: none;
-
-line-break: auto;
-overflow-wrap: initial;
-white-space: break-spaces;
-text-rendering: geometricPrecision;
-caret-color: rgba(154, 154, 154, 1);
-text-decoration: none;
-letter-spacing: 0px;
-font-size: 30px;
-font-family: "Abel";
-font-style: normal;
-font-weight: 400;
-}
-.prosesnya-c5e1eedcc58c .root-0-paragraph-set-0-paragraph-1-text-1 {
-color: rgba(154, 154, 154, 1);
-text-transform: none;
-
-line-break: auto;
-overflow-wrap: initial;
-white-space: break-spaces;
-text-rendering: geometricPrecision;
-caret-color: rgba(154, 154, 154, 1);
-text-decoration: none;
-letter-spacing: 0px;
-font-size: 25px;
-font-family: "Abel";
-font-style: normal;
-font-weight: 400;
-}
-.prosesnya-c5e1eedcc58c .root-0-paragraph-set-0-paragraph-2 {
-font-size: 0;
-line-height: 1.5;
-margin: 0;
-text-align: justify;
-}
-.prosesnya-c5e1eedcc58c .root-0-paragraph-set-0-paragraph-2-text-0 {
-color: rgba(154, 154, 154, 1);
-text-transform: none;
-
-line-break: auto;
-overflow-wrap: initial;
-white-space: break-spaces;
-text-rendering: geometricPrecision;
-caret-color: rgba(154, 154, 154, 1);
-text-decoration: none;
-letter-spacing: 0px;
-font-size: 30px;
-font-family: "Abel";
-font-style: normal;
-font-weight: 400;
-}
-.prosesnya-c5e1eedcc58c .root-0-paragraph-set-0-paragraph-2-text-1 {
-color: rgba(154, 154, 154, 1);
-text-transform: none;
-
-line-break: auto;
-overflow-wrap: initial;
-white-space: break-spaces;
-text-rendering: geometricPrecision;
-caret-color: rgba(154, 154, 154, 1);
-text-decoration: none;
-letter-spacing: 0px;
-font-size: 25px;
-font-family: "Abel";
-font-style: normal;
-font-weight: 400;
-}
-.prosesnya-c5e1eedcc58c .root-0-paragraph-set-0-paragraph-3 {
-font-size: 0;
-line-height: 1.5;
-margin: 0;
-text-align: justify;
-}
-.prosesnya-c5e1eedcc58c .root-0-paragraph-set-0-paragraph-3-text-0 {
-color: rgba(154, 154, 154, 1);
-text-transform: none;
-
-line-break: auto;
-overflow-wrap: initial;
-white-space: break-spaces;
-text-rendering: geometricPrecision;
-caret-color: rgba(154, 154, 154, 1);
-text-decoration: none;
-letter-spacing: 0px;
-font-size: 30px;
-font-family: "Abel";
-font-style: normal;
-font-weight: 400;
-}
-.prosesnya-c5e1eedcc58c .root-0-paragraph-set-0-paragraph-3-text-1 {
-color: rgba(154, 154, 154, 1);
-text-transform: none;
-
-line-break: auto;
-overflow-wrap: initial;
-white-space: break-spaces;
-text-rendering: geometricPrecision;
-caret-color: rgba(154, 154, 154, 1);
-text-decoration: none;
-letter-spacing: 0px;
-font-size: 25px;
-font-family: "Abel";
-font-style: normal;
-font-weight: 400;
-}
-
-/* Rectangle */
-.rectangle-c5e1eedcc58b {
-position: absolute;
-left: 0px;
-top: 39px;
-width: 838px;
-height: 3px;
-background: #F7F7F7;
-border-radius: 10px;
-}
-
-/* Bagaimana cara kerjanya? */
-.bagaimana-c5e1eedcc58a {
-position: absolute;
-left: 0px;
-top: 0px;
-width: 511px;
-height: 35px;
-}
-.bagaimana-c5e1eedcc58a .root-0 {
-
-
-display: flex;
-white-space: break-spaces;
-align-items: flex-start;
-}
-.bagaimana-c5e1eedcc58a .root-0-paragraph-set-0 {
-display: inline-flex;
-flex-direction: column;
-justify-content: inherit;
-min-width: 100%;
-margin-right: 1px;
-vertical-align: top;
-}
-.bagaimana-c5e1eedcc58a .root-0-paragraph-set-0-paragraph-0 {
-font-size: 0;
-line-height: 1.2;
-margin: 0;
-text-align: left;
-}
-.bagaimana-c5e1eedcc58a .root-0-paragraph-set-0-paragraph-0-text-0 {
-color: rgba(255, 255, 255, 1);
-text-transform: none;
-
-line-break: auto;
-overflow-wrap: initial;
-white-space: break-spaces;
-text-rendering: geometricPrecision;
-caret-color: rgba(255, 255, 255, 1);
-text-decoration: none;
-letter-spacing: 0px;
-font-size: 30px;
-font-family: "Abel";
-font-style: normal;
-font-weight: 400;
-}
-
-/* Group */
-.group-c5e0cde5d4c3 {
-position: absolute;
-left: 1px;
-top: 367px;
-width: 838px;
-height: 283px;
-}
-
-/* Shortcut-docx dibuat untuk membantu para mahasiswa agar dapat menyelesaikan makalah dengan lebih cepat dan lebih mudah. Tidak perlu lagi repot mengatur format dan detail makalah secara manual, karena kami yang akan melakukannya untuk Anda. */
-.shortcutd-c5e0cde5d4c6 {
-position: absolute;
-left: 0px;
-top: 45px;
-width: 838px;
-height: 238px;
-}
-.shortcutd-c5e0cde5d4c6 .root-0 {
-
-
-display: flex;
-white-space: break-spaces;
-align-items: flex-start;
-}
-.shortcutd-c5e0cde5d4c6 .root-0-paragraph-set-0 {
-display: inline-flex;
-flex-direction: column;
-justify-content: inherit;
-min-width: 100%;
-margin-right: 1px;
-vertical-align: top;
-}
-.shortcutd-c5e0cde5d4c6 .root-0-paragraph-set-0-paragraph-0 {
-font-size: 0;
-line-height: 1.5;
-margin: 0;
-text-align: justify;
-}
-.shortcutd-c5e0cde5d4c6 .root-0-paragraph-set-0-paragraph-0-text-0 {
-color: rgba(154, 154, 154, 1);
-text-transform: none;
-
-line-break: auto;
-overflow-wrap: initial;
-white-space: break-spaces;
-text-rendering: geometricPrecision;
-caret-color: rgba(154, 154, 154, 1);
-text-decoration: none;
-letter-spacing: 0px;
-font-size: 30px;
-font-family: "Abel";
-font-style: normal;
-font-weight: 400;
-}
-
-/* Rectangle */
-.rectangle-c5e0cde5d4c5 {
-position: absolute;
-left: 0px;
-top: 39px;
-width: 838px;
-height: 3px;
-background: #F7F7F7;
-border-radius: 10px;
-}
-
-/* Kenapa memilih shortcut-docx? */
-.kenapa-mem-c5e0cde5d4c4 {
-position: absolute;
-left: 0px;
-top: 0px;
-width: 511px;
-height: 35px;
-}
-.kenapa-mem-c5e0cde5d4c4 .root-0 {
-
-
-display: flex;
-white-space: break-spaces;
-align-items: flex-start;
-}
-.kenapa-mem-c5e0cde5d4c4 .root-0-paragraph-set-0 {
-display: inline-flex;
-flex-direction: column;
-justify-content: inherit;
-min-width: 100%;
-margin-right: 1px;
-vertical-align: top;
-}
-.kenapa-mem-c5e0cde5d4c4 .root-0-paragraph-set-0-paragraph-0 {
-font-size: 0;
-line-height: 1.2;
-margin: 0;
-text-align: left;
-}
-.kenapa-mem-c5e0cde5d4c4 .root-0-paragraph-set-0-paragraph-0-text-0 {
-color: rgba(255, 255, 255, 1);
-text-transform: none;
-
-line-break: auto;
-overflow-wrap: initial;
-white-space: break-spaces;
-text-rendering: geometricPrecision;
-caret-color: rgba(255, 255, 255, 1);
-text-decoration: none;
-letter-spacing: 0px;
-font-size: 30px;
-font-family: "Abel";
-font-style: normal;
-font-weight: 400;
-}
-
-/* Group */
-.group-c5e0c697b189 {
-position: absolute;
-left: 0px;
-top: 71px;
-width: 838px;
-height: 286px;
-}
-
-/* Kami dengan senang hati memperkenalkan shortcut-docx, sebuah alat inovatif yang dirancang khusus untuk mempermudah Anda dalam mengerjakan makalah. Shortcut-docx adalah solusi tepat bagi Anda yang menginginkan kemudahan dan efisiensi dalam menyiapkan tugas akademik. */
-.kami-denga-c5dfee11bfda {
-position: absolute;
-left: 0px;
-top: 48px;
-width: 838px;
-height: 238px;
-}
-.kami-denga-c5dfee11bfda .root-0 {
-
-
-display: flex;
-white-space: break-spaces;
-align-items: flex-start;
-}
-.kami-denga-c5dfee11bfda .root-0-paragraph-set-0 {
-display: inline-flex;
-flex-direction: column;
-justify-content: inherit;
-min-width: 100%;
-margin-right: 1px;
-vertical-align: top;
-}
-.kami-denga-c5dfee11bfda .root-0-paragraph-set-0-paragraph-0 {
-font-size: 0;
-line-height: 1.5;
-margin: 0;
-text-align: justify;
-}
-.kami-denga-c5dfee11bfda .root-0-paragraph-set-0-paragraph-0-text-0 {
-color: rgba(154, 154, 154, 1);
-text-transform: none;
-
-line-break: auto;
-overflow-wrap: initial;
-white-space: break-spaces;
-text-rendering: geometricPrecision;
-caret-color: rgba(154, 154, 154, 1);
-text-decoration: none;
-letter-spacing: 0px;
-font-size: 30px;
-font-family: "Abel";
-font-style: normal;
-font-weight: 400;
-}
-
-/* Rectangle */
-.rectangle-c5e07ed569c6 {
-position: absolute;
-left: 0px;
-top: 39px;
-width: 838px;
-height: 3px;
-background: #F7F7F7;
-border-radius: 10px;
-}
-
-/* Halo para mahasiswa dan pengunjung! */
-.halo-para-c5dfa8ee1de3 {
-position: absolute;
-left: 0px;
-top: 0px;
-width: 511px;
-height: 35px;
-}
-.halo-para-c5dfa8ee1de3 .root-0 {
-
-
-display: flex;
-white-space: break-spaces;
-align-items: flex-start;
-}
-.halo-para-c5dfa8ee1de3 .root-0-paragraph-set-0 {
-display: inline-flex;
-flex-direction: column;
-justify-content: inherit;
-min-width: 100%;
-margin-right: 1px;
-vertical-align: top;
-}
-.halo-para-c5dfa8ee1de3 .root-0-paragraph-set-0-paragraph-0 {
-font-size: 0;
-line-height: 1.2;
-margin: 0;
-text-align: left;
-}
-.halo-para-c5dfa8ee1de3 .root-0-paragraph-set-0-paragraph-0-text-0 {
-color: rgba(255, 255, 255, 1);
-text-transform: none;
-
-line-break: auto;
-overflow-wrap: initial;
-white-space: break-spaces;
-text-rendering: geometricPrecision;
-caret-color: rgba(255, 255, 255, 1);
-text-decoration: none;
-letter-spacing: 0px;
-font-size: 30px;
-font-family: "Abel";
-font-style: normal;
-font-weight: 400;
-}
-
-/* Selamat Datang di SHORTCUT-DOCX! */
-.selamat-da-c5dafc20d2b6 {
-position: absolute;
-left: 0px;
-top: 0px;
-width: 572px;
-height: 71px;
-}
-.selamat-da-c5dafc20d2b6 .root-0 {
-
-
-display: flex;
-white-space: break-spaces;
-align-items: flex-start;
-}
-.selamat-da-c5dafc20d2b6 .root-0-paragraph-set-0 {
-display: inline-flex;
-flex-direction: column;
-justify-content: inherit;
-min-width: 100%;
-margin-right: 1px;
-vertical-align: top;
-}
-.selamat-da-c5dafc20d2b6 .root-0-paragraph-set-0-paragraph-0 {
-font-size: 0;
-line-height: 1.2;
-margin: 0;
-text-align: left;
-}
-.selamat-da-c5dafc20d2b6 .root-0-paragraph-set-0-paragraph-0-text-0 {
-color: rgba(255, 255, 255, 1);
-text-transform: none;
-
-line-break: auto;
-overflow-wrap: initial;
-white-space: break-spaces;
-text-rendering: geometricPrecision;
-caret-color: rgba(255, 255, 255, 1);
-text-decoration: none;
-letter-spacing: 0px;
-font-size: 40px;
-font-family: "Abel";
-font-style: normal;
-font-weight: 400;
-}
-
-/* content */
-.content-c551c355eb0a {
-position: absolute;
-left: 0px;
-top: 0px;
-width: 892px;
-height: 2859px;
-background: #000000;
-border-radius: 0px;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+  /* width: 100vw; */
+  background-color: black;
+  min-height: 100vh;
+}
+
+/* page layout */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  z-index: 2;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 8vh;
+  background-color: #e7e8ec;
+  padding: 0 10px;
+}
+
+.tgl-btn {
+  display: block;
+  position: absolute;
+  right: 15px;
+  margin-right: 10px;
+  z-index: 1;
+  cursor: pointer;
+  opacity: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: grey;
+}
+
+.tgl-view {
+  display: block;
+  position: absolute;
+  right: 15px;
+  width: 30px;
+  height: 5px;
+  border-radius: 5px;
+  box-shadow: var(--bgClr-tgl) 0px 10px 0px 0px,
+    var(--bgClr-tgl) 0px -10px 0px 0px;
+  background-color: var(--bgClr-tgl);
+  margin-right: 10px;
+}
+
+.tgl-btn:checked + .tgl-view {
+  height: 30px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  transform: scale(1.8, 1.4);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  background-color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: var(--bgClr-tgl) 0px 0px 0px 0px, var(--bgClr-tgl) 0px 0px 0px 0px;
+  transition: 0.1s;
+}
+
+.navbar .drop-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  top: 100%;
+  width: 35%;
+  height: max-content;
+  justify-content: center;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  background-color: #d8d8d8;
+}
+
+.drop-menu-none {
+  display: none;
+}
+
+.navbar .drop-menu a {
+  color: black;
+  padding: 2px 0;
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar .drop-menu a:active {
+  transform: scaleY(1.2);
+}
+
+.navbar .drop-menu a:hover {
+  color: rgb(138, 138, 138);
+}
+
+.navbar .text-nav {
+  margin-left: 10px;
+  /* width: 30%; */
+}
+
+.navbar .text-nav a {
+  color: black;
+  margin-right: 35px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+.navbar .text-nav a:hover {
+  opacity: 50%;
+}
+
+/* page index */
+
+.hero {
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  margin-top: -5vh;
+  top: 0px;
+  left: 0px;
+  z-index: 0;
+  color: white;
+  /* padding-left: 1%; */
+}
+.hero-parent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 1%;
+}
+
+.container-txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .line {
+  background-color: white;
+  width: 100%;
+  height: 2px;
+  /* margin-left: 5px; */
+}
+
+.hero h1 {
+  color: white;
+  opacity: 0.7;
+  font-size: 7vw;
+  font-weight: 200;
+}
+
+.hero .link-href {
+  display: flex;
+  width: 100%;
+  justify-content: left;
+  margin-top: 3px;
+  margin-left: 2.5%;
+}
+
+.hero .link-href a {
+  text-decoration: underline;
+  color: white;
+  font-size: 1.4vw;
+  padding-right: calc(100% / 10);
+  /* animation: opacityAnim 10s infinite cubic-bezier(0.23, 1, 0.320, 1); */
+}
+
+.hero .link-href a:hover {
+  transform: scaleY(1.1);
+  transition: 0.1s;
+}
+
+.container-prop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: inherit;
+  width: 33%;
+}
+
+.parent-prop {
+  width: 0.5rem;
+  height: inherit;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+@keyframes playDesk {
+  0% {
+    transform: translateY(-100%);
+    /* box-shadow:white  0px 0px 30px 0px; */
+  }
+  50% {
+    transform: translateY(115%);
+    /* box-shadow:white  0px 0px 30px 0px; */
+  }
+  100% {
+    transform: translateY(100vh);
+    /* box-shadow:white  0px 0px 30px 0px; */
+  }
+}
+
+.properti {
+  border-radius: 40px;
+  background-color: white;
+  transform: translateY(-100%);
+  width: 40px;
+  height: 30%;
+  animation: playDesk 10s infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.parent-prop:hover {
+  transform: translateX(-15px);
+}
+
+/* .content-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 1;
+} */
+
+.content {
+  background-color: rgb(0, 0, 0);
+  border-top: white 2px solid;
+  max-height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  z-index: 1;
+  color: white;
+  text-align: justify;
+  position: relative;
+  padding: 10px 15%;
+}
+
+/* .content-content {
+  position: relative; 
+  z-index: 2;
+  max-width: 600px;
+  padding: 20px;
+} */
+
+.content h1 {
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: left;
+  font-size: 2rem;
+}
+
+.content p {
+  padding-top: 2px;
+}
+
+.content .text {
+  font-size: 1.2rem;
+  padding: 5px 15px;
+  font-weight: 300;
+  text-align: justify;
+}
+
+.content .list {
+  opacity: 70%;
+  padding: 10px 0px;
+  margin-left: 5%;
+}
+.content .list li {
+  padding: 2px 0px;
+}
+.content .list-child {
+  opacity: 70%;
+  padding: 10px 0px;
+  margin-left: 10%;
+}
+
+.content .list-child li {
+  padding: 3px 0px;
+}
+
+.content .judul {
+  font-weight: 400;
+  padding-top: 20px;
+  font-size: 1.4rem;
+}
+
+.content .line {
+  height: 1px;
+  background-color: white;
+  width: 100%;
+  margin: 5px 0px;
+}
+
+.content .child {
+  opacity: 70%;
+}
+
+footer {
+  height: 40px;
+  width: 100%;
+  color: black;
+  font-weight: 700;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 1;
+}
+
+footer p {
+  margin: 0 10px;
+}
+
+footer a {
+  color: black;
+}
+
+/* page home */
+.container-home {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 5px;
+  width: 100%;
+  height: max-content;
+}
+
+.container-home textarea {
+  font-size: 1.3rem;
+  background-color: rgb(41, 41, 41);
+  color: white;
+}
+
+.btn-home {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0px auto;
+  width: 100%;
+  height: 40px;
+  background-color: rgb(255, 255, 255);
+  border: #3f3f3f 2px solid;
+  color: rgb(0, 0, 0);
+  border-radius: 20px;
+  padding-bottom: 2px;
+}
+
+.btn-home:active {
+  opacity: 0.5;
+}
+
+.btn-home:hover {
+  cursor: pointer;
+  color: rgb(102, 102, 102);
+  border: #797979 2px solid;
+}
+
+.container-ads-home {
+  height: 85%;
+  width: 100%;
+}
+
+@keyframes play2 {
+  0% {
+    transform: translateY(-10vh);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.show-ref-home {
+  font-size: 1.3rem;
+  padding: 5px;
+  border-radius: 5px;
+  overflow: scroll;
+  overflow-x: hidden;
+  transition: 0.3s;
+  animation: play2 0.1s alternate;
+  border: 5px solid rgb(94, 94, 94);
+  background-color: rgb(94, 94, 94);
+}
+
+.ref-home {
+  width: 100%;
+  height: max-content;
+  margin-bottom: 10px;
+  background-color: rgb(24, 24, 24);
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.ref-home p {
+  color: white;
+  margin: 0 0 3px 0;
+}
+
+.ref-home p:nth-child(1) {
+  display: flex;
+  cursor: pointer;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 3px 0px;
+  width: 100%;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  border-bottom: 1px white solid;
+  margin: 0 0 3px 0;
+  background-color: rgb(0, 0, 0);
+}
+
+.ref-home p:nth-child(1):active {
+  color: rgb(73, 73, 73);
+}
+
+.ref-home p:nth-child(1):hover {
+  border-bottom: 1px rgb(37, 37, 37) solid;
+  background-color: rgb(126, 126, 126);
+}
+
+/* page referensi */
+.container-input {
+  background-color: rgb(37, 37, 37);
+  width: 100%;
+  border-radius: 5px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-bottom: 20px;
+  border-bottom: 2px white solid;
+}
+
+.container-input h1 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.container-ref {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap-reverse;
+  width: 100%;
+  height: 100%;
+  margin-top: 5px;
+}
+
+.select-type {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.select-type p {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 3px;
+}
+
+.select-type select {
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: white;
+  padding-bottom: 2px;
+  padding-left: 2px;
+  width: max-content;
+  margin-bottom: 10px;
+  background-color: rgb(58, 58, 58);
+}
+
+.select-type select option {
+  font-size: 1.2rem;
+  padding-bottom: 0;
+  padding-left: 0;
+  font-weight: 100;
+}
+
+.select-type button {
+  font-weight: 400;
+  font-size: 1.2rem;
+  border: 1px rgb(255, 255, 255) solid;
+  color: rgb(202, 202, 202);
+  background-color: rgb(54, 54, 54);
+  padding: 0 20px;
+  margin-left: 10px;
+  padding-bottom: 1px;
+  border-radius: 20px;
+}
+
+.select-type button:active {
+  background-color: rgb(117, 117, 117);
+}
+
+.select-type button:hover {
+  border: 1px rgb(163, 163, 163) solid;
+  color: white;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input > input {
+  margin: 2px 5px;
+  font-size: 1.3rem;
+  background-color: rgb(48, 48, 48);
+  color: rgb(187, 187, 187);
+  border: white 1px solid;
+  padding: 5px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+.form-input input:focus {
+  border: white 1px solid;
+  color: white;
+  background-color: #4e4e4e;
+  outline: none;
+}
+
+.container-ref {
+  display: flex;
+  width: 100%;
+  flex-direction: row-reverse;
+  justify-content: stretch;
+  align-items: stretch;
+}
+
+.container-ref > .show-ref {
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 3px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container-ref > .show-ref > p {
+  margin: 5px;
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-align: left;
+}
+
+.container-ref > .show-ref button {
+  font-size: 1.3rem;
+  font-weight: 400;
+  border: 1px rgb(255, 255, 255) solid;
+  color: rgb(202, 202, 202);
+  background-color: rgb(54, 54, 54);
+  padding: 15px 0;
+  border-radius: 20px;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-ref > .show-ref button:active {
+  opacity: 0.5;
+}
+
+.container-ref > .show-ref button:hover {
+  cursor: pointer;
+  color: rgb(102, 102, 102);
+  border: #797979 2px solid;
+}
+
+.container-ads-ref {
+  display: none;
+  width: 10%;
+  height: 100px;
+  background-color: white;
+}
+
+/* page tutorial */
+
+.tutorial {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.container-tutor {
+  width: 70%;
+  background-color: #141414;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px 10px;
+}
+
+.container-tutor #tutorial-page {
+  font-size: 3rem;
+}
+
+.container-tutor .line {
+  background-color: white;
+  width: 100%;
+}
+
+.container-tutor .daftar-isi {
+  background-color: black;
+  border-radius: 20px;
+}
+
+.container-tutor .daftar-isi p {
+  font-size: 2rem;
+  font-weight: 500;
+  padding-left: 1%;
+}
+
+.daftar-isi ul {
+  padding-left: 5%;
+  color: white;
+}
+
+.daftar-isi ul li {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.daftar-isi ul li a {
+  color: white;
+}
+
+.container-tutor .text .line {
+  width: 100%;
+  background-color: white;
+  margin: 5px 0;
+}
+
+.container-tutor .text h1 {
+  color: #ffffff;
+  font-size: 2rem;
+  margin-left: 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.text h1 p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-left: 20px;
+  text-align: justify;
+}
+
+.text h1 p a {
+  color: white;
+}
+
+.img-tutor {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+
+.container-ads-tutor {
+  width: 15%;
+}
+
+/* page tentang kami */
+
+.container-about .text-about {
+  width: 100% !important;
+}
+.container-about {
+  width: 100%;
+  margin: 0px auto;
+  background-color: #1f1f1f;
+  color: white;
+  min-height: 100vh;
+  max-height: max-content;
+  padding: 10px 20px;
+  padding-bottom: 30vh;
+}
+
+.container-about h1 {
+  font-size: 5rem;
+  margin-bottom: 20px;
+  background-color: black;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+}
+
+.container-about .text-about {
+  padding-top: 20px;
+  width: inherit;
+}
+
+.text-about .link-about {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  border: solid 1px black;
+  text-decoration: none;
+  padding: 5px;
+  padding-bottom: 10px;
+  border-radius: 50px;
+  display: inline-block;
+}
+
+.text-about a {
+  color: white;
+  display: inline-block;
+  margin: 5px;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.text-about .line {
+  width: 90%;
+  background-color: white;
+  height: 5px;
+}
+
+.text-about .penjelasan-about {
+  width: 70%;
+  text-align: left;
+  background-color: black;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.penjelasan-about h2 {
+  margin: 10px 0;
+  font-size: 2rem;
+}
+
+.penjelasan-about p {
+  margin: 25px 0;
+  font-size: 1.3rem;
+  font-weight: 200;
+  margin-left: 3%;
+}
+
+.text-about .kontak-about {
+  margin-top: 5%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+}
+
+.kontak-about .kontak {
+  width: 100%;
+  padding: 20px;
+  background-color: black;
+}
+
+.kontak h2 {
+  font-size: 2.3rem;
+  font-weight: 400;
+}
+
+.kontak .line {
+  width: inherit;
+  height: 3px;
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+
+.kontak .profil {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+}
+
+.profil .profil-text {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.profil-text h3 {
+  font-size: 5rem;
+}
+
+.profil-text .h4-point {
+  border-left: white 3px solid;
+  margin-left: 30px;
+}
+
+.h4-point h4 {
+  font-weight: 500;
+  background-color: rgb(46, 46, 46);
+  padding: 3px;
+  margin: 2px 10px;
+}
+
+.profil-text .social-media {
+  margin-left: 30px;
+  margin-top: 20px;
+  border: solid 2px white;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.social-media .line {
+  margin: 0;
+  height: 2px;
+}
+
+.social-media p {
+  font-size: 1.2rem;
+}
+
+.social-media a {
+  text-decoration: underline;
+  border-left: 2px solid white;
+  padding-left: 5px;
+  font-size: 1.1rem;
+  display: inline-block;
+  margin-left: 25px;
+}
+
+.profil .profil-img {
+  width: 250px;
+  height: 250px;
+  margin-left: 20px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 800%;
+  font-weight: 100;
+}
+
+/* page kebijakan privasi */
+
+.container-privasi {
+  padding: 0 10%;
+  width: 100%;
+  color: white;
+  height: max-content;
+}
+
+.container-privasi h1 {
+  font-size: 5rem;
+  background-color: rgb(32, 32, 32);
+  padding: 10px;
+  border-bottom: 3px white solid;
+}
+
+.container-privasi div {
+  margin: 60px 0;
+  border-left: 3px solid white;
+  border-right: 3px solid white;
+  padding: 0 5px;
+}
+
+.container-privasi div h2 {
+  font-size: 2rem;
+  padding: 0px 5px;
+  background-color: rgb(49, 49, 49);
+}
+
+.container-privasi div p {
+  font-size: 1.2rem;a
+  margin-left: 20px;
+}
+
+.container-privasi div ul {
+  font-size: 1.2rem;
+  margin-left: 50px;
+}
+
+.container-privasi div a {
+  font-size: 1.2rem;
+  margin-left: 20px;
+  color: white;
 }

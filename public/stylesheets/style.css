@@ -8,6 +8,523 @@
   /* outline: 1px red solid; */
 }
 
+/* page layout */
+/* page index */
+/* page home */
+/* page referensi */
+/* page tutorial */
+/* page tentang kami */
+/* page kebijakan privasi */
+
+.container-about .text-about {
+  width: 100%;
+}
+/* page kebijakan privasi */
+
+/* responsif */
+/* desktop */
+@media (min-width: 901px) {
+  /* page layout */
+
+  .navbar {
+    height: 8vh;
+  }
+  .tgl-btn {
+    display: block;
+  }
+  .tgl-view {
+    display: block;
+  }
+  .drop-menu {
+    width: 35%;
+    padding: 10px 20px;
+  }
+  .drop-menu a {
+    font-size: 1.3rem;
+    padding: 2px 0;
+    font-weight: 500;
+  }
+  .drop-menu-none {
+    display: none;
+  }
+  .navbar .text-nav {
+    width: max-content;
+  }
+  .navbar .text-nav a {
+    font-size: 1.5rem;
+  }
+
+  /* page index */
+  .hero {
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero .hero-parent {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 1%;
+  }
+
+  .hero-parent .container-txt {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-parent .container-txt .link-href {
+    width: 100%;
+    justify-content: left;
+    margin-top: 3px;
+    margin-left: 2.5%;
+  }
+
+  .hero-parent .container-txt h1 {
+    font-size: 7vw;
+    font-weight: 200;
+  }
+
+  .hero-parent .container-txt a {
+    font-size: 1.4vw;
+    padding-right: calc(100% / 10);
+  }
+
+  .hero-parent .container-prop {
+    height: inherit;
+    width: 33%;
+  }
+
+  .container-prop .parent-prop {
+    height: inherit;
+  }
+
+  @keyframes playDesk {
+    0% {
+      transform: translateY(-100%);
+      /* box-shadow:white  0px 0px 30px 0px; */
+    }
+    50% {
+      transform: translateY(115%);
+      /* box-shadow:white  0px 0px 30px 0px; */
+    }
+    100% {
+      transform: translateY(100vh);
+      /* box-shadow:white  0px 0px 30px 0px; */
+    }
+  }
+  .parent-prop .properti {
+    width: 40px;
+    height: 30%;
+    animation: playDesk 10s infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .content {
+    padding: 10px 15%;
+  }
+
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .content h1 .text {
+    font-size: 1.3rem;
+  }
+
+  .content h1 .text .judul {
+    font-size: 1.5rem;
+  }
+
+  /* page home */
+
+  .container-home textarea {
+    font-size: 1.3rem;
+  }
+
+  .btn-home {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0px 2px;
+    width: 100%;
+    height: 40px;
+  }
+
+  .show-ref-home {
+    font-size: 1.3rem;
+    padding: 5px;
+    overflow: scroll;
+  }
+
+  .ref-home {
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+
+  .ref-home p {
+    font-size: 1.1rem;
+    margin: 0 0 3px 0;
+  }
+
+  .ref-home p:nth-child(1) {
+    padding: 3px 0px;
+    font-weight: 500;
+    border-bottom: 1px white solid;
+    margin: 0 0 3px 0;
+  }
+
+  /* page referensi */
+  .container-input {
+    padding: 5px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    border-bottom: 2px white solid;
+    margin-top: 0.5%;
+  }
+
+  .container-input h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+
+  .select-type {
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+
+  .select-type p {
+    font-size: 1.5rem;
+    font-weight: 350;
+    margin-bottom: 3px;
+  }
+
+  .select-type select {
+    font-weight: 400;
+    font-size: 1.3rem;
+    padding-bottom: 2px;
+    padding-left: 2px;
+  }
+
+  .select-type select option {
+    font-size: 1.1rem;
+    font-weight: 100;
+  }
+
+  .select-type button {
+    font-weight: 400;
+    font-size: 1.2rem;
+    padding: 0 20px;
+    margin-left: 10px;
+    padding-bottom: 1px;
+  }
+
+  .form-input > input {
+    margin: 7px 5px;
+    font-size: 1.3rem;
+    padding: 5px;
+  }
+
+  .container-ref {
+    margin-top: 5px;
+  }
+
+  .container-ref > .show-ref {
+    padding: 5px;
+    margin: 3px 10px;
+  }
+
+  .container-ref > .show-ref > p {
+    margin: 5px;
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+
+  .container-ref > .show-ref button {
+    font-size: 1.3rem;
+    font-weight: 400;
+    padding: 15px 0;
+  }
+
+
+  /* page tutorial */
+  
+
+}
+
+/* tablet */
+@media (min-width: 601px) and (max-width: 900px) {
+  /* html{
+    overflow: visible;
+  } */
+
+  .navbar {
+    height: 7vh;
+    font-size: 1.3rem;
+  }
+
+  .navbar .text-nav a:nth-child(1) {
+    font-size: 1.3rem;
+  }
+  .navbar .text-nav a:nth-child(2) {
+    display: none;
+  }
+  .navbar .text-nav a:nth-child(3) {
+    display: none;
+  }
+  .navbar .text-nav a:nth-child(4) {
+    display: none;
+  }
+
+  .tgl-btn {
+    display: block;
+  }
+  .tgl-view {
+    display: block;
+  }
+
+  .drop-menu {
+    width: 40%;
+  }
+
+  .drop-menu a {
+    margin-top: 5px;
+    font-size: 1.3rem;
+  }
+
+  /* page index */
+
+  .hero {
+    height: 50vh;
+  }
+
+  .hero .hero-parent {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-parent .container-prop {
+    position: absolute;
+    opacity: 0.2;
+    z-index: 0;
+    width: 80%;
+    height: 100%;
+  }
+
+  .container-prop .parent-prop {
+    height: inherit;
+  }
+
+  .container-prop .parent-prop .properti {
+    width: 35px;
+    height: 50%;
+  }
+
+  .hero-parent .container-txt {
+    position: absolute;
+    z-index: 1;
+  }
+
+  .container-txt .link-href {
+    justify-content: center;
+  }
+
+  .link-href a {
+    padding-right: 0;
+    margin: 0 auto;
+    font-size: 1.3rem;
+  }
+
+  .container-txt h1 {
+    font-size: 4rem;
+    font-weight: 500;
+  }
+
+  .content {
+    padding: 10px 2.5%;
+  }
+
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .content h1 .text {
+    text-align: left;
+    font-size: 1.3rem;
+  }
+
+  .content h1 .text .judul {
+    font-size: 1.5rem;
+  }
+
+  /* page referensi */
+
+  .container-input h1 {
+    font-size: 2rem;
+  }
+
+  .select-type p {
+    font-size: 1.6rem;
+  }
+
+  /* page tutorial */
+
+  .tutorial {
+    flex-direction: column;
+  }
+
+  .container-tutor {
+    padding-right: 20px;
+    width: 100%;
+  }
+
+  .daftar-isi ul li {
+    font-size: 1.3rem;
+  }
+
+  .text h1 p {
+    font-size: 1.3rem;
+  }
+
+  .container-ads-tutor {
+    display: none;
+  }
+
+  /* page tentang kami */
+
+  .container-about .text-about a {
+    font-size: 1.2rem;
+  }
+
+  .container-about .text-about .line {
+    width: 100%;
+  }
+
+  .container-about .text-about .penjelasan-about {
+    width: 100%;
+  }
+
+  .container-about .text-about .kontak-about .profil {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .kontak-about .kontak .profil .profil-text {
+    width: 100%;
+  }
+
+  .profil .profil-text h3 {
+    text-align: center;
+  }
+
+  /* page kebijakan privasi */
+
+  .container-privasi {
+    padding: 0 0;
+  }
+  .container-privasi div p {
+    font-size: 1.4rem;
+  }
+}
+
+/* gawai */
+@media (max-width: 600px) {
+  html {
+    overflow: visible;
+  }
+
+  /* page layout */
+  .navbar {
+    height: 9vh;
+  }
+
+  .navbar .text-nav a {
+    font-size: 1.3rem;
+  }
+
+  .navbar .drop-menu {
+    padding-right: 10px;
+  }
+
+  .navbar .drop-menu a {
+    font-size: 1.1rem;
+  }
+
+  .navbar .text-nav a:nth-child(2) {
+    display: none;
+  }
+  .navbar .text-nav a:nth-child(3) {
+    display: none;
+  }
+  .navbar .text-nav a:nth-child(4) {
+    display: none;
+  }
+
+  .tgl-btn {
+    display: block;
+  }
+  .tgl-view {
+    display: block;
+  }
+
+  /* page index */
+
+  .hero {
+    height: 50vh;
+  }
+
+  .hero .hero-parent {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-parent .container-prop {
+    position: absolute;
+    opacity: 0.2;
+    z-index: 0;
+    top: 0;
+    width: 80%;
+    height: 100%;
+  }
+
+  .container-prop .parent-prop {
+    height: inherit;
+  }
+
+  .container-prop .parent-prop .properti {
+    width: 30px;
+    height: 50%;
+  }
+
+  .hero-parent {
+    padding: 0 0;
+    width: 100%;
+  }
+
+  .hero-parent .container-txt {
+    position: absolute;
+    z-index: 1;
+    width: 90%;
+  }
+
+  .container-txt h1 {
+    font-size: calc(1.5rem + 3.5vw);
+  }
+
+  .container-txt .link-href {
+    justify-content: center;
+  }
+
+  .link-href a {
+    padding-right: 0;
+    margin: 0 auto;
+    font-size: calc(0.5rem + 1.5vw);
+  }
+}
 
 /* style seleksi teks */
 ::selection {
@@ -80,21 +597,6 @@
   }
 }
 
-@keyframes play1 {
-  0% {
-    transform: translateY(-100%);
-    /* box-shadow:white  0px 0px 30px 0px; */
-  }
-  50% {
-    transform: translateY(50%);
-    /* box-shadow:white  0px 0px 30px 0px; */
-  }
-  100% {
-    transform: translateY(200%);
-    /* box-shadow:white  0px 0px 30px 0px; */
-  }
-}
-
 /* .parent-prop{
   background-color: white;
   position: absolute;
@@ -148,13 +650,11 @@ body {
   left: 0px;
   top: 0px;
   width: 100%;
-  height: 8vh;
   background-color: #e7e8ec;
   padding: 0 10px;
 }
 
 .tgl-btn {
-  display: block;
   position: absolute;
   right: 15px;
   margin-right: 10px;
@@ -168,7 +668,6 @@ body {
 }
 
 .tgl-view {
-  display: block;
   position: absolute;
   right: 15px;
   width: 30px;
@@ -202,25 +701,14 @@ body {
   z-index: -1;
   right: 0;
   top: 100%;
-  width: 35%;
   height: max-content;
   justify-content: center;
-  padding-left: 20px;
-  padding-bottom: 10px;
-  padding-top: 10px;
   background-color: #d8d8d8;
-}
-
-.drop-menu-none {
-  display: none;
 }
 
 .navbar .drop-menu a {
   color: black;
-  padding: 2px 0;
-  font-size: 1.2rem;
   text-decoration: none;
-  font-weight: 500;
 }
 
 .navbar .drop-menu a:active {
@@ -233,7 +721,6 @@ body {
 
 .navbar .text-nav {
   margin-left: 10px;
-  /* width: 30%; */
 }
 
 .navbar .text-nav a {
@@ -241,7 +728,6 @@ body {
   margin-right: 35px;
   text-decoration: none;
   font-weight: 500;
-  font-size: 1.4rem;
 }
 
 .navbar .text-nav a:hover {
@@ -253,63 +739,42 @@ body {
 .hero {
   background-color: rgb(0, 0, 0);
   width: 100%;
-  height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   position: sticky;
   margin-top: -5vh;
   top: 0px;
   left: 0px;
   z-index: 0;
   color: white;
-  /* padding-left: 1%; */
 }
+
 .hero-parent {
   width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 0px 1%;
 }
 
 .container-txt {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  justify-content: center;
 }
 
 .hero .line {
   background-color: white;
   width: 100%;
   height: 2px;
-  /* margin-left: 5px; */
 }
 
 .hero h1 {
   color: white;
   opacity: 0.7;
-  font-size: 7vw;
-  font-weight: 200;
 }
 
 .hero .link-href {
   display: flex;
-  width: 100%;
-  justify-content: left;
-  margin-top: 3px;
-  margin-left: 2.5%;
 }
 
 .hero .link-href a {
   text-decoration: underline;
   color: white;
-  font-size: 1.4vw;
-  padding-right: calc(100% / 10);
   /* animation: opacityAnim 10s infinite cubic-bezier(0.23, 1, 0.320, 1); */
 }
 
@@ -323,13 +788,10 @@ body {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  height: inherit;
-  width: 33%;
 }
 
 .parent-prop {
   width: 0.5rem;
-  height: inherit;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -337,17 +799,18 @@ body {
   justify-content: flex-start;
 }
 
-@keyframes playDesk {
+/* animasi defauld untuk displat tablet dan hp */
+@keyframes play1 {
   0% {
     transform: translateY(-100%);
     /* box-shadow:white  0px 0px 30px 0px; */
   }
   50% {
-    transform: translateY(115%);
+    transform: translateY(50%);
     /* box-shadow:white  0px 0px 30px 0px; */
   }
   100% {
-    transform: translateY(100vh);
+    transform: translateY(200%);
     /* box-shadow:white  0px 0px 30px 0px; */
   }
 }
@@ -356,9 +819,7 @@ body {
   border-radius: 40px;
   background-color: white;
   transform: translateY(-100%);
-  width: 40px;
-  height: 30%;
-  animation: playDesk 10s infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  animation: play1 10s infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
 .parent-prop:hover {
@@ -387,7 +848,6 @@ body {
   color: white;
   text-align: justify;
   position: relative;
-  padding: 10px 15%;
 }
 
 /* .content-content {
@@ -401,7 +861,6 @@ body {
   font-weight: bold;
   margin-top: 10px;
   text-align: left;
-  font-size: 2rem;
 }
 
 .content p {
@@ -409,7 +868,6 @@ body {
 }
 
 .content .text {
-  font-size: 1.2rem;
   padding: 5px 15px;
   font-weight: 300;
   text-align: justify;
@@ -436,7 +894,6 @@ body {
 .content .judul {
   font-weight: 400;
   padding-top: 20px;
-  font-size: 1.4rem;
 }
 
 .content .line {
@@ -482,17 +939,11 @@ footer a {
 }
 
 .container-home textarea {
-  font-size: 1.3rem;
   background-color: rgb(41, 41, 41);
   color: white;
 }
 
 .btn-home {
-  font-size: 1.2rem;
-  font-weight: 500;
-  margin: 0px auto;
-  width: 100%;
-  height: 40px;
   background-color: rgb(255, 255, 255);
   border: #3f3f3f 2px solid;
   color: rgb(0, 0, 0);
@@ -527,10 +978,7 @@ footer a {
 }
 
 .show-ref-home {
-  font-size: 1.3rem;
-  padding: 5px;
   border-radius: 5px;
-  overflow: scroll;
   overflow-x: hidden;
   transition: 0.3s;
   animation: play2 0.1s alternate;
@@ -541,15 +989,12 @@ footer a {
 .ref-home {
   width: 100%;
   height: max-content;
-  margin-bottom: 10px;
   background-color: rgb(24, 24, 24);
-  padding: 5px;
   border-radius: 10px;
 }
 
 .ref-home p {
   color: white;
-  margin: 0 0 3px 0;
 }
 
 .ref-home p:nth-child(1) {
@@ -557,12 +1002,8 @@ footer a {
   cursor: pointer;
   justify-content: space-evenly;
   align-items: center;
-  padding: 3px 0px;
   width: 100%;
-  font-weight: 500;
   color: rgb(255, 255, 255);
-  border-bottom: 1px white solid;
-  margin: 0 0 3px 0;
   background-color: rgb(0, 0, 0);
 }
 
@@ -580,68 +1021,33 @@ footer a {
   background-color: rgb(37, 37, 37);
   width: 100%;
   border-radius: 5px;
-  padding: 5px;
-  padding-left: 10px;
-  padding-bottom: 20px;
-  border-bottom: 2px white solid;
 }
 
 .container-input h1 {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  font-size: 2.5rem;
-  font-weight: 300;
   color: white;
-  margin-bottom: 20px;
-}
-
-.container-ref {
-  display: flex;
-  flex-direction: row-reverse;
-  flex-wrap: wrap-reverse;
-  width: 100%;
-  height: 100%;
-  margin-top: 5px;
-}
-
-.select-type {
-  margin-left: 20px;
-  margin-bottom: 10px;
 }
 
 .select-type p {
   color: white;
-  font-size: 1.8rem;
-  font-weight: 400;
-  margin-bottom: 3px;
 }
 
 .select-type select {
-  font-weight: 400;
-  font-size: 1.3rem;
   color: white;
-  padding-bottom: 2px;
-  padding-left: 2px;
   width: max-content;
   margin-bottom: 10px;
   background-color: rgb(58, 58, 58);
 }
 
 .select-type select option {
-  font-size: 1.2rem;
   padding-bottom: 0;
   padding-left: 0;
-  font-weight: 100;
 }
 
 .select-type button {
-  font-weight: 400;
-  font-size: 1.2rem;
   border: 1px rgb(255, 255, 255) solid;
   color: rgb(202, 202, 202);
   background-color: rgb(54, 54, 54);
-  padding: 0 20px;
-  margin-left: 10px;
-  padding-bottom: 1px;
   border-radius: 20px;
 }
 
@@ -660,13 +1066,9 @@ footer a {
 }
 
 .form-input > input {
-  margin: 2px 5px;
-  font-size: 1.3rem;
   background-color: rgb(48, 48, 48);
   color: rgb(187, 187, 187);
   border: white 1px solid;
-  padding: 5px;
-  margin: 5px 0;
   border-radius: 5px;
 }
 
@@ -680,7 +1082,9 @@ footer a {
 .container-ref {
   display: flex;
   width: 100%;
+  height: 100%;
   flex-direction: row-reverse;
+  flex-wrap: wrap-reverse;
   justify-content: stretch;
   align-items: stretch;
 }
@@ -688,27 +1092,19 @@ footer a {
 .container-ref > .show-ref {
   background-color: white;
   border-radius: 5px;
-  padding: 5px;
-  margin: 3px 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .container-ref > .show-ref > p {
-  margin: 5px;
-  font-size: 1.3rem;
-  font-weight: 400;
   text-align: left;
 }
 
 .container-ref > .show-ref button {
-  font-size: 1.3rem;
-  font-weight: 400;
   border: 1px rgb(255, 255, 255) solid;
   color: rgb(202, 202, 202);
   background-color: rgb(54, 54, 54);
-  padding: 15px 0;
   border-radius: 20px;
   width: 100%;
   height: 10%;
@@ -828,7 +1224,7 @@ footer a {
 /* page tentang kami */
 
 .container-about .text-about {
-  width: 100% !important;
+  width: 100%;
 }
 .container-about {
   width: 100%;
