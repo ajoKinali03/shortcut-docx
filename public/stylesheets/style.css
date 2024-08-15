@@ -18,7 +18,7 @@
 
 /* responsif */
 /* desktop */
-@media (min-width: 901px) {
+@media screen and (min-width: 901px) {
   /* page layout */
 
   .navbar {
@@ -141,6 +141,10 @@
   }
 
   /* page home */
+  .container-home {
+    flex-direction: row;
+    gap: 5px;
+  }
 
   .container-home textarea {
     font-size: 1.3rem;
@@ -252,6 +256,8 @@
 
   /* page tutorial */
   .tutorial .container-tutor {
+    width: 70%;
+    gap: 20px;
     padding: 10px 10px;
   }
 
@@ -278,6 +284,7 @@
     font-size: 2rem;
     margin-left: 20px;
     margin-top: 20px;
+    gap: 20px;
   }
 
   .text h1 p {
@@ -422,21 +429,22 @@
 }
 
 /* tablet */
-@media (min-width: 601px) and (max-width: 900px) {
-  /* html{
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  html{
     overflow: visible;
-  } */
+  }
 
   .navbar {
-    height: 7vh;
-    font-size: 1.3rem;
+    height: 9vh;
   }
-
-  .navbar .text-nav a:nth-child(1) {
-    font-size: 1.3rem;
+  .logo{
+    width: 13%;
+    margin-right: 20px;
   }
   .navbar .text-nav a:nth-child(2) {
-    display: none;
+    font-size: 1.3rem;
+    display: inline-block;
+    font-weight: 700;
   }
   .navbar .text-nav a:nth-child(3) {
     display: none;
@@ -444,21 +452,27 @@
   .navbar .text-nav a:nth-child(4) {
     display: none;
   }
-
+  .navbar .text-nav a:nth-child(5) {
+    display: none;
+  }
   .tgl-btn {
     display: block;
   }
   .tgl-view {
     display: block;
   }
-
   .drop-menu {
     width: 40%;
+    padding: 10px 20px;
   }
-
   .drop-menu a {
-    margin-top: 5px;
     font-size: 1.3rem;
+    padding: 5px 0;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  .navbar .text-nav {
+    width: max-content;
   }
 
   /* page index */
@@ -468,9 +482,11 @@
   }
 
   .hero .hero-parent {
-    flex-direction: column;
-    justify-content: center;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
   }
 
   .hero-parent .container-prop {
@@ -492,21 +508,27 @@
 
   .hero-parent .container-txt {
     position: absolute;
+    width: 85%;
     z-index: 1;
+    align-items: center;
+    justify-content: center;
   }
 
   .container-txt .link-href {
+    width: 100%;
     justify-content: center;
+    margin-top: 3px;
+    margin-left: 2.5%;
   }
 
   .link-href a {
     padding-right: 0;
     margin: 0 auto;
-    font-size: 1.3rem;
+    font-size: calc(0.7rem + 1.5vw);
   }
 
   .container-txt h1 {
-    font-size: 4rem;
+    font-size: calc(2rem + 5vw);
     font-weight: 500;
   }
 
@@ -527,37 +549,149 @@
     font-size: 1.5rem;
   }
 
-  /* page referensi */
 
-  .container-input h1 {
-    font-size: 2rem;
+
+  /* page home */
+  .container-home{
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+  .container-home textarea {
+    font-size: 1.4rem;
+  }
+  .btn-home {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 3px 0;
+    width: 100%;
+    height: 40px;
+  }
+  .show-ref-home {
+    font-size: 1.3rem;
+    padding: 5px;
+    margin-top: 5vh;
+    overflow: scroll;
+    height: 80vh;
   }
 
-  .select-type p {
+  .ref-home {
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+
+  .ref-home p {
+    font-size: 1.3rem;
+    margin: 0 0 5px 0;
+  }
+
+  .ref-home p:nth-child(1) {
     font-size: 1.6rem;
+    padding: 3px 0px;
+    font-weight: 500;
+    border-bottom: 2px white solid;
+    margin: 0 0 3px 0;
+  }
+
+  /* page referensi */
+  
+  .container-input {
+    padding: 5px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    border-bottom: 3px white solid;
+    margin-top: 0.5%;
+  }
+  .container-input h1 {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 15px;
+  }
+  .select-type {
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+  .select-type p {
+    font-size: 1.3rem;
+    font-weight: 350;
+    margin-bottom: 3px;
+  }
+  .select-type select {
+    font-weight: 400;
+    font-size: 1rem;
+    padding-bottom: 2px;
+    padding-left: 2px;
+  }
+  .select-type select option {
+    font-size: 0.5rem;
+    font-weight: 100;
+  }
+  .select-type button {
+    font-weight: 400;
+    font-size: 1rem;
+    padding: 0 20px;
+    margin-left: 10px;
+    padding-bottom: 1px;
+  }
+  .form-input > input {
+    margin: 7px 5px;
+    font-size: 1rem;
+    padding: 5px;
+  }
+  .container-ref {
+    margin-top: 10px;
+  }
+  .container-ref > .show-ref {
+    padding: 5px;
+    margin: 3px 5px;
+  }
+  .container-ref > .show-ref > p {
+    margin: 5px;
+    font-size: 1rem;
+    font-weight: 450;
+  }
+  .container-ref > .show-ref button {
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 15px 0;
   }
 
   /* page tutorial */
-
   .tutorial {
     flex-direction: column;
   }
-
+  
   .container-tutor {
-    padding-right: 20px;
+    padding: 20px;
     width: 100%;
+    gap: 20px;
   }
-
+  .container-tutor #tutorial-page {
+    font-size: 1.7rem;
+  }
+  .container-tutor .daftar-isi p {
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding-left: 3%;
+  }
+  .daftar-isi ul {
+    padding-left: 5%;
+  }
   .daftar-isi ul li {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
+    margin: 10px 0;
   }
-
+  .container-tutor .text h1 {
+    font-size: 1.8rem;
+    margin-left: 20px;
+    margin-top: 15px;  
+    gap: 5px;
+  }
   .text h1 p {
-    font-size: 1.3rem;
-  }
-
-  .container-ads-tutor {
-    display: none;
+    font-size: 1.2rem;
+    font-weight: 350;
+    margin-left: 20px;
+    text-align: left;
   }
 
   /* page tentang kami */
@@ -1106,8 +1240,6 @@ footer a {
 .container-home {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  gap: 5px;
   width: 100%;
   height: max-content;
 }
@@ -1314,12 +1446,10 @@ footer a {
 }
 
 .container-tutor {
-  width: 70%;
   background-color: #141414;
   color: white;
   display: flex;
   flex-direction: column;
-  gap: 20px;
 }
 
 .container-tutor .line {
@@ -1350,7 +1480,6 @@ footer a {
   color: #ffffff;
   display: flex;
   flex-direction: column;
-  gap: 20px;
 }
 
 .text h1 p a {
@@ -1363,10 +1492,6 @@ footer a {
   display: block;
   margin: 0 auto;
   margin-bottom: 25px;
-}
-
-.container-ads-tutor {
-  width: 15%;
 }
 
 /* page tentang kami */
