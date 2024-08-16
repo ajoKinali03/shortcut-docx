@@ -85,6 +85,8 @@ btnPostText.addEventListener("click", () => {
               .then((res3) => {
                 let setuju = persetujuanPrivasi(res3);
                 if (setuju) {
+
+                  // siko wak validasi bagian client
                   downloadDocx(data);
                 } else if (!setuju) {
                   alert(

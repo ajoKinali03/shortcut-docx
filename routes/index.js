@@ -25,6 +25,8 @@ function calculateDataSize(data) {
 
 router.post("/home", async function (req, res) {
   let data = req.body.data;
+  // bagian siko wak lakukan validasi bagian server
+
   // let dataSize = calculateDataSize(data)
   if (data.teks.length > 70) {
     if (spclChar.test(data.teks) && /[a-zA-Z\d]/.test(data.teks)) {
