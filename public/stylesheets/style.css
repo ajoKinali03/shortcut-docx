@@ -46,8 +46,8 @@
   .navbar .text-nav {
     width: max-content;
   }
-  
-  .logo{
+
+  .logo {
     width: 5%;
     margin-right: 10px;
   }
@@ -138,6 +138,13 @@
 
   .content h1 .text .judul {
     font-size: 1.5rem;
+  }
+
+  footer p,
+  a {
+    margin: 0 10px;
+    font-size: 1.3rem;
+    color: black;
   }
 
   /* page home */
@@ -276,8 +283,10 @@
   }
 
   .daftar-isi ul li {
-    font-size: 1.2rem;
     margin: 10px 0;
+  }
+  .daftar-isi ul li a {
+    font-size: 1.2rem;
   }
 
   .container-tutor .text h1 {
@@ -293,7 +302,6 @@
     margin-left: 20px;
     text-align: justify;
   }
-
 
   /* page tentang kami */
   .container-about {
@@ -323,7 +331,7 @@
     text-align: left;
     padding: 30px;
   }
-  
+
   .penjelasan-about h2 {
     margin: 10px 0;
     font-size: 2rem;
@@ -335,7 +343,7 @@
     font-weight: 200;
     margin-left: 3%;
   }
-  
+
   .text-about .kontak-about {
     margin-top: 5%;
   }
@@ -351,18 +359,21 @@
     justify-content: right;
   }
 
-  .profil .profil-text{
+  .profil .profil-text {
     width: 50%;
   }
 
   .profil-text h3 {
     font-size: 5rem;
   }
-
+  .profil-text .h4-point {
+    border-left: white 3px solid;
+    padding: 30px;
+  }
   .h4-point h4 {
     font-size: 1.1rem;
     font-weight: 500;
-    padding: 3px;
+    margin-left: 30px;
     margin: 2px 10px;
   }
 
@@ -380,19 +391,18 @@
     font-size: 1.1rem;
     margin-left: 25px;
   }
-  
+
   .profil .profil-img {
     width: 250px;
     height: 250px;
     margin-left: 20px;
   }
 
-
   /* page kebijakan privasi */
   .container-privasi {
     padding: 0 10%;
   }
-  
+
   .container-privasi h1 {
     font-size: 5rem;
     padding: 10px;
@@ -401,7 +411,7 @@
   .container-privasi div {
     margin: 60px 0;
     padding: 0 5px;
-  }  
+  }
 
   .container-privasi div h2 {
     font-size: 2rem;
@@ -413,31 +423,28 @@
     margin-left: 20px;
   }
 
-  
-.container-privasi div ul {
-  font-size: 1.2rem;
-  margin-left: 50px;
-}
+  .container-privasi div ul {
+    font-size: 1.2rem;
+    margin-left: 50px;
+  }
 
-.container-privasi div a {
-  font-size: 1.2rem;
-  margin-left: 20px;
-  color: white;
-}
-
-
+  .container-privasi div a {
+    font-size: 1.2rem;
+    margin-left: 20px;
+    color: white;
+  }
 }
 
 /* tablet */
 @media screen and (min-width: 601px) and (max-width: 900px) {
-  html{
+  html {
     overflow: visible;
   }
 
   .navbar {
     height: 9vh;
   }
-  .logo{
+  .logo {
     width: 13%;
     margin-right: 20px;
   }
@@ -549,10 +556,15 @@
     font-size: 1.5rem;
   }
 
-
+  footer p,
+  a {
+    margin: 0 5px;
+    font-size: 1rem;
+    color: black;
+  }
 
   /* page home */
-  .container-home{
+  .container-home {
     flex-direction: column;
     align-items: center;
     gap: 5px;
@@ -594,7 +606,7 @@
   }
 
   /* page referensi */
-  
+
   .container-input {
     padding: 5px;
     padding-left: 10px;
@@ -660,7 +672,7 @@
   .tutorial {
     flex-direction: column;
   }
-  
+
   .container-tutor {
     padding: 20px;
     width: 100%;
@@ -678,13 +690,15 @@
     padding-left: 5%;
   }
   .daftar-isi ul li {
-    font-size: 1.1rem;
     margin: 10px 0;
+  }
+  .daftar-isi ul li a {
+    font-size: 1.1rem;
   }
   .container-tutor .text h1 {
     font-size: 1.8rem;
     margin-left: 20px;
-    margin-top: 15px;  
+    margin-top: 15px;
     gap: 5px;
   }
   .text h1 p {
@@ -696,67 +710,134 @@
 
   /* page tentang kami */
 
-  .container-about .text-about a {
+  .container-about {
+    padding: 10px 0;
+    padding-bottom: 10vh;
+  }
+  .container-about h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    padding: 10px;
+  }
+  .text-about .link-about {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    padding: 5px;
+  }
+  .text-about .line {
+    width: 100%;
+    height: 2px;
+  }
+  .text-about .penjelasan-about {
+    width: 100%;
+    text-align: left;
+    padding: 30px;
+  }
+  .penjelasan-about h2 {
+    margin: 10px 0;
+    font-size: 1.7rem;
+  }
+  .penjelasan-about p {
+    margin: 20px 0;
     font-size: 1.2rem;
+    font-weight: 200;
+    margin-left: 2%;
+    text-align: justify;
   }
-
-  .container-about .text-about .line {
-    width: 100%;
+  .text-about .kontak-about {
+    margin-top: 2%;
+    border-top: white 3px solid;
   }
-
-  .container-about .text-about .penjelasan-about {
-    width: 100%;
+  .kontak h2 {
+    font-size: 2rem;
+    font-weight: 500;
   }
-
-  .container-about .text-about .kontak-about .profil {
+  .kontak .profil {
+    display: flex;
     flex-direction: column-reverse;
     justify-content: center;
-    align-items: center;
   }
-
-  .kontak-about .kontak .profil .profil-text {
+  .profil .profil-img {
+    width: 250px;
+    height: 250px;
+    margin-left: 20px;
+    margin: 0 auto;
+  }
+  .profil .profil-text {
     width: 100%;
   }
-
-  .profil .profil-text h3 {
+  .profil-text h3 {
+    font-size: 5rem;
     text-align: center;
+  }
+  .h4-point h4 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 3px;
+    margin: 2px 10px;
+    border: none;
+  }
+  .profil-text .social-media {
+    padding: 10px;
+  }
+  .social-media p {
+    font-size: 1.2rem;
+  }
+  .social-media a {
+    padding-left: 5px;
+    font-size: 1.1rem;
+    margin-left: 25px;
   }
 
   /* page kebijakan privasi */
 
   .container-privasi {
-    padding: 0 0;
+    padding: 0 2%;
+  }
+  .container-privasi h1 {
+    font-size: 3rem;
+    padding: 10px;
+  }
+  .container-privasi div {
+    margin: 60px 0;
+    padding: 0 5px;
+  }
+  .container-privasi div h2 {
+    font-size: 1.7rem;
+    padding: 0px 5px;
   }
   .container-privasi div p {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
+    margin-left: 20px;
+  }
+  .container-privasi div ul {
+    font-size: 1.1rem;
+    margin-left: 50px;
+  }
+  .container-privasi div a {
+    font-size: 1.1rem;
+    margin-left: 20px;
+    color: white;
   }
 }
 
 /* gawai */
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
   html {
     overflow: visible;
   }
 
-  /* page layout */
   .navbar {
     height: 9vh;
   }
-
-  .navbar .text-nav a {
-    font-size: 1.3rem;
+  .logo {
+    width: 11%;
+    margin-right: 10px;
   }
-
-  .navbar .drop-menu {
-    padding-right: 10px;
-  }
-
-  .navbar .drop-menu a {
-    font-size: 1.1rem;
-  }
-
   .navbar .text-nav a:nth-child(2) {
-    display: none;
+    font-size: 1.2rem;
+    display: inline-block;
+    font-weight: 700;
   }
   .navbar .text-nav a:nth-child(3) {
     display: none;
@@ -764,31 +845,47 @@
   .navbar .text-nav a:nth-child(4) {
     display: none;
   }
-
+  .navbar .text-nav a:nth-child(5) {
+    display: none;
+  }
   .tgl-btn {
     display: block;
   }
   .tgl-view {
     display: block;
   }
+  .drop-menu {
+    width: 60%;
+    padding: 10px 20px;
+  }
+  .drop-menu a {
+    font-size: 1.2rem;
+    padding: 5px 0;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  .navbar .text-nav {
+    width: max-content;
+  }
 
   /* page index */
 
   .hero {
-    height: 50vh;
+    height: 40vh;
   }
 
   .hero .hero-parent {
-    flex-direction: column;
-    justify-content: center;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
   }
 
   .hero-parent .container-prop {
     position: absolute;
     opacity: 0.2;
     z-index: 0;
-    top: 0;
     width: 80%;
     height: 100%;
   }
@@ -798,33 +895,316 @@
   }
 
   .container-prop .parent-prop .properti {
-    width: 30px;
+    width: 20px;
     height: 50%;
-  }
-
-  .hero-parent {
-    padding: 0 0;
-    width: 100%;
   }
 
   .hero-parent .container-txt {
     position: absolute;
+    width: 85%;
     z-index: 1;
-    width: 90%;
-  }
-
-  .container-txt h1 {
-    font-size: calc(1.5rem + 3.5vw);
+    align-items: center;
+    justify-content: center;
   }
 
   .container-txt .link-href {
+    width: 100%;
     justify-content: center;
+    margin-top: 3px;
+    margin-left: 2.5%;
+  }
+
+  .container-txt h1 {
+    font-size: calc(1.5rem + 3vw);
+    font-weight: 500;
   }
 
   .link-href a {
     padding-right: 0;
     margin: 0 auto;
-    font-size: calc(0.5rem + 1.5vw);
+    font-size: calc(0.5rem + 1vw);
+  }
+
+  .content {
+    padding: 10px 2.5%;
+  }
+
+  .content h1 {
+    font-size: 1.5rem;
+  }
+
+  .content h1 .text {
+    text-align: left;
+    font-size: 1rem;
+  }
+
+  .content h1 .text .judul {
+    font-size: 1.3rem;
+  }
+
+  footer p,
+  a {
+    margin: 0 5px;
+    font-size: 0.7rem;
+    color: black;
+  }
+
+  /* page home */
+  .container-home {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+  .container-home textarea {
+    font-size: 1rem;
+  }
+  .btn-home {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 3px 0;
+    width: 100%;
+    height: 40px;
+  }
+  .show-ref-home {
+    font-size: 1rem;
+    padding: 5px;
+    margin-top: 5vh;
+    overflow: scroll;
+    height: 75vh;
+  }
+
+  .ref-home {
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+
+  .ref-home p {
+    font-size: 1.2rem;
+    margin: 0 0 5px 0;
+  }
+
+  .ref-home p:nth-child(1) {
+    font-size: 1.4rem;
+    padding: 3px 0px;
+    font-weight: 500;
+    border-bottom: 2px white solid;
+    margin: 0 0 3px 0;
+  }
+
+  /* page referensi */
+
+  .container-input {
+    padding: 3px;
+    padding-left: 5px;
+    padding-bottom: 10px;
+    border-bottom: 3px white solid;
+    margin-top: 0.3%;
+  }
+  .container-input h1 {
+    font-size: 1.7rem;
+    font-weight: 300;
+    margin-bottom: 15px;
+  }
+  .select-type {
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+  .select-type p {
+    font-size: 1.3rem;
+    font-weight: 350;
+    margin-bottom: 3px;
+  }
+  .select-type select {
+    font-weight: 400;
+    font-size: 1rem;
+    padding-bottom: 2px;
+    padding-left: 2px;
+  }
+  .select-type select option {
+    font-size: 0.8rem;
+    font-weight: 100;
+  }
+  .select-type button {
+    font-weight: 400;
+    font-size: 1.1rem;
+    padding: 0 20px;
+    margin-left: 10px;
+    padding-bottom: 1px;
+  }
+  .form-input > input {
+    margin: 7px 5px;
+    font-size: 1.1rem;
+    padding: 5px;
+    font-weight: 400;
+  }
+  .container-ref {
+    margin-top: 10px;
+  }
+  .container-ref > .show-ref {
+    padding: 5px;
+    margin: 3px 5px;
+  }
+  .container-ref > .show-ref > p {
+    margin: 5px;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  .container-ref > .show-ref button {
+    font-size: 1.1rem;
+    font-weight: 400;
+    padding: 15px 0;
+  }
+
+  /* page tutorial */
+  .tutorial {
+    flex-direction: column;
+  }
+
+  .container-tutor {
+    padding: 5px;
+    width: 100%;
+    gap: 20px;
+  }
+  .container-tutor #tutorial-page {
+    font-size: 1.4rem;
+  }
+  .container-tutor .daftar-isi p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding-left: 5%;
+  }
+  .daftar-isi ul {
+    padding-left: 15%;
+  }
+  .daftar-isi ul li {
+    margin: 10px 0;
+  }
+  .daftar-isi ul li a {
+    font-size: 1.1rem;
+  }
+  .container-tutor .text h1 {
+    font-size: 1.8rem;
+    margin-top: 15px;
+    gap: 5px;
+  }
+  .text h1 p {
+    font-size: 1.2rem;
+    font-weight: 350;
+    margin-left: 10px;
+    text-align: left;
+  }
+
+  /* page tentang kami */
+
+  .container-about {
+    padding: 10px 0;
+    /* padding-bottom: 10vh; */
+  }
+  .container-about h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    padding: 10px;
+  }
+  .text-about .link-about {
+    font-size: 1rem;
+    margin: 0 -2px;
+    margin-bottom: 10px;
+  }
+  .text-about .line {
+    width: 100%;
+    height: 2px;
+  }
+  .text-about .penjelasan-about {
+    width: 100%;
+    padding: 30px;
+  }
+  .penjelasan-about h2 {
+    margin: 10px 0;
+    font-size: 1.3rem;
+    text-align: left;
+  }
+  .penjelasan-about p {
+    margin: 20px 0;
+    font-size: 1rem;
+    font-weight: 200;
+    margin-left: 2%;
+    text-align: left;
+  }
+  .text-about .kontak-about {
+    margin-top: 5%;
+    border-top: white 3px solid;
+  }
+  .kontak h2 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-align: center;
+  }
+  .kontak .profil {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  .profil .profil-img {
+    width: 150px;
+    height: 150px;
+    margin-left: 20px;
+    margin: 0 auto;
+  }
+  .profil .profil-text {
+    width: 100%;
+  }
+  .profil-text h3 {
+    font-size: 3rem;
+    text-align: center;
+  }
+  .h4-point h4 {
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 3px;
+    margin: 2px 10px;
+    border: none;
+  }
+  .profil-text .social-media {
+    padding: 10px;
+  }
+  .social-media p {
+    font-size: 1.1rem;
+  }
+  .social-media a {
+    padding-left: 5px;
+    font-size: 1rem;
+    margin-left: 20px;
+  }
+
+  /* page kebijakan privasi */
+
+  .container-privasi {
+    padding: 0 2%;
+  }
+  .container-privasi h1 {
+    font-size: 2rem;
+    padding: 10px;
+  }
+  .container-privasi div {
+    margin: 50px 0;
+    padding: 0 5px;
+  }
+  .container-privasi div h2 {
+    font-size: 1.3rem;
+    padding: 0px 5px;
+  }
+  .container-privasi div p {
+    font-size: 1rem;
+    margin-left: 20px;
+  }
+  .container-privasi div ul {
+    font-size: 1rem;
+    margin-left: 50px;
+  }
+  .container-privasi div a {
+    font-size: 1rem;
+    margin-left: 20px;
+    color: white;
   }
 }
 
@@ -833,7 +1213,6 @@
   background-color: white;
   color: black;
 }
-
 
 /* loading animasi */
 @keyframes load {
@@ -1228,14 +1607,6 @@ footer {
   z-index: 1;
 }
 
-footer p {
-  margin: 0 10px;
-}
-
-footer a {
-  color: black;
-}
-
 /* page home */
 .container-home {
   display: flex;
@@ -1470,6 +1841,9 @@ footer a {
   color: white;
 }
 
+.container-tutor .text {
+  padding: 0;
+}
 .container-tutor .text .line {
   width: 100%;
   background-color: white;
@@ -1485,7 +1859,6 @@ footer a {
 .text h1 p a {
   color: white;
 }
-
 .img-tutor {
   max-width: 100%;
   height: auto;
@@ -1553,11 +1926,6 @@ footer a {
 .profil .profil-text {
   display: flex;
   flex-direction: column;
-}
-
-.profil-text .h4-point {
-  border-left: white 3px solid;
-  margin-left: 30px;
 }
 
 .h4-point h4 {
