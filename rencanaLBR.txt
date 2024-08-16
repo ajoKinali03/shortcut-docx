@@ -85,8 +85,8 @@ PERBAIKAN
     b. perbaiki sistem penyimpanan home dan referensi [100%]
     c. buat sistem input data melelui injeksi code [lupa ini apa]
     d. buat riwayat/history pengguna [rencana]
-  4. tampilan website di perbagus[proses responsif]--------<
-  5. sistem validasi input
+  4. tampilan website di perbagus[selesai]
+  5. sistem validasi input[proses]
   
 TAMBAHAN FITUR
-  1. notifikasi izin penggunaan indexDb
+  1. notifikasi izin penggunaan indexDb[selesai]
