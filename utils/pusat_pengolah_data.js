@@ -9,9 +9,9 @@ const spclChar = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~\n\t]/;
 // code runner
 const mentahanData = async (data) => {
   // data = JSON.parse(data);
-  teks = data.teks;
-  ref = data.ref;
-
+  let teks = data.teks;
+  let ref = data.ref;
+  let listRef = null;
   if (spclChar.test(data.teks) && /[a-zA-Z\d]/.test(data.teks)) {
     // kelola data text input
     const lineTeks = filterEnter(teks);
@@ -19,7 +19,7 @@ const mentahanData = async (data) => {
     const arrHuruf = filterSpasi(arrInArr);
     const objCkNmr = cekNomor(arrHuruf);
     let grPnt = groupPoint(arrInArr, objCkNmr);
-    if (ref) {
+    if (ref[0]) {
       // kelola data input referensi
       let mergeRefAndTxt = mainManageRef(ref, grPnt);
       grPnt = mergeRefAndTxt.txt;
@@ -28,6 +28,7 @@ const mentahanData = async (data) => {
       listRef = { ftNt: "", dfPstk: "" };
       grPnt = extractTxt(grPnt);
     }
+
     // membuat file
     const teksStyled = getTextStyle(grPnt, pointStyle, teksStyle);
     try{
