@@ -80,7 +80,7 @@
 
   .hero-parent .container-txt .link-href {
     width: 100%;
-    justify-content: left;
+    justify-content: space-between;
     margin-top: 3px;
     margin-left: 2.5%;
   }
@@ -91,8 +91,7 @@
   }
 
   .hero-parent .container-txt a {
-    font-size: 1.3vw;
-    padding-right: calc(100% / 10);
+    font-size: 1.4vw;
   }
 
   .hero-parent .container-prop {
@@ -368,7 +367,7 @@
   }
   .profil-text .h4-point {
     border-left: white 3px solid;
-    padding: 30px;
+    /* padding: 30px; */
   }
   .h4-point h4 {
     font-size: 1.1rem;
