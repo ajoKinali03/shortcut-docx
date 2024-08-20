@@ -1,6 +1,7 @@
 let express = require("express");
 let router = express.Router();
 const mentahanData = require("./../utils/pusat_pengolah_data");
+const validator = require("validator");
 const spclChar = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~\n\t]/;
 
 let app = express();
@@ -25,11 +26,14 @@ function calculateDataSize(data) {
 
 router.post("/home", async function (req, res) {
   let data = req.body.data;
-  // bagian siko wak lakukan validasi bagian server
-
+  console.log(data.teks)
   // let dataSize = calculateDataSize(data)
-  if (data.teks.length > 70) {
-    if (spclChar.test(data.teks) && /[a-zA-Z\d]/.test(data.teks)) {
+  if (validator.isByteLength(data.teks, { min: 70, max: undefined })) {
+    if (
+      spclChar.test(data.teks) &&
+      /[a-zA-Z\d]/.test(data.teks) &&
+      validator.isJSON(JSON.stringify(data.ref))
+    ) {
       try {
         let docxBuffer = await mentahanData(data);
         res.set({
@@ -49,7 +53,6 @@ router.post("/home", async function (req, res) {
     return res.redirect("/home");
   }
 });
-
 
 router.get("/referensi", async function (req, res) {
   res.render("referensi", {
