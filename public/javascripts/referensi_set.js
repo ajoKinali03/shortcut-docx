@@ -1,3 +1,4 @@
+console.log("test")
 // import { saveData, deleteData, displayData } from "./client_save.js";
 
 let {saveData, deleteData, displayData} = require("./client_save");
