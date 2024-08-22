@@ -92,3 +92,5 @@ export function displayData(id) {
       return Promise.reject("Error opening database: " + error);
     });
 }
+
+module.exports = {saveData, deleteData, displayData};

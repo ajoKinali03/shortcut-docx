@@ -1,4 +1,6 @@
-import { saveData, deleteData, displayData } from "./client_save.js";
+// import { saveData, deleteData, displayData } from "./client_save.js";
+let {saveData, deleteData, displayData} = require("./client_save");
+
 
 // const inputPost = document.getElementById("input-post");
 // const cntrShwRefHome = document.getElementsByClassName("show-ref-home")[0];
