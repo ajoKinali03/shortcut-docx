@@ -1,5 +1,4 @@
-// import { saveData, deleteData, displayData } from "./client_save.js";
-let {saveData, deleteData, displayData} = require("./client_save");
+import { saveData, deleteData, displayData } from "./client_save.js";
 
 
 // const inputPost = document.getElementById("input-post");

@@ -1,7 +1,5 @@
 console.log("test")
-// import { saveData, deleteData, displayData } from "./client_save.js";
-
-let {saveData, deleteData, displayData} = require("./client_save");
+import { saveData, deleteData, displayData } from "./client_save.js";
 
 // tahap melakukan penyimpanan dummy dan untuk menampilkan data yang tersimpan
 displayData(2)
