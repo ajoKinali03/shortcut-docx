@@ -1,4 +1,4 @@
-// import { saveData, deleteData, displayData } from "./indexedDb.js";
+import { saveData, deleteData, displayData } from "./indexedDb.js";
 
 // const inputPost = document.getElementById("input-post");
 // const cntrShwRefHome = document.getElementsByClassName("show-ref-home")[0];

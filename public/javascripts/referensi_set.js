@@ -1,4 +1,4 @@
-// import { saveData, deleteData, displayData } from "./indexedDb.js";
+import { saveData, deleteData, displayData } from "./indexedDb.js";
 
 // tahap melakukan penyimpanan dummy dan untuk menampilkan data yang tersimpan
 displayData(2)
