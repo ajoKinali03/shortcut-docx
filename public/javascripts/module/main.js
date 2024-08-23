@@ -1,26 +1,29 @@
 import { saveData, deleteData, displayData } from "./client_save.js";
 
-  // const inputPost = document.getElementById("input-post");
-  // const cntrShwRefHome = document.getElementsByClassName("show-ref-home")[0];
+const tglBtn = document.getElementById("nav-tgl-btn");
+const dropMenu = document.getElementsByClassName("drop-menu")[0];
+const tglView = document.getElementsByClassName("tgl-view")[0];
 
+tglBtn.addEventListener("click", () => {
+  if (tglBtn.checked) {
+    dropMenu.style.display = "flex";
+    tglView.childNodes.item(0).style.display = "block";
+  } else {
+    tglView.childNodes.item(0).style.display = "none";
+    dropMenu.style.display = "none";
+  }
+});
+
+let pathHome = window.location.pathname;
+
+// const inputPost = document.getElementById("input-post");
+// const cntrShwRefHome = document.getElementsByClassName("show-ref-home")[0];
+if (pathHome == "/home") {
   const inpt = document.getElementById("form-input");
   const formPost = document.getElementById("form-post");
   const btnShwRef = document.getElementById("btn-showref");
   const cntrCntn = document.getElementsByClassName("container-home")[0];
   const btnPostText = document.getElementById("btn-post");
-  const tglBtn = document.getElementById("nav-tgl-btn");
-  const dropMenu = document.getElementsByClassName("drop-menu")[0];
-  const tglView = document.getElementsByClassName("tgl-view")[0];
-
-  tglBtn.addEventListener("click", () => {
-    if (tglBtn.checked) {
-      dropMenu.style.display = "flex";
-      tglView.childNodes.item(0).style.display = "block";
-    } else {
-      tglView.childNodes.item(0).style.display = "none";
-      dropMenu.style.display = "none";
-    }
-  });
 
   document.addEventListener("keyup", (event) => {
     let cekElementTarget = event.view.location.href.includes("home")
@@ -248,4 +251,4 @@ import { saveData, deleteData, displayData } from "./client_save.js";
       }
     }
   };
-
+}

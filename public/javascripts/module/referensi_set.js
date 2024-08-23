@@ -1,8 +1,8 @@
-
 import { saveData, displayData } from "./client_save.js";
 
+let pathRef = window.location.pathname;
 
-
+if (pathRef == "/referensi") {
   // tahap melakukan penyimpanan dummy dan untuk menampilkan data yang tersimpan
   displayData(2)
     .then((res) => {
@@ -47,7 +47,7 @@ import { saveData, displayData } from "./client_save.js";
         "Penerbit",
         "Tahun",
         "Halaman",
-        // "Penterjemah",
+        "Penterjemah",
         // "ISBN",
       ];
     } else if (type == "tesis") {
@@ -202,4 +202,4 @@ import { saveData, displayData } from "./client_save.js";
   });
 
   // fungsi untuk menghapus semua data
-
+}
