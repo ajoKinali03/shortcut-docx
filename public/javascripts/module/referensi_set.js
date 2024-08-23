@@ -1,8 +1,10 @@
 
+let pageLocationRef = window.location.href;
+
 import { saveData, displayData } from "./client_save.js";
 
 
-
+if(pageLocationRef == "http://localhost:3000/referensi"){
   // tahap melakukan penyimpanan dummy dan untuk menampilkan data yang tersimpan
   displayData(2)
     .then((res) => {
@@ -47,7 +49,7 @@ import { saveData, displayData } from "./client_save.js";
         "Penerbit",
         "Tahun",
         "Halaman",
-        // "Penterjemah",
+        "Penterjemah",
         // "ISBN",
       ];
     } else if (type == "tesis") {
@@ -203,3 +205,4 @@ import { saveData, displayData } from "./client_save.js";
 
   // fungsi untuk menghapus semua data
 
+}

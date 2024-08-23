@@ -1,1 +1,70 @@
 .vercel
+
+# Dependensi Node.js
+node_modules/
+
+# Direktori build output dari Webpack atau proses build lain
+dist/
+public/dist/
+build/
+coverage/
+
+# File log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# File yang dibuat secara otomatis oleh sistem operasi
+.DS_Store
+Thumbs.db
+
+# Direktori dan file spesifik editor atau IDE
+.vscode/
+.idea/
+*.swp
+
+# File lock package manager (opsional, tergantung kebijakan tim)
+package-lock.json
+yarn.lock
+
+# File konfigurasi lingkungan
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Direktori cache untuk Webpack atau alat build lainnya
+.cache/
+
+# Output sementara atau data upload
+tmp/
+temp/
+uploads/
+
+# File PID (Proses ID) dan lock file
+*.pid
+*.seed
+*.pid.lock
+
+# Direktori log aplikasi
+logs/
+
+# Direktori database lokal, jika ada
+data/
+db/
+
+# Direktori untuk menyimpan dump, jika digunakan
+dump/
+
+# Output build atau data lokal lain
+local/
+output/
+
+# Direktori alat testing atau coverage
+.nyc_output/
+jest/
+
+# Direktori sesi, jika menggunakan sesi berbasis file
+sessions/
