@@ -1,27 +1,10 @@
 .vercel
 
 
-
-# File yang dibuat secara otomatis oleh sistem operasi
-.DS_Store
-Thumbs.db
-
-# Direktori dan file spesifik editor atau IDE
-.vscode/
-.idea/
-*.swp
-
-
 # File konfigurasi lingkungan
 .env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
-
-
-# File PID (Proses ID) dan lock file
-*.pid
-*.seed
-*.pid.lock
 
