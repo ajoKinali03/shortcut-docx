@@ -67,28 +67,27 @@ export function deleteData(id) {
   });
 }
 
-export function displayData(id) {
-  return openDatabase()
-    .then((db) => {
-      return new Promise((resolve, reject) => {
-        const transaction = db.transaction(["myStore"], "readonly");
-        const store = transaction.objectStore("myStore");
+export async function displayData(id) {
+  try {
+    const db = await openDatabase();
+    return await new Promise((resolve, reject) => {
+      const transaction = db.transaction(["myStore"], "readonly");
+      const store = transaction.objectStore("myStore");
 
-        const getRequest = store.get(id);
-        getRequest.onsuccess = function (event) {
-          const data = event.target.result;
-          if (data) {
-            resolve(data); // mengembalikan nilai data
-          } else {
-            resolve(null); // data tidak ditemukan atau kosong
-          }
-        };
-        getRequest.onerror = function (event) {
-          reject("Error retrieving data: " + event.target.error);
-        };
-      });
-    })
-    .catch((error) => {
-      return Promise.reject("Error opening database: " + error);
+      const getRequest = store.get(id);
+      getRequest.onsuccess = function (event) {
+        const data = event.target.result;
+        if (data) {
+          resolve(data); // mengembalikan nilai data
+        } else {
+          resolve(null); // data tidak ditemukan atau kosong
+        }
+      };
+      getRequest.onerror = function (event_1) {
+        reject("Error retrieving data: " + event_1.target.error);
+      };
     });
+  } catch (error) {
+    return await Promise.reject("Error opening database: " + error);
+  }
 }
