@@ -5,7 +5,8 @@
       "src": "app.js",
       "use": "@vercel/node"
     },
-    { "src": "public/**", "use": "@vercel/static" }
+    { "src": "public/**", "use": "@vercel/static" },
+    { "src": "views/**", "use": "@vercel/static" }
   ],
   "routes": [
     {
@@ -15,6 +16,10 @@
     {
       "src": "/(.+)",
       "dest": "public/$1"
+    },
+    {
+      "src": "/(.+)",
+      "dest": "views/$1"
     }
   ]
 }
