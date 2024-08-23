@@ -4,8 +4,6 @@
 node_modules/
 
 # Direktori build output dari Webpack atau proses build lain
-dist/
-public/dist/
 coverage/
 
 # File log
