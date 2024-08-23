@@ -37,7 +37,7 @@ if (pathHome == "/home") {
           console.error("Error saving data:", error);
         });
     }
-  })
+  });
 
   // menyimpan inputan data apa bila promp imput aktif
   inpt.addEventListener("focus", (event) => {
@@ -85,14 +85,14 @@ if (pathHome == "/home") {
   // fungsi ketika tombol download ditekan
   btnPostText.addEventListener("click", () => {
     displayData(1)
-      .then((res1) => {
+    .then((res1) => {
         displayData(2)
-          .then((res2) => {
+        .then((res2) => {
+            // akan mengirim data apabila teks ada isi keduanya
             let data = {
               teks: res1.txt,
               ref: res2.ref,
             };
-            // akan mengirim data apabila teks ada isi nya
             if (res1.txt.length > 70) {
               displayData(3)
                 .then((res3) => {

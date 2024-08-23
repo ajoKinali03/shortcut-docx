@@ -4,19 +4,20 @@ import { saveData, displayData } from "./client_save.js";
 let pathRef = window.location.pathname;
 if (pathRef == "/referensi") {
   // tahap melakukan penyimpanan dummy dan untuk menampilkan data yang tersimpan
-  displayData(2)
-    .then((res) => {
-      if (res) {
-        res.ref.forEach((e, i) => {
-          if (e != null) {
-            crtShowDt(e);
-          }
-        });
-      } else {
-        saveData([null], 2, "ref");
-      }
-    })
-    .catch((err) => err);
+  // bagian ini dipindahkan ke bagian client_save.js
+  // displayData(2)
+  //   .then((res) => {
+  //     if (res) {
+  //       res.ref.forEach((e, i) => {
+  //         if (e != null) {
+  //           crtShowDt(e);
+  //         }
+  //       });
+  //     } else {
+  //       saveData([null], 2, "ref");
+  //     }
+  //   })
+  //   .catch((err) => err);
 
   const cntrRefInpt = document.getElementsByClassName("container-input")[0];
   const selectType = document.getElementById("tipe-ref");

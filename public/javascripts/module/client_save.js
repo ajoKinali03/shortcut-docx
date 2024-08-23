@@ -47,6 +47,7 @@ export function saveData(dt, id, tipe) {
   });
 }
 
+
 export function deleteData(id) {
   return new Promise((resolve, reject) => {
     openDatabase()
@@ -93,3 +94,17 @@ export function displayData(id) {
       return Promise.reject("Error opening database: " + error);
     });
 }
+
+
+// dummy save stage
+displayData(2).then((res) => {
+  if(res == null){
+    saveData([null], 2, "ref")
+  }
+}).catch(err => console.log(err))
+
+displayData(1).then((res) => {
+  if(res == null){
+    saveData("", 1, "txt")
+  }
+}).catch(err => console.log(err))
