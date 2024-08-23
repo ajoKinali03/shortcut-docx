@@ -26,7 +26,7 @@ function calculateDataSize(data) {
 
 router.post("/home", async function (req, res) {
   let data = req.body.data;
-  
+  console.log(data.teks)
   // let dataSize = calculateDataSize(data)
   if (validator.isByteLength(data.teks, { min: 70, max: undefined })) {
     if (
