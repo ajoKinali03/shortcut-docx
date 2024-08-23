@@ -50,12 +50,10 @@ function pembalikNama(nama) {
     selectNama = selectNama.join("");
     let hslNama = "";
     if(nama.includes("dan")){
-      console.log("ok ndan")
       nama = nama.join(" ").replace(" " + selectNama, "")
       hslNama = selectNama.replaceAll(",", "") + ", " + nama;
     };
     if(!nama.includes("dan")){
-      console.log("ndk ndan")
       nama = nama.join(" ").replace(" " + selectNama, ",")
       hslNama = selectNama.replaceAll(",", "") + ". " + nama;
     };

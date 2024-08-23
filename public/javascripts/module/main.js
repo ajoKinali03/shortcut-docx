@@ -14,10 +14,9 @@ tglBtn.addEventListener("click", () => {
   }
 });
 
-let pathHome = window.location.pathname;
-
 // const inputPost = document.getElementById("input-post");
 // const cntrShwRefHome = document.getElementsByClassName("show-ref-home")[0];
+let pathHome = window.location.pathname;
 if (pathHome == "/home") {
   const inpt = document.getElementById("form-input");
   const formPost = document.getElementById("form-post");
@@ -25,23 +24,36 @@ if (pathHome == "/home") {
   const cntrCntn = document.getElementsByClassName("container-home")[0];
   const btnPostText = document.getElementById("btn-post");
 
-  document.addEventListener("keyup", (event) => {
-    let cekElementTarget = event.view.location.href.includes("home")
-      ? event.target.attributes.id.nodeValue
-      : false;
-    if (cekElementTarget == "form-input") {
+  // tindakan jaga-jaga apabila user tidak mengetik dan langsung keluar dari promp input
+  inpt.addEventListener("focusout", (event) => {
+    if (event.isTrusted) {
       deleteData(1)
-        .then((res) => console.log(res))
+        .then()
         .catch((err) => console.log(err));
 
       saveData(inpt.value, 1, "txt")
-        .then((res) => {
-          console.log(res);
-        })
+        .then()
         .catch((error) => {
           console.error("Error saving data:", error);
         });
     }
+  })
+
+  // menyimpan inputan data apa bila promp imput aktif
+  inpt.addEventListener("focus", (event) => {
+    document.addEventListener("keyup", () => {
+      if (event.isTrusted) {
+        deleteData(1)
+          .then()
+          .catch((err) => console.log(err));
+
+        saveData(inpt.value, 1, "txt")
+          .then()
+          .catch((error) => {
+            console.error("Error saving data:", error);
+          });
+      }
+    });
   });
 
   // menempatkan kembali teks yang tersimpan di indexedDB
@@ -226,8 +238,8 @@ if (pathHome == "/home") {
       navigator.clipboard
         .writeText(elementClick)
         .then(function () {
-          console.log(elementClick);
-          console.log("Teks berhasil disalin ke papan klip!");
+          // console.log(elementClick);
+          // console.log("Teks berhasil disalin ke papan klip!");
         })
         .catch(function (err) {
           console.error("Gagal menyalin teks:", err);

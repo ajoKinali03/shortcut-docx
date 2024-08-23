@@ -86,7 +86,7 @@ PERBAIKAN
     c. buat sistem input data melelui injeksi code [lupa ini apa]
     d. buat riwayat/history pengguna [rencana]
   4. tampilan website di perbagus[selesai]
-  5. sistem validasi input[proses]
+  5. sistem validasi input [selesai]
   
 TAMBAHAN FITUR
   1. notifikasi izin penggunaan indexDb[selesai]

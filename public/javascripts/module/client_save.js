@@ -34,9 +34,9 @@ export function saveData(dt, id, tipe) {
 
         const data = { id: id, [tipe]: dt };
         const request = store.put(data);
-        request.onsuccess = function (event) {
-          resolve(`Data bertipe ${tipe} dan id ${id} berhasil disimpan`);
-        };
+        // request.onsuccess = function (event) {
+        //   resolve(`Data bertipe ${tipe} dan id ${id} berhasil disimpan`);
+        // };
         request.onerror = function (event) {
           reject(event.target.error);
         };
@@ -55,9 +55,9 @@ export function deleteData(id) {
         const store = transaction.objectStore("myStore");
 
         const request = store.delete(id);
-        request.onsuccess = function (event) {
-          resolve(`DATA DENGAN ID ${id} BERHASIL DIHAPUS`);
-        };
+        // request.onsuccess = function (event) {
+        //   resolve(`DATA DENGAN ID ${id} BERHASIL DIHAPUS`);
+        // };
         request.onerror = function (event) {
           reject(event.target.error);
         };
