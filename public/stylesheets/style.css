@@ -1,0 +1,1978 @@
+/* root */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --bgClr-tgl: black;
+  /* outline: 1px red solid; */
+}
+
+/* page layout */
+/* page index */
+/* page home */
+/* page referensi */
+/* page tutorial */
+/* page tentang kami */
+/* page kebijakan privasi */
+
+/* responsif */
+/* desktop */
+@media screen and (min-width: 901px) {
+  /* page layout */
+
+  .navbar {
+    height: 8vh;
+  }
+  .tgl-btn {
+    display: block;
+  }
+  .tgl-view {
+    display: block;
+  }
+  .drop-menu {
+    width: 35%;
+    padding: 10px 20px;
+  }
+  .drop-menu a {
+    font-size: 1.3rem;
+    padding: 2px 0;
+    font-weight: 500;
+    text-decoration: underline;
+  }
+  .drop-menu-none {
+    display: none;
+  }
+  .navbar .text-nav {
+    width: max-content;
+  }
+
+  .logo {
+    width: 5%;
+    margin-right: 10px;
+  }
+
+  .navbar .text-nav a {
+    font-size: 1.5rem;
+    text-decoration: underline;
+  }
+
+  /* page index */
+  .hero {
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero .hero-parent {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 1%;
+  }
+
+  .hero-parent .container-txt {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-parent .container-txt .link-href {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 3px;
+    margin-left: 2.5%;
+  }
+
+  .hero-parent .container-txt h1 {
+    font-size: 7vw;
+    font-weight: 200;
+  }
+
+  .hero-parent .container-txt a {
+    font-size: 1.4vw;
+  }
+
+  .hero-parent .container-prop {
+    height: inherit;
+    width: 33%;
+  }
+
+  .container-prop .parent-prop {
+    height: inherit;
+  }
+
+  @keyframes playDesk {
+    0% {
+      transform: translateY(-100%);
+      /* box-shadow:white  0px 0px 30px 0px; */
+    }
+    50% {
+      transform: translateY(115%);
+      /* box-shadow:white  0px 0px 30px 0px; */
+    }
+    100% {
+      transform: translateY(100vh);
+      /* box-shadow:white  0px 0px 30px 0px; */
+    }
+  }
+  .parent-prop .properti {
+    width: 40px;
+    height: 30%;
+    animation: playDesk 10s infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .content {
+    padding: 10px 15%;
+  }
+
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .content h1 .text {
+    font-size: 1.3rem;
+  }
+
+  .content h1 .text .judul {
+    font-size: 1.5rem;
+  }
+
+  footer p,
+  a {
+    margin: 0 10px;
+    font-size: 1.3rem;
+    color: black;
+  }
+
+  /* page home */
+  .container-home {
+    flex-direction: row;
+    gap: 5px;
+  }
+
+  .container-home textarea {
+    font-size: 1.3rem;
+  }
+
+  .btn-home {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0px 2px;
+    width: 100%;
+    height: 40px;
+  }
+
+  .show-ref-home {
+    font-size: 1.3rem;
+    padding: 5px;
+    overflow: scroll;
+  }
+
+  .ref-home {
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+
+  .ref-home p {
+    font-size: 1.1rem;
+    margin: 0 0 3px 0;
+  }
+
+  .ref-home p:nth-child(1) {
+    padding: 3px 0px;
+    font-weight: 500;
+    border-bottom: 1px white solid;
+    margin: 0 0 3px 0;
+  }
+
+  /* page referensi */
+  .container-input {
+    padding: 5px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    border-bottom: 2px white solid;
+    margin-top: 0.5%;
+  }
+
+  .container-input h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+
+  .select-type {
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+
+  .select-type p {
+    font-size: 1.5rem;
+    font-weight: 350;
+    margin-bottom: 3px;
+  }
+
+  .select-type select {
+    font-weight: 400;
+    font-size: 1.3rem;
+    padding-bottom: 2px;
+    padding-left: 2px;
+  }
+
+  .select-type select option {
+    font-size: 1.1rem;
+    font-weight: 100;
+  }
+
+  .select-type button {
+    font-weight: 400;
+    font-size: 1.2rem;
+    padding: 0 20px;
+    margin-left: 10px;
+    padding-bottom: 1px;
+  }
+
+  .form-input > input {
+    margin: 7px 5px;
+    font-size: 1.3rem;
+    padding: 5px;
+  }
+
+  .container-ref {
+    margin-top: 5px;
+  }
+
+  .container-ref > .show-ref {
+    padding: 5px;
+    margin: 3px 10px;
+  }
+
+  .container-ref > .show-ref > p {
+    margin: 5px;
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+
+  .container-ref > .show-ref button {
+    font-size: 1.3rem;
+    font-weight: 400;
+    padding: 15px 0;
+  }
+
+  /* page tutorial */
+  .tutorial .container-tutor {
+    width: 70%;
+    gap: 20px;
+    padding: 10px 10px;
+  }
+
+  .container-tutor #tutorial-page {
+    font-size: 3rem;
+  }
+
+  .container-tutor .daftar-isi p {
+    font-size: 2rem;
+    font-weight: 500;
+    padding-left: 1%;
+  }
+
+  .daftar-isi ul {
+    padding-left: 5%;
+  }
+
+  .daftar-isi ul li {
+    margin: 10px 0;
+  }
+  .daftar-isi ul li a {
+    font-size: 1.2rem;
+  }
+
+  .container-tutor .text h1 {
+    font-size: 2rem;
+    margin-left: 20px;
+    margin-top: 20px;
+    gap: 20px;
+  }
+
+  .text h1 p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-left: 20px;
+    text-align: justify;
+  }
+
+  /* page tentang kami */
+  .container-about {
+    padding: 10px 20px;
+    padding-bottom: 30vh;
+  }
+
+  .container-about h1 {
+    font-size: 4.5rem;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+
+  .text-about .link-about {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    padding: 5px;
+  }
+
+  .text-about .line {
+    width: 80%;
+    height: 5px;
+  }
+
+  .text-about .penjelasan-about {
+    width: 70%;
+    text-align: left;
+    padding: 30px;
+  }
+
+  .penjelasan-about h2 {
+    margin: 10px 0;
+    font-size: 2rem;
+  }
+
+  .penjelasan-about p {
+    margin: 25px 0;
+    font-size: 1.3rem;
+    font-weight: 200;
+    margin-left: 3%;
+  }
+
+  .text-about .kontak-about {
+    margin-top: 5%;
+  }
+
+  .kontak h2 {
+    font-size: 2.3rem;
+    font-weight: 400;
+  }
+
+  .kontak .profil {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+  }
+
+  .profil .profil-text {
+    width: 50%;
+  }
+
+  .profil-text h3 {
+    font-size: 5rem;
+  }
+  .profil-text .h4-point {
+    border-left: white 3px solid;
+    /* padding: 30px; */
+  }
+  .h4-point h4 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-left: 30px;
+    margin: 2px 10px;
+  }
+
+  .profil-text .social-media {
+    margin-left: 30px;
+    padding: 10px;
+  }
+
+  .social-media p {
+    font-size: 1.2rem;
+  }
+
+  .social-media a {
+    padding-left: 5px;
+    font-size: 1.1rem;
+    margin-left: 25px;
+  }
+
+  .profil .profil-img {
+    width: 250px;
+    height: 250px;
+    margin-left: 20px;
+  }
+
+  /* page kebijakan privasi */
+  .container-privasi {
+    padding: 0 10%;
+  }
+
+  .container-privasi h1 {
+    font-size: 5rem;
+    padding: 10px;
+  }
+
+  .container-privasi div {
+    margin: 60px 0;
+    padding: 0 5px;
+  }
+
+  .container-privasi div h2 {
+    font-size: 2rem;
+    padding: 0px 5px;
+  }
+
+  .container-privasi div p {
+    font-size: 1.2rem;
+    margin-left: 20px;
+  }
+
+  .container-privasi div ul {
+    font-size: 1.2rem;
+    margin-left: 50px;
+  }
+
+  .container-privasi div a {
+    font-size: 1.2rem;
+    margin-left: 20px;
+    color: white;
+  }
+}
+
+/* tablet */
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  html {
+    overflow: visible;
+  }
+
+  .navbar {
+    height: 9vh;
+  }
+  .logo {
+    width: 13%;
+    margin-right: 20px;
+  }
+  .navbar .text-nav a:nth-child(2) {
+    font-size: 1.3rem;
+    display: inline-block;
+    font-weight: 700;
+  }
+  .navbar .text-nav a:nth-child(3) {
+    display: none;
+  }
+  .navbar .text-nav a:nth-child(4) {
+    display: none;
+  }
+  .navbar .text-nav a:nth-child(5) {
+    display: none;
+  }
+  .tgl-btn {
+    display: block;
+  }
+  .tgl-view {
+    display: block;
+  }
+  .drop-menu {
+    width: 40%;
+    padding: 10px 20px;
+  }
+  .drop-menu a {
+    font-size: 1.3rem;
+    padding: 5px 0;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  .navbar .text-nav {
+    width: max-content;
+  }
+
+  /* page index */
+
+  .hero {
+    height: 50vh;
+  }
+
+  .hero .hero-parent {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-parent .container-prop {
+    position: absolute;
+    opacity: 0.2;
+    z-index: 0;
+    width: 80%;
+    height: 100%;
+  }
+
+  .container-prop .parent-prop {
+    height: inherit;
+  }
+
+  .container-prop .parent-prop .properti {
+    width: 35px;
+    height: 50%;
+  }
+
+  .hero-parent .container-txt {
+    position: absolute;
+    width: 85%;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container-txt .link-href {
+    width: 100%;
+    justify-content: center;
+    margin-top: 3px;
+    margin-left: 2.5%;
+  }
+
+  .link-href a {
+    padding-right: 0;
+    margin: 0 auto;
+    font-size: calc(0.7rem + 1.5vw);
+  }
+
+  .container-txt h1 {
+    font-size: calc(2rem + 5vw);
+    font-weight: 500;
+  }
+
+  .content {
+    padding: 10px 2.5%;
+  }
+
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .content h1 .text {
+    text-align: left;
+    font-size: 1.3rem;
+  }
+
+  .content h1 .text .judul {
+    font-size: 1.5rem;
+  }
+
+  footer p,
+  a {
+    margin: 0 5px;
+    font-size: 1rem;
+    color: black;
+  }
+
+  /* page home */
+  .container-home {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+  .container-home textarea {
+    font-size: 1.4rem;
+  }
+  .btn-home {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 3px 0;
+    width: 100%;
+    height: 40px;
+  }
+  .show-ref-home {
+    font-size: 1.3rem;
+    padding: 5px;
+    margin-top: 5vh;
+    overflow: scroll;
+    height: 80vh;
+  }
+
+  .ref-home {
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+
+  .ref-home p {
+    font-size: 1.3rem;
+    margin: 0 0 5px 0;
+  }
+
+  .ref-home p:nth-child(1) {
+    font-size: 1.6rem;
+    padding: 3px 0px;
+    font-weight: 500;
+    border-bottom: 2px white solid;
+    margin: 0 0 3px 0;
+  }
+
+  /* page referensi */
+
+  .container-input {
+    padding: 5px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    border-bottom: 3px white solid;
+    margin-top: 0.5%;
+  }
+  .container-input h1 {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 15px;
+  }
+  .select-type {
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+  .select-type p {
+    font-size: 1.3rem;
+    font-weight: 350;
+    margin-bottom: 3px;
+  }
+  .select-type select {
+    font-weight: 400;
+    font-size: 1rem;
+    padding-bottom: 2px;
+    padding-left: 2px;
+  }
+  .select-type select option {
+    font-size: 0.5rem;
+    font-weight: 100;
+  }
+  .select-type button {
+    font-weight: 400;
+    font-size: 1rem;
+    padding: 0 20px;
+    margin-left: 10px;
+    padding-bottom: 1px;
+  }
+  .form-input > input {
+    margin: 7px 5px;
+    font-size: 1rem;
+    padding: 5px;
+  }
+  .container-ref {
+    margin-top: 10px;
+  }
+  .container-ref > .show-ref {
+    padding: 5px;
+    margin: 3px 5px;
+  }
+  .container-ref > .show-ref > p {
+    margin: 5px;
+    font-size: 1rem;
+    font-weight: 450;
+  }
+  .container-ref > .show-ref button {
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 15px 0;
+  }
+
+  /* page tutorial */
+  .tutorial {
+    flex-direction: column;
+  }
+
+  .container-tutor {
+    padding: 20px;
+    width: 100%;
+    gap: 20px;
+  }
+  .container-tutor #tutorial-page {
+    font-size: 1.7rem;
+  }
+  .container-tutor .daftar-isi p {
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding-left: 3%;
+  }
+  .daftar-isi ul {
+    padding-left: 5%;
+  }
+  .daftar-isi ul li {
+    margin: 10px 0;
+  }
+  .daftar-isi ul li a {
+    font-size: 1.1rem;
+  }
+  .container-tutor .text h1 {
+    font-size: 1.8rem;
+    margin-left: 20px;
+    margin-top: 15px;
+    gap: 5px;
+  }
+  .text h1 p {
+    font-size: 1.2rem;
+    font-weight: 350;
+    margin-left: 20px;
+    text-align: left;
+  }
+
+  /* page tentang kami */
+
+  .container-about {
+    padding: 10px 0;
+    padding-bottom: 10vh;
+  }
+  .container-about h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    padding: 10px;
+  }
+  .text-about .link-about {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    padding: 5px;
+  }
+  .text-about .line {
+    width: 100%;
+    height: 2px;
+  }
+  .text-about .penjelasan-about {
+    width: 100%;
+    text-align: left;
+    padding: 30px;
+  }
+  .penjelasan-about h2 {
+    margin: 10px 0;
+    font-size: 1.7rem;
+  }
+  .penjelasan-about p {
+    margin: 20px 0;
+    font-size: 1.2rem;
+    font-weight: 200;
+    margin-left: 2%;
+    text-align: justify;
+  }
+  .text-about .kontak-about {
+    margin-top: 2%;
+    border-top: white 3px solid;
+  }
+  .kontak h2 {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  .kontak .profil {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  .profil .profil-img {
+    width: 250px;
+    height: 250px;
+    margin-left: 20px;
+    margin: 0 auto;
+  }
+  .profil .profil-text {
+    width: 100%;
+  }
+  .profil-text h3 {
+    font-size: 5rem;
+    text-align: center;
+  }
+  .h4-point h4 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 3px;
+    margin: 2px 10px;
+    border: none;
+  }
+  .profil-text .social-media {
+    padding: 10px;
+  }
+  .social-media p {
+    font-size: 1.2rem;
+  }
+  .social-media a {
+    padding-left: 5px;
+    font-size: 1.1rem;
+    margin-left: 25px;
+  }
+
+  /* page kebijakan privasi */
+
+  .container-privasi {
+    padding: 0 2%;
+  }
+  .container-privasi h1 {
+    font-size: 3rem;
+    padding: 10px;
+  }
+  .container-privasi div {
+    margin: 60px 0;
+    padding: 0 5px;
+  }
+  .container-privasi div h2 {
+    font-size: 1.7rem;
+    padding: 0px 5px;
+  }
+  .container-privasi div p {
+    font-size: 1.1rem;
+    margin-left: 20px;
+  }
+  .container-privasi div ul {
+    font-size: 1.1rem;
+    margin-left: 50px;
+  }
+  .container-privasi div a {
+    font-size: 1.1rem;
+    margin-left: 20px;
+    color: white;
+  }
+}
+
+/* gawai */
+@media screen and (max-width: 600px) {
+  html {
+    overflow: visible;
+  }
+
+  .navbar {
+    height: 9vh;
+  }
+  .logo {
+    width: 11%;
+    margin-right: 10px;
+  }
+  .navbar .text-nav a:nth-child(2) {
+    font-size: 1.2rem;
+    display: inline-block;
+    font-weight: 700;
+  }
+  .navbar .text-nav a:nth-child(3) {
+    display: none;
+  }
+  .navbar .text-nav a:nth-child(4) {
+    display: none;
+  }
+  .navbar .text-nav a:nth-child(5) {
+    display: none;
+  }
+  .tgl-btn {
+    display: block;
+  }
+  .tgl-view {
+    display: block;
+  }
+  .drop-menu {
+    width: 60%;
+    padding: 10px 20px;
+  }
+  .drop-menu a {
+    font-size: 1.2rem;
+    padding: 5px 0;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  .navbar .text-nav {
+    width: max-content;
+  }
+
+  /* page index */
+
+  .hero {
+    height: 40vh;
+  }
+
+  .hero .hero-parent {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-parent .container-prop {
+    position: absolute;
+    opacity: 0.2;
+    z-index: 0;
+    width: 80%;
+    height: 100%;
+  }
+
+  .container-prop .parent-prop {
+    height: inherit;
+  }
+
+  .container-prop .parent-prop .properti {
+    width: 20px;
+    height: 50%;
+  }
+
+  .hero-parent .container-txt {
+    position: absolute;
+    width: 85%;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container-txt .link-href {
+    width: 100%;
+    justify-content: center;
+    margin-top: 3px;
+    margin-left: 2.5%;
+  }
+
+  .container-txt h1 {
+    font-size: calc(1.5rem + 3vw);
+    font-weight: 500;
+  }
+
+  .link-href a {
+    padding-right: 0;
+    margin: 0 auto;
+    font-size: calc(0.5rem + 1vw);
+  }
+
+  .content {
+    padding: 10px 2.5%;
+  }
+
+  .content h1 {
+    font-size: 1.5rem;
+  }
+
+  .content h1 .text {
+    text-align: left;
+    font-size: 1rem;
+  }
+
+  .content h1 .text .judul {
+    font-size: 1.3rem;
+  }
+
+  footer p,
+  a {
+    margin: 0 5px;
+    font-size: 0.7rem;
+    color: black;
+  }
+
+  /* page home */
+  .container-home {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+  .container-home textarea {
+    font-size: 1rem;
+  }
+  .btn-home {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 3px 0;
+    width: 100%;
+    height: 40px;
+  }
+  .show-ref-home {
+    font-size: 1rem;
+    padding: 5px;
+    margin-top: 5vh;
+    overflow: scroll;
+    height: 75vh;
+  }
+
+  .ref-home {
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+
+  .ref-home p {
+    font-size: 1.2rem;
+    margin: 0 0 5px 0;
+  }
+
+  .ref-home p:nth-child(1) {
+    font-size: 1.4rem;
+    padding: 3px 0px;
+    font-weight: 500;
+    border-bottom: 2px white solid;
+    margin: 0 0 3px 0;
+  }
+
+  /* page referensi */
+
+  .container-input {
+    padding: 3px;
+    padding-left: 5px;
+    padding-bottom: 10px;
+    border-bottom: 3px white solid;
+    margin-top: 0.3%;
+  }
+  .container-input h1 {
+    font-size: 1.7rem;
+    font-weight: 300;
+    margin-bottom: 15px;
+  }
+  .select-type {
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+  .select-type p {
+    font-size: 1.3rem;
+    font-weight: 350;
+    margin-bottom: 3px;
+  }
+  .select-type select {
+    font-weight: 400;
+    font-size: 1rem;
+    padding-bottom: 2px;
+    padding-left: 2px;
+  }
+  .select-type select option {
+    font-size: 0.8rem;
+    font-weight: 100;
+  }
+  .select-type button {
+    font-weight: 400;
+    font-size: 1.1rem;
+    padding: 0 20px;
+    margin-left: 10px;
+    padding-bottom: 1px;
+  }
+  .form-input > input {
+    margin: 7px 5px;
+    font-size: 1.1rem;
+    padding: 5px;
+    font-weight: 400;
+  }
+  .container-ref {
+    margin-top: 10px;
+  }
+  .container-ref > .show-ref {
+    padding: 5px;
+    margin: 3px 5px;
+  }
+  .container-ref > .show-ref > p {
+    margin: 5px;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  .container-ref > .show-ref button {
+    font-size: 1.1rem;
+    font-weight: 400;
+    padding: 15px 0;
+  }
+
+  /* page tutorial */
+  .tutorial {
+    flex-direction: column;
+  }
+
+  .container-tutor {
+    padding: 5px;
+    width: 100%;
+    gap: 20px;
+  }
+  .container-tutor #tutorial-page {
+    font-size: 1.4rem;
+  }
+  .container-tutor .daftar-isi p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding-left: 5%;
+  }
+  .daftar-isi ul {
+    padding-left: 15%;
+  }
+  .daftar-isi ul li {
+    margin: 10px 0;
+  }
+  .daftar-isi ul li a {
+    font-size: 1.1rem;
+  }
+  .container-tutor .text h1 {
+    font-size: 1.8rem;
+    margin-top: 15px;
+    gap: 5px;
+  }
+  .text h1 p {
+    font-size: 1.2rem;
+    font-weight: 350;
+    margin-left: 10px;
+    text-align: left;
+  }
+
+  /* page tentang kami */
+
+  .container-about {
+    padding: 10px 0;
+    /* padding-bottom: 10vh; */
+  }
+  .container-about h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    padding: 10px;
+  }
+  .text-about .link-about {
+    font-size: 1rem;
+    margin: 0 -2px;
+    margin-bottom: 10px;
+  }
+  .text-about .line {
+    width: 100%;
+    height: 2px;
+  }
+  .text-about .penjelasan-about {
+    width: 100%;
+    padding: 30px;
+  }
+  .penjelasan-about h2 {
+    margin: 10px 0;
+    font-size: 1.3rem;
+    text-align: left;
+  }
+  .penjelasan-about p {
+    margin: 20px 0;
+    font-size: 1rem;
+    font-weight: 200;
+    margin-left: 2%;
+    text-align: left;
+  }
+  .text-about .kontak-about {
+    margin-top: 5%;
+    border-top: white 3px solid;
+  }
+  .kontak h2 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-align: center;
+  }
+  .kontak .profil {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  .profil .profil-img {
+    width: 150px;
+    height: 150px;
+    margin-left: 20px;
+    margin: 0 auto;
+  }
+  .profil .profil-text {
+    width: 100%;
+  }
+  .profil-text h3 {
+    font-size: 3rem;
+    text-align: center;
+  }
+  .h4-point h4 {
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 3px;
+    margin: 2px 10px;
+    border: none;
+  }
+  .profil-text .social-media {
+    padding: 10px;
+  }
+  .social-media p {
+    font-size: 1.1rem;
+  }
+  .social-media a {
+    padding-left: 5px;
+    font-size: 1rem;
+    margin-left: 20px;
+  }
+
+  /* page kebijakan privasi */
+
+  .container-privasi {
+    padding: 0 2%;
+  }
+  .container-privasi h1 {
+    font-size: 2rem;
+    padding: 10px;
+  }
+  .container-privasi div {
+    margin: 50px 0;
+    padding: 0 5px;
+  }
+  .container-privasi div h2 {
+    font-size: 1.3rem;
+    padding: 0px 5px;
+  }
+  .container-privasi div p {
+    font-size: 1rem;
+    margin-left: 20px;
+  }
+  .container-privasi div ul {
+    font-size: 1rem;
+    margin-left: 50px;
+  }
+  .container-privasi div a {
+    font-size: 1rem;
+    margin-left: 20px;
+    color: white;
+  }
+}
+
+/* style seleksi teks */
+::selection {
+  background-color: white;
+  color: black;
+}
+
+/* loading animasi */
+@keyframes load {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#container-load {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: rgb(0, 0, 0);
+  opacity: 30%;
+}
+
+#container-load.active-parent {
+  display: flex;
+}
+
+#loading {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  width: 15%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+
+#loading p {
+  color: black;
+  padding: 10px 5px;
+  text-align: center;
+  font-weight: 500;
+  animation: load 3s infinite;
+}
+
+#loading.active {
+  display: block;
+}
+
+/* animasi loop bagian index */
+@keyframes opacityAnim {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+/* .parent-prop{
+  background-color: white;
+  position: absolute;
+  z-index: 1;
+} */
+
+/* .ball {
+  width: 10px;
+  height: 10px;
+  box-shadow: white 0px 0px 30px 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  position: absolute;
+  transition: 2s;
+} */
+
+/* style umum untuk garis di index */
+.line {
+  height: 4px;
+  width: 20%;
+  background-color: red;
+  border-radius: 5px;
+}
+
+/* pengaturan umum */
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  min-width: 100%;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+  /* width: 100vw; */
+  background-color: black;
+  min-height: 100vh;
+}
+
+/* page layout */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  z-index: 2;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  background-color: #e7e8ec;
+  padding: 0 10px;
+}
+
+.tgl-btn {
+  position: absolute;
+  right: 15px;
+  margin-right: 10px;
+  z-index: 1;
+  cursor: pointer;
+  opacity: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: grey;
+}
+
+.tgl-view {
+  position: absolute;
+  right: 15px;
+  width: 30px;
+  height: 5px;
+  border-radius: 5px;
+  box-shadow: var(--bgClr-tgl) 0px 10px 0px 0px,
+    var(--bgClr-tgl) 0px -10px 0px 0px;
+  background-color: var(--bgClr-tgl);
+  margin-right: 10px;
+}
+
+.tgl-btn:checked + .tgl-view {
+  height: 30px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  transform: scale(1.8, 1.4);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  background-color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: var(--bgClr-tgl) 0px 0px 0px 0px, var(--bgClr-tgl) 0px 0px 0px 0px;
+  transition: 0.1s;
+}
+
+.navbar .drop-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  top: 100%;
+  height: max-content;
+  justify-content: center;
+  background-color: #d8d8d8;
+}
+
+.navbar .drop-menu a {
+  color: black;
+}
+
+.navbar .drop-menu a:active {
+  transform: scaleY(1.2);
+}
+
+.navbar .drop-menu a:hover {
+  color: rgb(138, 138, 138);
+}
+
+.navbar .text-nav {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.logo {
+  height: auto;
+  display: block;
+}
+
+.navbar .text-nav a {
+  color: black;
+  margin-right: 35px;
+  font-weight: 500;
+}
+
+.navbar .text-nav a:hover {
+  opacity: 50%;
+}
+
+/* page index */
+
+.hero {
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  display: flex;
+  position: sticky;
+  margin-top: -5vh;
+  top: 0px;
+  left: 0px;
+  z-index: 0;
+  color: white;
+}
+
+.hero-parent {
+  width: 100%;
+}
+
+.container-txt {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero .line {
+  background-color: white;
+  width: 100%;
+  height: 2px;
+}
+
+.hero h1 {
+  color: white;
+  opacity: 0.7;
+}
+
+.hero .link-href {
+  display: flex;
+}
+
+.hero .link-href a {
+  text-decoration: underline;
+  color: white;
+  /* animation: opacityAnim 10s infinite cubic-bezier(0.23, 1, 0.320, 1); */
+}
+
+.hero .link-href a:hover {
+  transform: scaleY(1.1);
+  transition: 0.1s;
+}
+
+.container-prop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.parent-prop {
+  width: 0.5rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* animasi defauld untuk displat tablet dan hp */
+@keyframes play1 {
+  0% {
+    transform: translateY(-100%);
+    /* box-shadow:white  0px 0px 30px 0px; */
+  }
+  50% {
+    transform: translateY(50%);
+    /* box-shadow:white  0px 0px 30px 0px; */
+  }
+  100% {
+    transform: translateY(200%);
+    /* box-shadow:white  0px 0px 30px 0px; */
+  }
+}
+
+.properti {
+  border-radius: 40px;
+  background-color: white;
+  transform: translateY(-100%);
+  animation: play1 10s infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.parent-prop:hover {
+  transform: translateX(-15px);
+}
+
+/* .content-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 1;
+} */
+
+.content {
+  background-color: rgb(0, 0, 0);
+  border-top: white 2px solid;
+  max-height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  z-index: 1;
+  color: white;
+  text-align: justify;
+  position: relative;
+}
+
+/* .content-content {
+  position: relative; 
+  z-index: 2;
+  max-width: 600px;
+  padding: 20px;
+} */
+
+.content h1 {
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.content p {
+  padding-top: 2px;
+}
+
+.content .text {
+  padding: 5px 15px;
+  font-weight: 300;
+  text-align: justify;
+}
+
+.content .list {
+  opacity: 70%;
+  padding: 10px 0px;
+  margin-left: 5%;
+}
+.content .list li {
+  padding: 2px 0px;
+}
+.content .list-child {
+  opacity: 70%;
+  padding: 10px 0px;
+  margin-left: 10%;
+}
+
+.content .list-child li {
+  padding: 3px 0px;
+}
+
+.content .judul {
+  font-weight: 400;
+  padding-top: 20px;
+}
+
+.content .line {
+  height: 1px;
+  background-color: white;
+  width: 100%;
+  margin: 5px 0px;
+}
+
+.content .child {
+  opacity: 70%;
+}
+
+footer {
+  height: 40px;
+  width: 100%;
+  color: black;
+  font-weight: 700;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 1;
+}
+
+/* page home */
+.container-home {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: max-content;
+}
+
+.container-home textarea {
+  background-color: rgb(41, 41, 41);
+  color: white;
+}
+
+.btn-home {
+  background-color: rgb(255, 255, 255);
+  border: #3f3f3f 2px solid;
+  color: rgb(0, 0, 0);
+  border-radius: 20px;
+  padding-bottom: 2px;
+}
+
+.btn-home:active {
+  opacity: 0.5;
+}
+
+.btn-home:hover {
+  cursor: pointer;
+  color: rgb(102, 102, 102);
+  border: #797979 2px solid;
+}
+
+.container-ads-home {
+  height: 85%;
+  width: 100%;
+}
+
+@keyframes play2 {
+  0% {
+    transform: translateY(-10vh);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.show-ref-home {
+  border-radius: 5px;
+  overflow-x: hidden;
+  transition: 0.3s;
+  animation: play2 0.1s alternate;
+  border: 5px solid rgb(94, 94, 94);
+  background-color: rgb(94, 94, 94);
+}
+
+.ref-home {
+  width: 100%;
+  height: max-content;
+  background-color: rgb(24, 24, 24);
+  border-radius: 10px;
+}
+
+.ref-home p {
+  color: white;
+}
+
+.ref-home p:nth-child(1) {
+  display: flex;
+  cursor: pointer;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+}
+
+.ref-home p:nth-child(1):active {
+  color: rgb(73, 73, 73);
+}
+
+.ref-home p:nth-child(1):hover {
+  border-bottom: 1px rgb(37, 37, 37) solid;
+  background-color: rgb(126, 126, 126);
+}
+
+/* page referensi */
+.container-input {
+  background-color: rgb(37, 37, 37);
+  width: 100%;
+  border-radius: 5px;
+}
+
+.container-input h1 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: white;
+}
+
+.select-type p {
+  color: white;
+}
+
+.select-type select {
+  color: white;
+  width: max-content;
+  margin-bottom: 10px;
+  background-color: rgb(58, 58, 58);
+}
+
+.select-type select option {
+  padding-bottom: 0;
+  padding-left: 0;
+}
+
+.select-type button {
+  border: 1px rgb(255, 255, 255) solid;
+  color: rgb(202, 202, 202);
+  background-color: rgb(54, 54, 54);
+  border-radius: 20px;
+}
+
+.select-type button:active {
+  background-color: rgb(117, 117, 117);
+}
+
+.select-type button:hover {
+  border: 1px rgb(163, 163, 163) solid;
+  color: white;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input > input {
+  background-color: rgb(48, 48, 48);
+  color: rgb(187, 187, 187);
+  border: white 1px solid;
+  border-radius: 5px;
+}
+
+.form-input input:focus {
+  border: white 1px solid;
+  color: white;
+  background-color: #4e4e4e;
+  outline: none;
+}
+
+.container-ref {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: row-reverse;
+  flex-wrap: wrap-reverse;
+  justify-content: stretch;
+  align-items: stretch;
+}
+
+.container-ref > .show-ref {
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container-ref > .show-ref > p {
+  text-align: left;
+}
+
+.container-ref > .show-ref button {
+  border: 1px rgb(255, 255, 255) solid;
+  color: rgb(202, 202, 202);
+  background-color: rgb(54, 54, 54);
+  border-radius: 20px;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-ref > .show-ref button:active {
+  opacity: 0.5;
+}
+
+.container-ref > .show-ref button:hover {
+  cursor: pointer;
+  color: rgb(102, 102, 102);
+  border: #797979 2px solid;
+}
+
+.container-ads-ref {
+  display: none;
+  width: 10%;
+  height: 100px;
+  background-color: white;
+}
+
+/* page tutorial */
+
+.tutorial {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* flex-direction: row; */
+}
+
+.container-tutor {
+  background-color: #141414;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-tutor .line {
+  background-color: white;
+  width: 100%;
+}
+
+.container-tutor .daftar-isi {
+  background-color: black;
+  border-radius: 20px;
+}
+
+.daftar-isi ul {
+  color: white;
+}
+
+.daftar-isi ul li a {
+  color: white;
+}
+
+.container-tutor .text {
+  padding: 0;
+}
+.container-tutor .text .line {
+  width: 100%;
+  background-color: white;
+  margin: 5px 0;
+}
+
+.container-tutor .text h1 {
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.text h1 p a {
+  color: white;
+}
+.img-tutor {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+
+/* page tentang kami */
+
+.container-about {
+  width: 100%;
+  margin: 0px auto;
+  background-color: #1f1f1f;
+  color: white;
+  min-height: 100vh;
+  max-height: max-content;
+}
+
+.container-about h1 {
+  background-color: black;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.container-about .text-about {
+  padding-top: 20px;
+  width: inherit;
+}
+
+.text-about .link-about {
+  text-decoration: underline;
+  display: inline-block;
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+
+.text-about .line {
+  background-color: white;
+}
+
+.text-about .penjelasan-about {
+  background-color: black;
+  border-radius: 5px;
+}
+
+.text-about .kontak-about {
+  width: 100%;
+}
+
+.kontak-about .kontak {
+  width: 100%;
+  padding: 20px;
+  background-color: black;
+}
+
+.kontak .line {
+  width: inherit;
+  height: 3px;
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+
+.profil .profil-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.h4-point h4 {
+  background-color: rgb(46, 46, 46);
+  color: white;
+}
+
+.profil-text .social-media {
+  margin-top: 20px;
+  border: solid 2px white;
+  border-radius: 10px;
+}
+
+.social-media .line {
+  margin: 0;
+  height: 2px;
+}
+
+.social-media a {
+  text-decoration: underline;
+  border-left: 2px solid white;
+  color: white;
+  display: inline-block;
+}
+
+.profil .profil-img {
+  border-radius: 50%;
+  background-color: white;
+}
+
+/* page kebijakan privasi */
+
+.container-privasi {
+  width: 100%;
+  color: white;
+  height: max-content;
+}
+
+.container-privasi h1 {
+  background-color: rgb(32, 32, 32);
+  border-bottom: 3px white solid;
+}
+
+.container-privasi div {
+  border-left: 3px solid white;
+  border-right: 3px solid white;
+}
+
+.container-privasi div h2 {
+  background-color: rgb(49, 49, 49);
+}
