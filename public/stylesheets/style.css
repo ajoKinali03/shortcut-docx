@@ -94,6 +94,18 @@
     font-size: 1.4vw;
   }
 
+  .hero-parent .container-txt .btn-start {
+    display: flex;
+    justify-content: left;
+  }
+  
+  .btn-start a{
+    width: 100px;
+    padding: 10px 0;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
   .hero-parent .container-prop {
     height: inherit;
     width: 33%;
@@ -520,6 +532,19 @@
     justify-content: center;
   }
 
+  .hero-parent .container-txt .btn-start {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .btn-start a{
+    width: 100px;
+    padding: 10px 3px;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+
   .container-txt .link-href {
     width: 100%;
     justify-content: center;
@@ -534,7 +559,7 @@
   }
 
   .container-txt h1 {
-    font-size: calc(2rem + 5vw);
+    font-size: calc(1.7rem + 5vw);
     font-weight: 500;
   }
 
@@ -914,7 +939,19 @@
   }
 
   .container-txt h1 {
-    font-size: calc(1.5rem + 3vw);
+    font-size: calc(1.3rem + 3vw);
+    font-weight: 500;
+  }
+
+  .hero-parent .container-txt .btn-start {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .btn-start a{
+    width: 80px;
+    padding: 9px 3px;
+    font-size: 1.1rem;
     font-weight: 500;
   }
 
@@ -1468,6 +1505,29 @@ body {
   transform: scaleY(1.1);
   transition: 0.1s;
 }
+
+
+.btn-start{
+  width: 100%;
+  height: max-content;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.btn-start a{
+  border: #4e4e4e 2px solid;
+  background-color: white;
+  border-radius: 5px;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+}
+
+.btn-start a:active{
+  border: white 2px solid;
+  background-color: #4e4e4e;
+}
+
 
 .container-prop {
   display: flex;
