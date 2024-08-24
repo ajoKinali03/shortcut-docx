@@ -22,6 +22,12 @@ app.use(logger('dev'));
 // app.set('/public', path.join(__dirname, '/public/'));
 app.use(express.static(path.join(__dirname, 'public')));
 
+// ads.txt untuk google adsense
+app.use('/ads.txt', (req, res) => {
+  res.sendFile(path.join(__dirname, './ads.txt'));
+});
+
+
 // set limit file input
 const limit = "100mb"
 app.use(express.json({limit: limit}));
