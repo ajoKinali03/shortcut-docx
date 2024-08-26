@@ -1,3 +1,5 @@
+const { isAlpha } = require("validator");
+
 const refStyled = (listRef, ref) => {
   
   let refCalled = [];
@@ -31,9 +33,35 @@ const refStyled = (listRef, ref) => {
   return { ftNt: `footnotes:{ ${hsl.join(",")}},`, dfPstk: dfPstk.join(",") };
 };
 
+function identifikasiNama(inpt){
+  const spclChar = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~\n\t]/;
+  let arrNama = inpt.split(" ")
+  let identObj = {
+    type: null,
+    afterSpace: null,
+  };
+
+  // lanjui bsk
+  if(arrNama.length == 1){
+    identObj.type = "short";
+  }else{
+    arrNama.forEach((e, i) => {
+      if(spclChar.test(e)){
+
+      }else{
+        console.log()
+      };
+    })
+  }
+
+
+  return identObj
+}
+
 
 // fungsi untuk membalik nama pada daftar pustaka
 function pembalikNama(nama) {
+  console.log(identifikasiNama(nama))
   if (nama.includes(" ")) {
     nama = nama.split(" ");
     let selectNama = [];
