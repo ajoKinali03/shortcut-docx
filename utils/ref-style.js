@@ -43,8 +43,6 @@ function identifikasiNama(inpt) {
     identObj.afterSpace = false;
     identObj.jamak = false;
   } else {
-    const identChar = inpt.charAt(inpt.indexOf(" ") + 1);
-    
     if (spclChar.test(inpt)) {
       let spclWord = arrNama.find((e) => e.match(spclChar));
       let wordSprai = [...spclWord];
@@ -54,8 +52,25 @@ function identifikasiNama(inpt) {
           wordSatatus = true;
         }
       });
-      
+      if (wordSatatus) {
+        if (arrNama.includes("dan") || arrNama.includes("dkk")) {
+          identObj.type = "long";
+          identObj.afterSpace = true;
+          identObj.jamak = [
+            arrNama.find((e) => e == "dan" || e == "dkk"),
+            arrNama.findIndex((e) => e == "dan" || e == "dkk"),
+          ];
+        } else if (!arrNama.includes("dan")) {
+          identObj.type = "mid";
+          identObj.afterSpace = true;
+          identObj.jamak = false;
+        }
+      } else if (!wordSatatus) {
+        identObj.afterSpace = false;
+        identObj.jamak = false;
+      }
     } else {
+      let identChar = inpt.charAt(inpt.indexOf(" ") + 1);
       if (identChar == "") {
         identObj.type = "short";
         identObj.afterSpace = true;
@@ -64,7 +79,10 @@ function identifikasiNama(inpt) {
         if (arrNama.includes("dan") || arrNama.includes("dkk")) {
           identObj.type = "long";
           identObj.afterSpace = true;
-          identObj.jamak = arrNama.find((e) => e == "dan" || e == "dkk");
+          identObj.jamak = [
+            arrNama.find((e) => e == "dan" || e == "dkk"),
+            arrNama.findIndex((e) => e == "dan" || e == "dkk"),
+          ];
         } else if (!arrNama.includes("dan")) {
           identObj.type = "mid";
           identObj.afterSpace = true;
@@ -79,8 +97,8 @@ function identifikasiNama(inpt) {
 
 // fungsi untuk membalik nama pada daftar pustaka
 function pembalikNama(nama) {
-  console.log(identifikasiNama(nama));
-  if (nama.includes(" ")) {
+  let identNama = identifikasiNama(nama);
+  if (identNama.type == "long") {
     nama = nama.split(" ");
     let selectNama = [];
     nama.forEach((e, i) => {
@@ -104,6 +122,10 @@ function pembalikNama(nama) {
       hslNama = selectNama.replaceAll(",", "") + ". " + nama;
     }
     return hslNama;
+  } else if(identNama.type == "mid"){
+
+  } else if(identNama.type == "short"){
+
   } else {
     return nama;
   }
