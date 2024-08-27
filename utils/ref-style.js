@@ -1,7 +1,4 @@
-const { isAlpha } = require("validator");
-
 const refStyled = (listRef, ref) => {
-  
   let refCalled = [];
   let refFtn = [];
   listRef.map((e, i) => {
@@ -14,7 +11,6 @@ const refStyled = (listRef, ref) => {
       }
     }
   });
-
 
   let hsl = [];
   let count = 0;
@@ -29,62 +25,84 @@ const refStyled = (listRef, ref) => {
   let dfPstk = sortingRef(ref).map((e, i) => {
     return daftarPustakaStyle(e, i, e.type);
   });
-  
+
   return { ftNt: `footnotes:{ ${hsl.join(",")}},`, dfPstk: dfPstk.join(",") };
 };
 
-function identifikasiNama(inpt){
-  const spclChar = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~\n\t]/;
-  let arrNama = inpt.split(" ")
+function identifikasiNama(inpt) {
+  const spclChar = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~\n\t]/;
+  let arrNama = inpt.split(" ");
   let identObj = {
     type: null,
     afterSpace: null,
+    jamak: null,
   };
 
-  // lanjui bsk
-  if(arrNama.length == 1){
+  if (arrNama.length == 1) {
     identObj.type = "short";
-  }else{
-    arrNama.forEach((e, i) => {
-      if(spclChar.test(e)){
-
-      }else{
-        console.log()
-      };
-    })
+    identObj.afterSpace = false;
+    identObj.jamak = false;
+  } else {
+    const identChar = inpt.charAt(inpt.indexOf(" ") + 1);
+    
+    if (spclChar.test(inpt)) {
+      let spclWord = arrNama.find((e) => e.match(spclChar));
+      let wordSprai = [...spclWord];
+      let wordSatatus = false;
+      wordSprai.forEach((e, i) => {
+        if (!spclChar.test(e)) {
+          wordSatatus = true;
+        }
+      });
+      
+    } else {
+      if (identChar == "") {
+        identObj.type = "short";
+        identObj.afterSpace = true;
+        identObj.jamak = false;
+      } else {
+        if (arrNama.includes("dan") || arrNama.includes("dkk")) {
+          identObj.type = "long";
+          identObj.afterSpace = true;
+          identObj.jamak = arrNama.find((e) => e == "dan" || e == "dkk");
+        } else if (!arrNama.includes("dan")) {
+          identObj.type = "mid";
+          identObj.afterSpace = true;
+          identObj.jamak = false;
+        }
+      }
+    }
   }
 
-
-  return identObj
+  return identObj;
 }
-
 
 // fungsi untuk membalik nama pada daftar pustaka
 function pembalikNama(nama) {
-  console.log(identifikasiNama(nama))
+  console.log(identifikasiNama(nama));
   if (nama.includes(" ")) {
     nama = nama.split(" ");
     let selectNama = [];
     nama.forEach((e, i) => {
-      if(e.toLowerCase() == "dkk"){
-        if(nama[i-1] != "dan") {
-          selectNama.push(nama[i-1]);
-        }else if(nama[i-1] == "dan"){
-          selectNama.push(nama[i-2]);
+      if (e.toLowerCase() == "dkk") {
+        if (nama[i - 1] != "dan") {
+          selectNama.push(nama[i - 1]);
+        } else if (nama[i - 1] == "dan") {
+          selectNama.push(nama[i - 2]);
         }
-      };
+      }
     });
 
     selectNama = selectNama.join("");
     let hslNama = "";
-    if(nama.includes("dan")){
-      nama = nama.join(" ").replace(" " + selectNama, "")
+    if (nama.includes("dan")) {
+      nama = nama.join(" ").replace(" " + selectNama, "");
       hslNama = selectNama.replaceAll(",", "") + ", " + nama;
-    };
-    if(!nama.includes("dan")){
-      nama = nama.join(" ").replace(" " + selectNama, ",")
+    }
+    if (!nama.includes("dan")) {
+      nama = nama.join(" ").replace(" " + selectNama, ",");
       hslNama = selectNama.replaceAll(",", "") + ". " + nama;
-    };
+    }
     return hslNama;
   } else {
     return nama;
@@ -104,7 +122,7 @@ function sortingRef(data) {
 
 function cekSameRef(listRef, refCalled, ref) {
   let idxRef = {};
-  
+
   for (let i = 1; i <= ref.length; i++) {
     idxRef["idx" + i] = [];
     refCalled.forEach((e, ie) => {
@@ -114,7 +132,6 @@ function cekSameRef(listRef, refCalled, ref) {
     });
   }
 
-  
   let keyRefSame = [];
   refCalled.forEach((e, i) => {
     if (e.ID) {
@@ -160,7 +177,7 @@ function cekSameRef(listRef, refCalled, ref) {
 //       return e;
 //     }
 //   });
-  
+
 //   for (let i = 1; i <= ref.length; i++) {
 //     idxRef["idx" + i] = [];
 //     refCalled.forEach((e, ie) => {
@@ -208,12 +225,11 @@ function cekSameRef(listRef, refCalled, ref) {
 // }
 
 function footnoteStyle(data, idx, type, recall, trueIdx) {
-
   // hanging: convertMillimetersToTwip(0),
   let indent = `indent: {
     firstLine: convertMillimetersToTwip(4.8),
     left: convertMillimetersToTwip(0),
-  },`
+  },`;
 
   if (recall.tipe == "normal") {
     if (type == "jurnal") {
@@ -434,7 +450,7 @@ function daftarPustakaStyle(data, idx, type) {
   let indent = `indent: {
     hanging: convertMillimetersToTwip(9.3),
     left: convertMillimetersToTwip(9.8),
-  },`
+  },`;
   if (type == "jurnal") {
     return `
                 new Paragraph({
