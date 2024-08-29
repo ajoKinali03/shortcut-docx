@@ -15,7 +15,6 @@ const refStyled = (listRef, ref) => {
   let hsl = [];
   let count = 0;
   let aftrCkSmeRf = cekSameRef(listRef, refFtn, ref);
-
   aftrCkSmeRf.forEach((e, i) => {
     if (i % 2 == 0) {
       count++;
@@ -53,12 +52,12 @@ function identifikasiNama(inpt) {
         }
       });
       if (wordSatatus) {
-        if (arrNama.includes("dan") || arrNama.includes("dkk")) {
+        if (arrNama.includes("dkk") || arrNama.includes("dan")) {
           identObj.type = "long";
           identObj.afterSpace = true;
           identObj.jamak = [
-            arrNama.find((e) => e == "dan" || e == "dkk"),
-            arrNama.findIndex((e) => e == "dan" || e == "dkk"),
+            arrNama.find((e) => e == "dkk" || e == "dan"),
+            arrNama.findIndex((e) => e == "dkk" || e == "dan"),
           ];
         } else if (!arrNama.includes("dan")) {
           identObj.type = "mid";
@@ -76,12 +75,12 @@ function identifikasiNama(inpt) {
         identObj.afterSpace = true;
         identObj.jamak = false;
       } else {
-        if (arrNama.includes("dan") || arrNama.includes("dkk")) {
+        if (arrNama.includes("dkk") || arrNama.includes("dan")) {
           identObj.type = "long";
           identObj.afterSpace = true;
           identObj.jamak = [
-            arrNama.find((e) => e == "dan" || e == "dkk"),
-            arrNama.findIndex((e) => e == "dan" || e == "dkk"),
+            arrNama.find((e) => e == "dkk" || e == "dan"),
+            arrNama.findIndex((e) => e == "dkk" || e == "dan"),
           ];
         } else if (!arrNama.includes("dan")) {
           identObj.type = "mid";
@@ -91,41 +90,65 @@ function identifikasiNama(inpt) {
       }
     }
   }
-
   return identObj;
 }
 
 // fungsi untuk membalik nama pada daftar pustaka
 function pembalikNama(nama) {
   let identNama = identifikasiNama(nama);
+  let placeNama;
   if (identNama.type == "long") {
     nama = nama.split(" ");
-    let selectNama = [];
-    nama.forEach((e, i) => {
-      if (e.toLowerCase() == "dkk") {
-        if (nama[i - 1] != "dan") {
-          selectNama.push(nama[i - 1]);
-        } else if (nama[i - 1] == "dan") {
-          selectNama.push(nama[i - 2]);
+    let hslNama = "";
+    if (identNama.jamak[0] == "dkk") {
+      let selectNama = [];
+      nama.forEach((e, i) => {
+        if (e.toLowerCase() == "dkk") {
+          if (nama[i - 1] != "dan") {
+            selectNama.push(nama[i - 1]);
+          } else if (nama[i - 1] == "dan") {
+            selectNama.push(nama[i - 2]);
+          }
+        }
+      });
+
+      selectNama = selectNama.join("");
+      if (nama.includes("dan")) {
+        nama = nama.join(" ").replace(" " + selectNama, "");
+        hslNama = selectNama.replaceAll(",", "") + ", " + nama;
+      }
+      if (!nama.includes("dan")) {
+        if (nama[0] == nama[identNama.jamak[1] - 1]) {
+          return nama.join(" ");
+        } else {
+          nama = nama.join(" ").replace(" " + selectNama, ",");
+          hslNama = selectNama.replaceAll(",", "") + ", " + nama;
         }
       }
-    });
-
-    selectNama = selectNama.join("");
-    let hslNama = "";
-    if (nama.includes("dan")) {
-      nama = nama.join(" ").replace(" " + selectNama, "");
-      hslNama = selectNama.replaceAll(",", "") + ", " + nama;
-    }
-    if (!nama.includes("dan")) {
-      nama = nama.join(" ").replace(" " + selectNama, ",");
-      hslNama = selectNama.replaceAll(",", "") + ". " + nama;
+    } else if (identNama.jamak[0] == "dan") {
+      if (nama[0] == nama[identNama.jamak[1] - 1]) {
+        return nama.join(" ");
+      } else {
+        placeNama = nama
+          .join(" ")
+          .replace(" " + nama[identNama.jamak[1] - 1], "");
+        hslNama =
+          nama[identNama.jamak[1] - 1].replaceAll(",", "") + ", " + placeNama;
+      }
     }
     return hslNama;
-  } else if(identNama.type == "mid"){
-
-  } else if(identNama.type == "short"){
-
+  } else if (identNama.type == "mid") {
+    nama = nama.split(" ");
+    if (nama[nama.length - 1] == "") {
+      nama.pop();
+      placeNama = nama.pop();
+      return `${placeNama}, ${nama}`;
+    } else {
+      placeNama = nama.pop();
+      return `${placeNama}, ${nama}`;
+    }
+  } else if (identNama.type == "short") {
+    return nama;
   } else {
     return nama;
   }
@@ -139,6 +162,7 @@ function sortingRef(data) {
   data.sort((a, b) =>
     a.Penulis.toLowerCase().localeCompare(b.Penulis.toLowerCase())
   );
+  console.log(data)
   return data;
 }
 
