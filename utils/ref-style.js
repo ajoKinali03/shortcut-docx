@@ -162,7 +162,6 @@ function sortingRef(data) {
   data.sort((a, b) =>
     a.Penulis.toLowerCase().localeCompare(b.Penulis.toLowerCase())
   );
-  console.log(data)
   return data;
 }
 
@@ -313,13 +312,12 @@ function footnoteStyle(data, idx, type, recall, trueIdx) {
               }`;
     }
     if (type == "buku") {
-      let tst = () => {
-        if (data.Penterjemah.length != 0) {
-          return { ok: `Terj. ${data.Penterjemah}, `, cek: true };
-        } else {
-          return false;
-        }
-      };
+      let terjemah = "";
+      if (data.Penterjemah.length != 0) {
+        terjemah = `Terj. ${data.Penterjemah}, `;
+      } else {
+        terjemah = "";
+      }
       return `${idx}: {
                 children: [
                   new Paragraph({
@@ -338,9 +336,7 @@ function footnoteStyle(data, idx, type, recall, trueIdx) {
                         italics: true,
                       }),
                       new TextRun({
-                        text: "${tst().cek ? tst.ok : ""}(${data.Kota}: ${
-        data.Penerbit
-      }, ${data.Tahun}), Hal. ${data.Halaman}.",
+                        text: "${terjemah}(${data.Kota}: ${data.Penerbit}, ${data.Tahun}), Hal. ${data.Halaman}.",
                         size: 20,
                         color: "000000",
                         font: "Times New Roman",
@@ -529,13 +525,12 @@ function daftarPustakaStyle(data, idx, type) {
                 })`;
   }
   if (type == "buku") {
-    let penterjemah = () => {
-      if (data.Penterjemah.length != 0) {
-        return { ok: `Terj. ${data.Penterjemah}. `, cek: true };
-      } else {
-        return false;
-      }
-    };
+    let terjemah = "";
+    if (data.Penterjemah.length != 0) {
+      terjemah = `Terj. ${data.Penterjemah}. `;
+    } else {
+      terjemah = "";
+    }
     return ` 
                 new Paragraph({
                   children: [
@@ -553,7 +548,7 @@ function daftarPustakaStyle(data, idx, type) {
                       italics: true,
                     }),
                     new TextRun({
-                      text: "${penterjemah().cek ? penterjemah.ok : ""} ${
+                      text: "${terjemah} ${
       data.Kota
     }: ${data.Penerbit}.",
                       size: 24,
