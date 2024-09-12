@@ -13,7 +13,7 @@ block content
 
 
   div.container-home(style="padding:0.5%;")
-    textarea(spellcheck="false", name="text-input", cols="80", rows="20", placeholder="*Harap untuk memisahkan setiap teks dengan 1x enter.\n\n*Harap untuk mengisi teks lebih dari 10 kata atau 70 character\n\n*Untuk memasukan footnote silahkan pencet tombol copy di referensi button.\n\n ^Untuk mengulang referensi yang sama cukup tambahkan \"koma\" pada akhir nomor footnote dan tambahkan dengan nomor halaman. EX:\"-(footnote:1,21-25)-\".", style="padding: 20px; text-align: justify;", onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}")#form-input
+    textarea(spellcheck="false", name="text-input", cols="80", rows="20", placeholder="*Harap untuk memisahkan setiap teks dengan 1x enter.\n\n*Harap untuk mengisi teks lebih dari 10 kata atau 70 character\n\n*Untuk memasukan footnote silahkan pencet tombol copy di referensi button.\n\n ^Untuk mengulang referensi yang sama cukup tambahkan \"koma\" pada akhir nomor footnote dan tambahkan dengan nomor halaman. EX:\"-(footnote:1,21-25)-\".", style="padding: 20px; text-align: left;", onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}")#form-input
     form#form-post(action="/home", method="post")
       button.btn-home#btn-post(type="button", style="display:inline-block")
         p Download
