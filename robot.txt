@@ -1,0 +1,6 @@
+# Mengizinkan semua mesin pencari untuk mengindeks situs ini
+User-agent: *
+Disallow:
+
+# Sitemap location
+Sitemap: https://shortcut-docx.com/sitemap.xml

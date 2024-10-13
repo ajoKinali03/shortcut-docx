@@ -32,6 +32,11 @@ app.use('/sitemap.xml', (req, res) => {
   res.sendFile(path.join(__dirname, './sitemap.xml'));
 });
 
+// robot.txt
+app.use('/robot.txt', (req, res) => {
+  res.sendFile(path.join(__dirname, './robot.txt'));
+});
+
 
 // set limit file input
 const limit = "100mb"
