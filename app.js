@@ -33,8 +33,8 @@ app.use('/sitemap.xml', (req, res) => {
 });
 
 // robot.txt
-app.use('/robot.txt', (req, res) => {
-  res.sendFile(path.join(__dirname, './robot.txt'));
+app.use('/robots.txt', (req, res) => {
+  res.sendFile(path.join(__dirname, './robots.txt'));
 });
 
 
