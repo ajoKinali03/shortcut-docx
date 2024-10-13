@@ -27,6 +27,11 @@ app.use('/ads.txt', (req, res) => {
   res.sendFile(path.join(__dirname, './ads.txt'));
 });
 
+// sitemap.xml untuk google search engine
+app.use('/sitemap.xml', (req, res) => {
+  res.sendFile(path.join(__dirname, './sitemap.xml'));
+});
+
 
 // set limit file input
 const limit = "100mb"
